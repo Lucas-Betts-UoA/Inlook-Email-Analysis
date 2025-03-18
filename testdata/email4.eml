@@ -1,0 +1,613 @@
+Received: from JH0PR02MB6937.apcprd02.prod.outlook.com (::1) by
+ JH0PR02MB7138.apcprd02.prod.outlook.com with HTTPS; Sat, 15 Mar 2025 14:07:48
+ +0000
+Received: from CH2PR05CA0047.namprd05.prod.outlook.com (2603:10b6:610:38::24)
+ by JH0PR02MB6937.apcprd02.prod.outlook.com (2603:1096:990:53::8) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.25; Sat, 15 Mar
+ 2025 14:07:47 +0000
+Received: from DS2PEPF00003448.namprd04.prod.outlook.com
+ (2603:10b6:610:38:cafe::24) by CH2PR05CA0047.outlook.office365.com
+ (2603:10b6:610:38::24) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.27 via Frontend Transport; Sat,
+ 15 Mar 2025 14:07:45 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.79.137)
+ smtp.mailfrom=amazonses.com; dkim=pass (signature was verified)
+ header.d=amazonses.com;dmarc=fail action=none
+ header.from=futurefinanceplans.com;
+Received-SPF: Pass (protection.outlook.com: domain of amazonses.com designates
+ 54.240.79.137 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.79.137; helo=a79-137.smtp-out.amazonses.com; pr=C
+Received: from a79-137.smtp-out.amazonses.com (54.240.79.137) by
+ DS2PEPF00003448.mail.protection.outlook.com (10.167.17.75) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.20
+ via Frontend Transport; Sat, 15 Mar 2025 14:07:45 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:397A3B26C49886F63B42B70BE5377DDB5CBBAC469E6D04D6C1FED386093E7271;UpperCasedChecksum:1C6CB15AF065F285EDDD135AB1909CF5205506801833D4CAADC38038D6672E3F;SizeAsReceived:1597;Count:16
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1742044805;
+	h=Date:From:Reply-To:To:Message-ID:Subject:MIME-Version:Content-Type:List-Unsubscribe-Post:Feedback-ID:List-Unsubscribe;
+	bh=HTlf4E6kYizhL/vhAXaBK4OaCmg3ivG5pXNpucC4JIA=;
+	b=jf0RIhjzU6H+5p+20XdyEoHnWM0Gnh/2f5fRSCTH0u3lxZ6lGBijCV9Z74kcz0FT
+	QPrBV039JWXBAz7hVTpjOYiSKWC/SsZi5ewl98j/zH37xSQU5YwcYQvE94eiJBcfGyo
+	pIq8A+1kNVOKZVUOPetcg+KPSbG3MeIMsmHwodlA=
+Date: Sat, 15 Mar 2025 13:20:05 +0000
+From: Future Finance Plans <contact@futurefinanceplans.com>
+Reply-To: contact@futurefinanceplans.com
+To: millinman@hotmail.com
+Message-ID: <0100019599f638a8-3f7b38b7-3ec7-4ac6-afdc-11c339cc02eb-000000@email.amazonses.com>
+Subject: Media Is Mocking Elon, But Wait Until They See This Demo
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_275516_857770205.1742044805141"
+X-Campaign-ID: 12898837
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Feedback-ID: ::1.us-east-1.lCJVkz6+3S71MtYe1CeGk/9v1Z83C325jnahyIHJIg0=:AmazonSES
+List-Unsubscribe: <https://links.iterable.com/s/u/ojiWd7UW_5kQomsYztcj1-5hWjg1IaUjmxvsAwD2KwVdKJ1K1pIGL4egmoqWrlSpBCgMstzNjq-NBNTz6vSJT6khhPsMI3Ul2efQnagkeIYcFfBJBkyU1I7g1EhbcRUVnJ_hx6XmcbGC5kx8aKmhbDPNNb71y7MNZoX3X5wzuPzFrgyrSbVuvFlyoWaJk7ADYHcnPDRPYgguB_dX/YX1S4ciG3nG-pOYT1-GvlwCeX4vD4nA5/7>,<mailto:unsubscribe+12898837+16890495@unsubscribe.iterable.com>
+X-Feedback-ID: 16890495:12898837:113221:iterable
+X-Message-ID: cfbfa9bc9f0a4daea1e60f82e6b99e74
+X-SES-Outgoing: 2025.03.15-54.240.79.137
+X-IncomingHeaderCount: 16
+Return-Path: 0100019599f638a8-3f7b38b7-3ec7-4ac6-afdc-11c339cc02eb-000000@amazonses.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Mar 2025 14:07:45.2450
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: efb05cc9-b0c2-4f32-70f6-08dd63cac265
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DS2PEPF00003448:EE_|JH0PR02MB6937:EE_|JH0PR02MB7138:EE_
+X-MS-Exchange-Organization-AuthSource: DS2PEPF00003448.namprd04.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/15/2025 2:03:52 PM
+X-MS-Office365-Filtering-Correlation-Id: efb05cc9-b0c2-4f32-70f6-08dd63cac265
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 54.240.79.137
+X-SID-PRA: CONTACT@FUTUREFINANCEPLANS.COM
+X-SID-Result: NONE
+X-MS-Exchange-Organization-SCL: 6
+X-Microsoft-Antispam: BCL:4;ARA:1444111002|9400799030|68400799013|21080799006|11000799015|47200799021|970799057|3600799018|56000799018|461199028|16002599021|58200799018|3151999006|21101999018|1380799030|1360799030|1122599019|18021999003|1370799030|56899033|1602099012|18301999012|18025499012|1290799030|3412199025|150899861|4302099013|160899965|440099028|2406899039|2006899018|6406899015;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Mar 2025 14:07:45.1357
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: efb05cc9-b0c2-4f32-70f6-08dd63cac265
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: DS2PEPF00003448.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: JH0PR02MB6937
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.6635027
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;psp:0;auth:0;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(2008001181)(2008121020)(4810010)(4910033)(9710001)(9610028)(9525003)(10145025)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?bERnbHdOTTNMYUhMR0ttaEVJSXFFV3hVNU9KSzBKYXRJeW0yMFFEVXJrSXQx?=
+ =?utf-8?B?NnIxOUg4UVVuUDM0N2tBOHFIZzZlSGpQN2dDN3g2b3VnNFJmbFUxemh4c1pw?=
+ =?utf-8?B?MlpWeUY0UW5aa2dmQTVPaDRzK1QwbnpHV2dUQ0xPT1pFRHo3cUNTT3p3T05U?=
+ =?utf-8?B?VUltc0wrVXNKOGFmREVYV2xZVHhzVnBGTVM0K0MySVZWY1czaUJiMy9najlY?=
+ =?utf-8?B?VUkyQnppTUFESDNicGJySGxBTndaR1VqUXEzK3F0VStOWTE2MkFoSUhieHlh?=
+ =?utf-8?B?eVcya08zeVJFYzBUNXgzTEtKM1VvU1Y4a3h4UnZzWUx4dWhpMkNzNkZPb28r?=
+ =?utf-8?B?eWFoVWg5V05Ea3pZTXBYZUpFL24yb1lPV0RscXk1V2R4aFcvWGhtL3FZc1VU?=
+ =?utf-8?B?UWtTUFdnT0VKak9tcnJKVnU2SWw1OFBYb2tBYllFbkxqSzJveFJpN1FXRFZS?=
+ =?utf-8?B?OFhVVlBGWlNJeDRqVVY1cEV0ZTZFbEtjN3Jrc3lmRlQyNnAvNHBaNHlDRmJ1?=
+ =?utf-8?B?Y2Rkc2hyRW9vT2Y4aHgwYUhJbFdWdFExcnlKblhVM2FLY2pKL0lNQ0FaUjlZ?=
+ =?utf-8?B?akZXWXZRazVlZWJ3QnhVWWdySU85czRRaklFYk0vdGdaMisvZ0QxTWVFNGhv?=
+ =?utf-8?B?RW1ueks1dVliS1ZycDVkNUhubkN6aDdkYXlNUTlZT3VFY0w4dEJtT3Ira2hF?=
+ =?utf-8?B?NlhGUUZIN1ErbXJOL0ZhUTZYVjJLclJPOU9BMXN4RXpYLzh1SlgvSmpTVzRk?=
+ =?utf-8?B?dDJHL1Y4K1JOQTRneEN4cWp0NDRxRVFOTURaVWk4c0lOSldXaXJiY1l2ZmdX?=
+ =?utf-8?B?YVBlZEE5VjJEaXIzZlpaaVhKcVhtcHJNNDBpOEtGL0ptVFlaU2dLanBIL0tY?=
+ =?utf-8?B?ZEFZZGRVN2RKSXhNMWRCU0t4T2tBZFU0bnlCVmRQZkVFb0wvZzQvNUcwdEFX?=
+ =?utf-8?B?cC9rbzBlMmZ4WjkxVUZCR1JrNE8yQlBmQk5NOVUrSDBUWFluUkdscUNvWHZj?=
+ =?utf-8?B?NHJjbVNzUFlJY0xOajlqajFIRmVrWVRDQUxBVXhNTjQyWFpjNS9mbm5PcGh5?=
+ =?utf-8?B?bGtJUjhHSFFZZ0dnRjk3ZlE0TXF5b0tKaWducVFOY1ZFNzArbjFGKzc4UVVo?=
+ =?utf-8?B?YkdQWCtOU2k4b1dGYjBpZzFoc2lyRmFHdWhyUk5reVY0eG5jd1UvaDhqQ1lQ?=
+ =?utf-8?B?V0g3TEdxSERoOENjNm1XdFZlU2dFQnZkZGc5YUNxK1Q1WUNlTUFzUTdVVThO?=
+ =?utf-8?B?b1JCenVDaVJ0VUpsckZrWUhqYytJamtpb0xyV0pUdmoyYytaMEZHeDhqZWJB?=
+ =?utf-8?B?SzV1U0RoZE5oS2V5MTk2ZzZleGd4bmpWQkJPQk5OS0wxZHJiWWRLc0JzTms4?=
+ =?utf-8?B?SDNiMDhZTFVpVjRQNzNmbFhpc2w3N29paEVhbTRYMURnOEdlN0RLNkJSRGRz?=
+ =?utf-8?B?K3h6a1dGOUtza1czQ2ZmVStna2tpNkJjR0ROMWZhUFdDdmh0MEZKK0IwQWNZ?=
+ =?utf-8?B?ZFIvMU1QWUYwczErTkNtMlZ1UldtNmtVTWFBU09NcHZDcXBXVUhFaXlmNWk5?=
+ =?utf-8?B?STdBUkVMVDNtWlJQcHoweU5SaHlMRTVQdGgrUG1XcmwyQk1qd0Y3S0RuOW1n?=
+ =?utf-8?B?WUMyUVRvYWhkT25OdWdHckY5b3FRRGlhcXlTdWVRNE1kNVB3MFRNNkh1OUJX?=
+ =?utf-8?B?OHhEaG01a0NJRVRRM0g5VC8vOUg2OHhOZ0ZWeXI1YStKRy9IQ1cvNDFvNE1j?=
+ =?utf-8?B?VllUMTFTWTYrdGZnNk1SMzJnVnBhVzMvRFJ1MHRJajlqK2JNeEZROUQ0Zkp4?=
+ =?utf-8?B?c25RSWEyZjhjN040OVhneEFES09ZL21VSHdxRVRNbXovZkN4K3dPaGJ6R1Bj?=
+ =?utf-8?B?eTJrS1c0bTVFNzdDTWVZSFMxT2lOZlRvWG5Tamlpb1llTTBtaUE5RzNLL2dL?=
+ =?utf-8?B?NGRwVVZLWUlaajluNmpwYXE0UnV0ckVZNk9BWUJYK1ZkTjN0VnZHQ0lMMEI5?=
+ =?utf-8?B?Z29JNCtUZkRQSm1vNHQxNHRtNzNYU2s3TlBqemczMGFQS2x5RzVsL0N4VVNR?=
+ =?utf-8?B?L1JSbzBrQVdya0JPbEtvVk9WR2V6aFRhcXowUjcxbmNiZWZZL3pEUm9Uc3Nn?=
+ =?utf-8?B?QnBoK0lmODA2UmJtM29heFZTT3FGNG05QTlBajJOMG9jcVJBVE96eVB1Nlgv?=
+ =?utf-8?B?aFYzRmtDS2o4UEFqd2hnVXhOM0tGbjdHZnIrSGVuK1RNOHB3ZERvRVpCNW9L?=
+ =?utf-8?B?eUcvUm1PNUtiK1Ric0R2VTY0VWh0UElOTGJodjJVT1JMRWd6ZldvWVlSSEtM?=
+ =?utf-8?B?UXNhQS9Qdldqcm83R3VKQVhac2hwZkNkUXFDcVkzVnJrRk1ESmZEWjd0ZXlL?=
+ =?utf-8?B?bElTTiszUGp5STZ4R240S2tvWUNHcGRLSHYwckh5Z25jdEo1djJ6cE1kQTZK?=
+ =?utf-8?B?QVdLRXlKTHEwaDhxbjhLQm5oUmpmWVZvdVZacWdKNmdoak5kaUl1U0hVSFk3?=
+ =?utf-8?B?WU5reHdacmZnbExzWElmaStwbGpuTW5MY1JFMWZ0VGoxU0dFU3d5bzEyQTRZ?=
+ =?utf-8?B?cVFTZCtad05taEU2MnByT2Y0OWduL1VVWENqWnZzRW5YSXNWT0NXbjNnSUJh?=
+ =?utf-8?B?OHRSTjg4NCtIUlpWNDNYdU5ZM0szaVdCNmVUeFdDcU40R0RCQk9naitZd1JZ?=
+ =?utf-8?B?bmwxRS9GTWF2a1Q5YzU1em1qb0FYL2w0SWs0eURPazNDaWI3SWR5UlV1VjZH?=
+ =?utf-8?B?cWoraEhxajBMTUQ0Y08rN29kVXBleVFFTWY1dWsrclBtb1NuaGRzSjRTS1V3?=
+ =?utf-8?B?SWFFVk1pZXpuSzNvcjBMYytCOHZwZ1FLMytpbmp1TytScUk1N3htV3RuK3FK?=
+ =?utf-8?B?a2x5RkMyNzVGdklUeFdzUVRqbkNDYUFWeUVoNXY1MkR5cVMrWHRUdVUrSFVC?=
+ =?utf-8?B?QXowV2VnaWMyTFU3OVNOOWxIaWdFYklDSDczMUFDU0c1d0lGeEVGenBTOVBz?=
+ =?utf-8?B?bGVjR3JtRU4yKzJlYW1mV21XYjcyTEhvUHJWQS9vM0FZS0VtVGcxOFA4QlJC?=
+ =?utf-8?B?Q1NCa3pHM3NpSHZndGNPM290MmNxYVpZR1VtSnAxczhjUjZZSXRDOXg1b01E?=
+ =?utf-8?B?REU5Z1Nva2ZWQXZ1TXBFTmJKcTVWVVQ2cnVhY3V4Q0o0Y0M2TnQzNEhUTUJS?=
+ =?utf-8?B?MTZkcWtER29INE9yVzV6VGp3YlNOTWtmdjk0R2oxTmlaUUpoRFRoWmdYUGYr?=
+ =?utf-8?B?SVFicDdibDVndW9ranczWTV5RndERk0xN2VORFhjckI2NVJsOGwzblNzdFhr?=
+ =?utf-8?B?VUNvTVRrQUw0WWN6bGN2aEtKTmNsM1FSdFNTeGFNSUhxdnZpMGovamhPQ0JO?=
+ =?utf-8?B?U3g4WnhzRGxGTHA5Si9rNzBmL1FBSmJnWTdwL0psK2EwMThUYnNjMlA1Y1ZI?=
+ =?utf-8?B?ZGdvQyt6aG9rQXcxUUNlY25EcGtpUm9FVzNDY0Z3aVNiQUY3aTRIYnVmNSt3?=
+ =?utf-8?B?RGhrZWx1UWx3WEtOWHZMUFpZNkNQYlJYaE5oT1A4NUhJOG9iMkVUMjg3aEtS?=
+ =?utf-8?B?RTVObXRrS1hZcUNPaUk0eXRaMGFqbnBNSXR3RGp5K1RPVE1vUUlLQ2xuVjNR?=
+ =?utf-8?B?dVcvUGx3ME54WW0vVkFGV1VlTFBMdWcrQnlzK2VDZmdOdmd5b09kaEpRNWxF?=
+ =?utf-8?B?UEFLczE3eFR1ZTA4bi9JM1dlQXdIbWNoMnVkMDh1Y2VrS0N3bkVRTWFsY3Ri?=
+ =?utf-8?B?YzdHdkJsakZ3QUdTbmxHWDdQMXVsWEg0WUo0bEZNc0VRSnBDdHRyd2RwckVo?=
+ =?utf-8?B?RWVqUmNOd0hpazBLQ0NmblQwSHFDM094WVBWS2RLL1oreGh1cnZyV21YMFNQ?=
+ =?utf-8?B?RjVqc0gxaEdQWEJVc3ozV3Q4bUwyWnE5QnlqUyt0MllQUHhVVTJ6Z1N3STJo?=
+ =?utf-8?B?bWEyZm5XRDJleHFPWElacmJJRDhiLzI2cDJ2NXlVZGNvS3hUUFFqWnByenVP?=
+ =?utf-8?B?MkRvRVRtemdNU2Y3MlRVSStJOEJKcklsd1JTcVBSRWpRZnZ3eVZXdUUvYkRX?=
+ =?utf-8?B?UXV2TTB1UU9uUElNZ3pQN2tyazFNeVppaCtlSTdGb2ZYRmdnUTZsL2RqWmVw?=
+ =?utf-8?B?L3laMGRVR0N4VXUvRTB2cmFONk1iRTFYT1gxTmFhaW8raHhPRmtpNDlKMEly?=
+ =?utf-8?B?ZTdOOFFIaTRhdEY4amJxeHYwTVA3eUxtUWMvRGpCWVVPRmxqWldVT0xJK1VM?=
+ =?utf-8?B?Y2VtR0JneFNjZTRBQnZmY0pyQ0VyRkVCUGM1bGwrM0QxYzFnM3RnKzc3YzYv?=
+ =?utf-8?B?MFNoOXlidWczWVNvTGljL1ZLU0JwazRUWVFXb2RldXNxbWtkWFVWb3NpU3Jr?=
+ =?utf-8?B?bXRzZlN0RURjR2J1bmxTcHlGWFM4UXk5TGJ5UjN4cDdmdGF5MFgyMWJPNTNU?=
+ =?utf-8?B?dW5FUllDUVVUQ21NYi9QZ3ZUSEFpaGdiZGg3WlpVL3EzK0JlbDNJSUF4Sk4y?=
+ =?utf-8?B?dm0wNlRXMUNNalhNejIrVmdUcitEdWVwRW9zdmRhT0ZDVkltdytGNTNMdzF1?=
+ =?utf-8?B?SXZ3RHY2dFQ3UmljTkpscm9mZTMwVWMxaCtRRklzZDRXZ2tEMHBJcFUrNVJ3?=
+ =?utf-8?B?VVdhTTB5K3IyTkFFUXN5L3VqZE12M3pIM3gzUEZwb2VLQTU0SEE5T0ZFTVlB?=
+ =?utf-8?B?Wm1LK1FWa2cvNW1xRlJ3K2tEaUtmVjNQVy8wMlNWK3pKRXhDM1VJeDFOQnRo?=
+ =?utf-8?B?dUU2RmdpM0Q0RTJiMjhsVFYzdHdYU1dPbFVjbEpORHE3UFMweEpPZGc0bkEx?=
+ =?utf-8?B?ZjhwS1VNMFEwTjcwOFBmOEtwemZ3bVVFZnRBL3FkQlphdjFlai9kYW5oR2tU?=
+ =?utf-8?B?WGxpanp2S2o4U1A4bWZsVm1LZGJNUTZuaXpOcDBxcG5GM2NQcFU1M0RXZmQ3?=
+ =?utf-8?B?WDloQnhxamdzYUtHK3NMRCtOQnRlWExyanRxVW96cm0rZkFNMVFqRWJ6Wlh3?=
+ =?utf-8?B?NWdhZFBvdGQzTnhRZlI5ZkVwOVZNak9GOXJjN05iVzBQeUNPY3laSllxNzB5?=
+ =?utf-8?B?RUdBWk95VEFPSGdKbTZaOEFCMERCM2dRUThDN1ZzMTBwQ3dEbzV0K1VzTlJR?=
+ =?utf-8?B?YnQ5UXVCb2FpRVpGVjhjRjJ0YUxRUC91aWJlR0gvbFRoS1IwdmZvUEY2K2Qw?=
+ =?utf-8?Q?0xV2tqZITP5xP/FHyXA+asUAx11pMqoC1j9u4aw=3D?=
+MIME-Version: 1.0
+
+------=_Part_275516_857770205.1742044805141
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+But the mainstream media is not buying it.=20
+
+March 15, 2025
+
+View in Browser=20
+<https://links.iterable.com/s/vb/TnmE-id4yt9AstEF-gayn0RygY7WBeDs4NKUvwg92q=
+DHBE_SswtFN5Ow3scLEDRZiF9fX8f2DFW_JWnT6mXmeKCt5SBGN1vWeCaiTdAYsFQ1nB-c7fmRx=
+-GXZKP3jA1Ep7ytki3dDvVsOpamsOJUAmZ3YtUWG6-kTBkz3Q/h8hXvIkygz5WAPzwUPxa79iKT=
+UdDfdR_/7>
+ /Unsubscribe=20
+<https://links.iterable.com/s/u/S2k3felaZSePYgi7ow78T-EZ8ziWazGRZ_tf1-XEN-O=
+aqjL9m3Z8Ah90TIV-kwVLPW6XRkNN6Iy1VlC5HOh0fiH-r3_Jtj0SekQGmrt_BXouti_N1zxMIo=
+Ys2F4Ph3ZGf59IG7LBtvjzAicmwAsIa7hh4rEufJae7mwU7Nh-oJyMxO_Tg6rnvfH_b02Cdz8fp=
+bpVB6rv5bVeopCF/JskZcpBjcao2vSTGaicEzBfPPJPq13eZ/7>
+Editor's Note: The message below from one of our partners is one we believe=
+=20
+you should take a close look at.=20
+Dear Reader,
+
+
+Elon Musk believes his new AI product will be worth an incredible $9 trilli=
+on.=20
+<https://www.futurefinanceplansnwl.com/28KL6/35DF1DH/?source_id=3DBrRCybe7&=
+sub1=3D1&sub2=3DIterSFFP&sub3=3DIter&sub4=3DMik&sub5=3Dmillinman@hotmail.co=
+m>
+
+But the mainstream media is not buying it.
+
+Fortune called it =E2=80=9Call smoke and mirrors=E2=80=9D
+
+The Economist said that Elon=E2=80=99s promises are =E2=80=9Clong on bombas=
+t and short on=20
+reality.=E2=80=9D
+
+And MarketWatch called it =E2=80=9Ca pipe dream.=E2=80=9D
+
+Who is right?
+
+Elon or the Media?
+
+Click here to watch this demo and decide for yourself.=20
+<https://www.futurefinanceplansnwl.com/28KL6/35DF1DH/?source_id=3DBrRCybe7&=
+sub1=3D1&sub2=3DIterSFFP&sub3=3DIter&sub4=3DMik&sub5=3Dmillinman@hotmail.co=
+m>
+
+
+Regards,
+
+Jeff Brown
+
+
+
+
+
+This ad is sent on behalf of Brownstone Research at 1125 N. Charles Street,=
+=20
+Baltimore, Maryland 21201. If you=E2=80=99re not interested in this opportu=
+nity, please
+click here=20
+<https://www.barkwindcent.com/o-dsqn-s76-1a73f10189199fea8f3c2e422fb1e5ec> =
+and=20
+remove yourself from these offers.=20
+
+
+
+
+
+
+This email was sent to millinman@hotmail.com because you made a great decis=
+ion=20
+to receive our newsletter.
+
+
+
+Trading involves risk. The information provided is NOT trading advice. Neit=
+her=20
+the Editors, the Publisher, nor any of their respective affiliates make any=
+=20
+guarantee or other promise as to any results that may be obtained from the=
+=20
+newsletter. Past performance is no guarantee of future performance. This=20
+recipient of this email assumes responsibility for conducting its own due=
+=20
+diligence on the aforementioned company or entity and assumes full=20
+responsibility, and releases the sender from liability for any purchase or=
+=20
+order made from any company or entity mentioned or recommended in this emai=
+l.=20
+
+The information provided is for educational purposes only. Please contact y=
+our=20
+financial advisor for specific financial advice tailored to your personal=
+=20
+circumstances. Actual results may differ. Nothing here constitutes a=20
+recommendation respecting the particular security illustrated.=20
+
+
+Copyright =C2=A9 2025 Web Impact.=20
+
+This offer is brought to you by Web Impact LLC. Al Jerozolimskie 85, 02-001=
+=20
+Warsaw, Poland. If you would like to unsubscribe from receiving offers brou=
+ght=20
+to you by Web Impact LLC click link below.
+
+ All Rights Reserved.=20
+
+Unsubscribe=20
+<https://links.iterable.com/s/u/S2k3felaZSePYgi7ow78T-EZ8ziWazGRZ_tf1-XEN-O=
+aqjL9m3Z8Ah90TIV-kwVLPW6XRkNN6Iy1VlC5HOh0fiH-r3_Jtj0SekQGmrt_BXouti_N1zxMIo=
+Ys2F4Ph3ZGf59IG7LBtvjzAicmwAsIa7hh4rEufJae7mwU7Nh-oJyMxO_Tg6rnvfH_b02Cdz8fp=
+bpVB6rv5bVeopCF/JskZcpBjcao2vSTGaicEzBfPPJPq13eZ/7>
+
+
+
+------=_Part_275516_857770205.1742044805141
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html data-lt-installed=3D"t=
+rue" xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsof=
+t-com:office:office" xmlns:v=3D"urn:schemas-microsoft-com:vml" style=3D"lin=
+e-height: inherit;"><head><!--[if gte mso 9]><xml><o:OfficeDocumentSettings=
+><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettin=
+gs></xml><![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"> <=
+meta content=3D"width=3Ddevice-width" name=3D"viewport"><!--[if !mso]><!-->=
+ <meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"><!--<![endif]--=
+> <title></title> <!--[if !mso]><!--> <link href=3D"https://fonts.googleapi=
+s.com/css?family=3DMontserrat" rel=3D"stylesheet" type=3D"text/css"><!--<![=
+endif]--> <style type=3D"text/css">body{margin:0;padding:0}table,td,tr{vert=
+ical-align:top;border-collapse:collapse}*{line-height:inherit}a[x-apple-dat=
+a-detectors=3Dtrue]{color:inherit!important;text-decoration:none!important}=
+</style> <style id=3D"media-query" type=3D"text/css">@media(max-width:620px=
+){.block-grid,.col{min-width:320px!important;max-width:100%!important;displ=
+ay:block!important}.block-grid{width:100%!important}.col{width:100%!importa=
+nt}.col>div{margin:0 auto}img.fullwidth,img.fullwidthOnMobile{max-width:100=
+%!important}.no-stack .col{min-width:0!important;display:table-cell!importa=
+nt}.no-stack.two-up .col{width:50%!important}.no-stack .col.num2{width:16.6=
+%!important}.no-stack .col.num3{width:25%!important}.no-stack .col.num4{wid=
+th:33%!important}.no-stack .col.num5{width:41.6%!important}.no-stack .col.n=
+um6{width:50%!important}.no-stack .col.num7{width:58.3%!important}.no-stack=
+ .col.num8{width:66.6%!important}.no-stack .col.num9{width:75%!important}.n=
+o-stack .col.num10{width:83.3%!important}.video-block{max-width:none!import=
+ant}.mobile_hide{min-height:0;max-height:0;max-width:0;display:none;overflo=
+w:hidden;font-size:0}.desktop_hide{display:block!important;max-height:none!=
+important}}</style> </head> <body class=3D"clean-body" data-gramm=3D"false"=
+ style=3D"line-height: inherit; margin: 0; padding: 0; -webkit-text-size-ad=
+just: 100%; background-color: #f2f2f2;"><span style=3D"color:transparent;vi=
+sibility:hidden;display:none;opacity:0;height:0;width:0;font-size:0;">But t=
+he mainstream media is not buying it.</span><img src=3D"https://links.itera=
+ble.com/s/eo/jdbIqfAKdxi4U8XfPIH502m-S7UhGoWCZwkD3mpImBo7iMx2UZCmLu9-BbaVWT=
+7oQaqZz6MhTQTA007ZLLkUhgJjzn2kWMS1yFEYIGSJbBgw9t0DGhBBtadN3RkfFPWGLuPZ0-4Z1=
+GKP6X4dmBrmNOLxUg-iwXZl2qYVQMgP719FmxPbKZerCPF5wHOEUJNgFlqJ-P2PYCCHbj4l3lob=
+QNDJcWoz4lpC0idH/OhqmR8Z-BFBqJTBSl0inWjzTdiVnSxZa/7" style=3D"border:0;widt=
+h:1px;height:1px;border-width:0px!important;display:none!important;line-hei=
+ght:0!important;" width=3D"1" height=3D"1"> <table bgcolor=3D"#f2f2f2" cell=
+padding=3D"0" cellspacing=3D"0" class=3D"nl-container" role=3D"presentation=
+" style=3D"line-height: inherit; table-layout: fixed; vertical-align: top; =
+min-width: 320px; border-spacing: 0; border-collapse: collapse; mso-table-l=
+space: 0pt; mso-table-rspace: 0pt; background-color: #f2f2f2; width: 100%;"=
+ width=3D"100%" valign=3D"top"> <tbody style=3D"line-height: inherit;"> <tr=
+ style=3D"line-height: inherit; border-collapse: collapse; vertical-align: =
+top;" valign=3D"top"> <td style=3D"line-height: inherit; border-collapse: c=
+ollapse; word-break: break-word; vertical-align: top;" valign=3D"top"><!--[=
+if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0"><tr><td align=3D"center" style=3D"background-color:#f2f2f2"><![e=
+ndif]--> <div style=3D"line-height: inherit; background-color: #131313; ove=
+rflow: hidden;"> <div class=3D"block-grid two-up no-stack" style=3D"line-he=
+ight: inherit; min-width: 320px; max-width: 600px; overflow-wrap: break-wor=
+d; word-wrap: break-word; word-break: break-word; margin: 0 auto; width: 10=
+0%; background-color: transparent;"> <div style=3D"line-height: inherit; bo=
+rder-collapse: collapse; display: table; width: 100%; background-color: tra=
+nsparent;"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0" style=3D"background-color:#131313;"><tr><td alig=
+n=3D""><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wid=
+th:600px"><tr class=3D"layout-full-width" style=3D"background-color:transpa=
+rent"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=3D"300" st=
+yle=3D"background-color:transparent;width:300px; border-top: 0px solid tran=
+sparent; border-left: 0px solid transparent; border-bottom: 0px solid trans=
+parent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px=
+;"><![endif]--> <div class=3D"col num6" style=3D"line-height: inherit; disp=
+lay: table-cell; vertical-align: top; max-width: 320px; min-width: 300px; w=
+idth: 300px;"> <div style=3D"line-height: inherit; width: 100% !important;"=
+><!--[if (!mso)&(!IE)]><!--> <div style=3D"line-height: inherit; border: 0p=
+x solid transparent; padding: 5px 0px 5px 0px;"><!--<![endif]--><!--[if mso=
+]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><t=
+r><td style=3D"padding-right: 10px; padding-left: 25px; padding-top: 10px; =
+padding-bottom: 10px; font-family: Tahoma, sans-serif"><![endif]--> <div st=
+yle=3D"color: #c5c5c5; font-family: Montserrat, Trebuchet MS, Lucida Grande=
+, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; line-height: 1.2; p=
+adding: 10px 10px 10px 25px;"> <div style=3D"line-height: 1.2; font-size: 1=
+2px; color: #c5c5c5; font-family: Montserrat, Trebuchet MS, Lucida Grande, =
+Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: =
+14px;"> <p style=3D"font-size: 12px; line-height: 1.2; word-break: break-wo=
+rd; mso-line-height-alt: 14px; margin: 0;"><span style=3D"line-height: inhe=
+rit; font-size: 12px;">March 15, 2025</span></p> </div> </div> <!--[if mso]=
+></td></tr></table><![endif]--><!--[if (!mso)&(!IE)]><!--></div> <!--<![end=
+if]--></div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--><!--[=
+if (mso)|(IE)]></td><td align=3D"center" width=3D"300" style=3D"background-=
+color:transparent;width:300px; border-top: 0px solid transparent; border-le=
+ft: 0px solid transparent; border-bottom: 0px solid transparent; border-rig=
+ht: 0px solid transparent;" valign=3D"top"><table width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px;=
+ padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]--> <div=
+ class=3D"col num6" style=3D"line-height: inherit; display: table-cell; ver=
+tical-align: top; max-width: 320px; min-width: 300px; width: 300px;"> <div =
+style=3D"line-height: inherit; width: 100% !important;"><!--[if (!mso)&(!IE=
+)]><!--> <div style=3D"line-height: inherit; border: 0px solid transparent;=
+ padding: 5px 0px 5px 0px;"><!--<![endif]--><!--[if mso]><table width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"paddi=
+ng-right: 25px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px=
+; font-family: Tahoma, sans-serif"><![endif]--> <div style=3D"color: #c5c5c=
+5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicod=
+e, Lucida Sans, Tahoma, sans-serif; line-height: 1.2; padding: 10px 25px 10=
+px 10px;"> <div style=3D"line-height: 1.2; font-size: 12px; color: #c5c5c5;=
+ font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode,=
+ Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14px;"> <p style=3D"=
+font-size: 12px; line-height: 1.2; word-break: break-word; text-align: righ=
+t; mso-line-height-alt: 14px; margin: 0;"><span style=3D"line-height: inher=
+it; font-size: 12px;"><a target=3D"_blank" style=3D"color:#ffffff;text-deco=
+ration:underline;" href=3D"https://links.iterable.com/s/vb/TnmE-id4yt9AstEF=
+-gayn0RygY7WBeDs4NKUvwg92qDHBE_SswtFN5Ow3scLEDRZiF9fX8f2DFW_JWnT6mXmeKCt5SB=
+GN1vWeCaiTdAYsFQ1nB-c7fmRx-GXZKP3jA1Ep7ytki3dDvVsOpamsOJUAmZ3YtUWG6-kTBkz3Q=
+/h8hXvIkygz5WAPzwUPxa79iKTUdDfdR_/7">View in Browser</a> / <a target=3D"_bl=
+ank" style=3D"color:#ffffff;text-decoration:underline;" href=3D"https://lin=
+ks.iterable.com/s/u/S2k3felaZSePYgi7ow78T-EZ8ziWazGRZ_tf1-XEN-OaqjL9m3Z8Ah9=
+0TIV-kwVLPW6XRkNN6Iy1VlC5HOh0fiH-r3_Jtj0SekQGmrt_BXouti_N1zxMIoYs2F4Ph3ZGf5=
+9IG7LBtvjzAicmwAsIa7hh4rEufJae7mwU7Nh-oJyMxO_Tg6rnvfH_b02Cdz8fpbpVB6rv5bVeo=
+pCF/JskZcpBjcao2vSTGaicEzBfPPJPq13eZ/7">Unsubscribe</a></span></p> </div> <=
+/div> <!--[if mso]></td></tr></table><![endif]--><!--[if (!mso)&(!IE)]><!--=
+></div> <!--<![endif]--></div> </div> <!--[if (mso)|(IE)]></td></tr></table=
+><![endif]--><!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![end=
+if]--></div> </div> </div> <div style=3D"line-height: inherit; background-c=
+olor: #131313; overflow: hidden;"> <div class=3D"block-grid " style=3D"line=
+-height: inherit; min-width: 320px; max-width: 600px; overflow-wrap: break-=
+word; word-wrap: break-word; word-break: break-word; margin: 0 auto; width:=
+ 100%; background-color: transparent;"> <div style=3D"line-height: inherit;=
+ border-collapse: collapse; display: table; width: 100%; background-color: =
+transparent; background-image: undefined; background-position: undefined; b=
+ackground-repeat: undefined;"><!--[if (mso)|(IE)]><table width=3D"100%" cel=
+lpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color:#13=
+1313;"><tr><td align=3D""><table cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0" style=3D"width:600px"><tr class=3D"layout-full-width" style=3D"backg=
+round-color:transparent"><![endif]--><!--[if (mso)|(IE)]><td align=3D"cente=
+r" width=3D"600" style=3D"background-color:transparent;width:600px; border-=
+top: 1px dashed #515151; border-left: 0px dashed #6F6F6F; border-bottom: 0p=
+x dashed #6F6F6F; border-right: 0px dashed #6F6F6F;" valign=3D"top"><table =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td sty=
+le=3D"padding-right: 50px; padding-left: 50px; padding-top:10px; padding-bo=
+ttom:10px;"><![endif]--> <div class=3D"col num12" style=3D"line-height: inh=
+erit; min-width: 320px; max-width: 600px; display: table-cell; vertical-ali=
+gn: top; width: 600px;"> <div style=3D"line-height: inherit; width: 100% !i=
+mportant;"><!--[if (!mso)&(!IE)]><!--> <div style=3D"line-height: inherit; =
+border-top: 1px dashed #515151; border-left: 0px dashed #6F6F6F; border-bot=
+tom: 0px dashed #6F6F6F; border-right: 0px dashed #6F6F6F; padding: 10px 50=
+px 10px 50px;"><!--<![endif]--> <div align=3D"center" class=3D"img-containe=
+r center fullwidth" style=3D"line-height: inherit; padding-right: 20px; pad=
+ding-left: 20px;"><span style=3D"line-height: inherit; font-size: 12px; col=
+or: rgb(197, 197, 197); font-family: Montserrat, 'Trebuchet MS', 'Lucida Gr=
+ande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; background=
+-color: transparent;">Editor's Note: The message below from one of our part=
+ners is one we believe you should take a close look at.</span></div> <!--[i=
+f mso]></td></tr></table><![endif]--><!--[if (!mso)&(!IE)]><!--></div> <!--=
+<![endif]--></div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--=
+><!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--></div>=
+ </div> </div> <div style=3D"line-height: inherit; background-color: transp=
+arent; overflow: hidden;"> <div class=3D"block-grid " style=3D"line-height:=
+ inherit; min-width: 320px; max-width: 600px; overflow-wrap: break-word; wo=
+rd-wrap: break-word; word-break: break-word; margin: 0 auto; width: 100%; b=
+ackground-color: #ffffff;"> <div style=3D"line-height: inherit; border-coll=
+apse: collapse; display: table; width: 100%; background-color: #ffffff;"><!=
+--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"=
+ border=3D"0" style=3D"background-color:transparent;"><tr><td align=3D""><t=
+able cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px"=
+><tr class=3D"layout-full-width" style=3D"background-color:#ffffff"><![endi=
+f]--><!--[if (mso)|(IE)]><td align=3D"center" width=3D"600" style=3D"backgr=
+ound-color:#ffffff;width:600px; border-top: 0px solid transparent; border-l=
+eft: 0px solid transparent; border-bottom: 0px solid transparent; border-ri=
+ght: 0px solid transparent;" valign=3D"top"><table width=3D"100%" cellpaddi=
+ng=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 15p=
+x; padding-left: 15px; padding-top:5px; padding-bottom:5px;"><![endif]--> <=
+div class=3D"col num12" style=3D"line-height: inherit; min-width: 320px; ma=
+x-width: 600px; display: table-cell; vertical-align: top; width: 600px;"> <=
+div style=3D"line-height: inherit; width: 100% !important;"><!--[if (!mso)&=
+(!IE)]><!--> <div style=3D"line-height: inherit; border: 0px solid transpar=
+ent; padding: 5px 15px 5px 15px;"><!--<![endif]--><!--[if mso]><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 10px; padding-left: 10px; padding-top: 15px; padding-bottom=
+: 10px; font-family: Tahoma, sans-serif"><![endif]--> <div style=3D"font-fa=
+mily: Montserrat, 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', '=
+Lucida Sans', Tahoma, sans-serif; line-height: 1.5; padding: 15px 10px 10px=
+;"> <div style=3D"line-height: 1.5; font-family: Montserrat, 'Trebuchet MS'=
+, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif=
+;"> <p style=3D"line-height: inherit;"><span style=3D"line-height: inherit;=
+ font-size: 16px;">Dear Reader,</span><br style=3D"line-height: inherit;">&=
+nbsp;</p> <p style=3D"line-height: inherit;"><span style=3D"line-height: in=
+herit; color: #000000;"><span style=3D"line-height: inherit; font-size: 16p=
+x;">Elon Musk believes </span></span><strong style=3D"line-height: inherit;=
+"><span style=3D"line-height: inherit; font-size: 16px;"><a href=3D"https:/=
+/links.iterable.com/s/c/5NvWxucQwTLOe5ntO40FaaMqUw3ryJabNG6_w-Lmsy46G83bVm5=
+bIrdNd1RYgj9TvXB2Z23zcbw6AjaILiNo1n9MP6XL25IJ7WRD_UZ7ovD7VGQrEYUH9JL3Txaciy=
+XEymI_hJ5y4kbS6s7UEDzwrWC3YipIavq1BxfsIDIoAIyZk0kedmxS65F9iX7zNKgaaqCH5p0i3=
+PNIBM_UFq8dFGYYKFG2ICNkWNSywaB6j1r6Eds706RS0raxJmXYOtUML0ukllVfzJZrjgSw1GiI=
+LGdPQ_i-3geuJ9I79F8e-16oKoBBL_EYRxLUIdTl9jt6EoAHYoGN-EvowKfuT78UyuPtRFxWyGP=
+9ao2oThUZFdJJGMmdXF9NxTspWjBXr2-g1oSNKxsyqL3B-_tVCbyilSbiETCLPYd34zrwT45Zlk=
+8RlCcZmZqQGzc/0WNI1ukSAaJVWKnBe_YTmNAd1jPqucOz/7" style=3D"line-height: inh=
+erit;">his new AI product will be worth an incredible $9 trillion.</a></spa=
+n></strong></p> <p style=3D"line-height: inherit;"><span style=3D"line-heig=
+ht: inherit; color: #000000;"><span style=3D"line-height: inherit; font-siz=
+e: 16px;">But the mainstream media is not buying it.</span></span></p> <p s=
+tyle=3D"line-height: inherit;"><span style=3D"line-height: inherit; color: =
+#000000;"><span style=3D"line-height: inherit; font-size: 16px;"><em style=
+=3D"line-height: inherit;">Fortune</em> called it =E2=80=9Call smoke and mi=
+rrors=E2=80=9D</span></span></p> <p style=3D"line-height: inherit;"><span s=
+tyle=3D"line-height: inherit; color: #000000;"><span style=3D"line-height: =
+inherit; font-size: 16px;"><em style=3D"line-height: inherit;">The Economis=
+t</em> said that Elon=E2=80=99s promises are =E2=80=9Clong on bombast and s=
+hort on reality.=E2=80=9D</span></span></p> <p style=3D"line-height: inheri=
+t;"><span style=3D"line-height: inherit; color: #000000;"><span style=3D"li=
+ne-height: inherit; font-size: 16px;">And MarketWatch called it =E2=80=9Ca =
+pipe dream.=E2=80=9D</span></span></p> <p style=3D"line-height: inherit;"><=
+span style=3D"line-height: inherit; color: #000000;"><span style=3D"line-he=
+ight: inherit; font-size: 16px;">Who is right?</span></span></p> <p style=
+=3D"line-height: inherit;"><span style=3D"line-height: inherit; color: #000=
+000;"><span style=3D"line-height: inherit; font-size: 16px;">Elon or the Me=
+dia?</span></span></p> <p style=3D"line-height: inherit;"><strong style=3D"=
+line-height: inherit;"><span style=3D"line-height: inherit; font-size: 16px=
+;"><a href=3D"https://links.iterable.com/s/c/JcccFpHA1XMAYX-09rbUo0-l3jeBie=
+rR-RBle4Hhi1u4Ig260UclVpfo_Z4ZFgrXk5K3tWv6eecjKgrrJlIeucjdgT00FOJn0Lz3zPTRZ=
+ERSJTDv_mulkwjqOVSRQw4KhG0Qy9o8kuG8ZDHZoWtJ3yujaVCB9mMo4pSQcbzl1hl6HGX5He6a=
+xNo4EBhdZgJ5GqblQA7aST-LVpxD5PuUgxnxcj1CCobKvDhUmzYeUNueiVNBcdBRcJghJKHXyF_=
+FrJonXWjj52TkdTrehKzloAenuFPuPyFnWPdisVQ2IOke8C9RZD7dWPT73OepJRLIrrA4tQj5Bm=
+HGPboOpjqszi16JAyfIn-bnSOuiJW1n2QVJGe982vL0rhg1YHwNX4BgYQVRCU0QYXf9uBeB4wYV=
+UTzJYGrj9pRtYPctS0vx00PWPDb-JuWZ3Q/M8SK-tZ1wEF5aeaHQTmwPX-gBdml83Mv/7" styl=
+e=3D"line-height: inherit;">Click here to watch this demo and decide for yo=
+urself.</a></span></strong><br style=3D"line-height: inherit;">&nbsp;</p> <=
+p style=3D"line-height: inherit;"><span style=3D"line-height: inherit; colo=
+r: #000000;"><span style=3D"line-height: inherit; font-size: 16px;">Regards=
+,</span></span></p> <p style=3D"line-height: inherit;"><span style=3D"line-=
+height: inherit; color: #000000;"><span style=3D"line-height: inherit; font=
+-size: 16px;">Jeff Brown</span></span></p> <p style=3D"line-height: inherit=
+; text-align: center;"><br style=3D"line-height: inherit;"><br style=3D"lin=
+e-height: inherit;"><br style=3D"line-height: inherit;"><br style=3D"line-h=
+eight: inherit;"><span style=3D"line-height: inherit; font-size: 8pt;"><spa=
+n style=3D"font-size: 10px; color: #000000; text-align: center; margin-top:=
+ 0px; margin-bottom: 0px;">This ad is sent on behalf of Brownstone Research=
+ at 1125 N. Charles Street, Baltimore, Maryland 21201. If you=E2=80=99re no=
+t interested in this opportunity, please <strong><a href=3D"https://links.i=
+terable.com/s/c/7HUPaLSbr7ciuV7II_1QSYvCnpKiTTsDPAXGsR_sISxEaCWwae2Zpr3Uv_A=
+sZqtU-Rg2VYpFV6we9JwTSJ3k_WtMZEVfAu2XF4j9AxixYbf57O9gHZYo6ZNkwfhIPzU8xLqHW1=
+1IhFjRFFiZSnFykhmg5KgUMK1HS2i6D_tlMqv5EfGsegFyN0SvUP59UFMCG7aa4DnUGd0eTej8y=
+oRxUf8JJhGWWtIT6Yn2VaRHqL1djFsljkzJw4aslWk9iMMZzKjt9OUScIyGG2BbPtbUde5Brj49=
+YqAx_BOlqCxE_k3N-xhJbxpTu69vnt2haSvRXHlTv0Bobs_arzfLV9nWDLHX2S35/D0xMYpymlQ=
+yVm1VmKrHFieHfaE5HLm1U/7">click here</a></strong> and remove yourself from =
+these offers.</span>&nbsp;</span><br style=3D"line-height: inherit;"><!--[i=
+f mso]></center></v:textbox></v:roundrect></td></tr></table><![endif]--></p=
+> </div> </div> <!--[if (!mso)&(!IE)]><!--></div> <!--<![endif]--></div> </=
+div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--><!--[if (mso)|(IE)]>=
+</td></tr></table></td></tr></table><![endif]--></div> </div> </div> <div s=
+tyle=3D"line-height: inherit; background-color: #131313; overflow: hidden;"=
+> <div class=3D"block-grid " style=3D"line-height: inherit; min-width: 320p=
+x; max-width: 600px; overflow-wrap: break-word; word-wrap: break-word; word=
+-break: break-word; margin: 0 auto; width: 100%; background-color: transpar=
+ent;"> <div style=3D"line-height: inherit; border-collapse: collapse; displ=
+ay: table; width: 100%; background-color: transparent;"><!--[if (mso)|(IE)]=
+><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" sty=
+le=3D"background-color:#131313;"><tr><td align=3D""><table cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"width:600px"><tr class=3D"layout-=
+full-width" style=3D"background-color:transparent"><![endif]--><!--[if (mso=
+)|(IE)]><td align=3D"center" width=3D"600" style=3D"background-color:transp=
+arent;width:600px; border-top: 0px solid transparent; border-left: 0px soli=
+d transparent; border-bottom: 0px solid transparent; border-right: 0px soli=
+d transparent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cell=
+spacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-lef=
+t: 0px; padding-top:5px; padding-bottom:5px;"><![endif]--> <div class=3D"co=
+l num12" style=3D"line-height: inherit; min-width: 320px; max-width: 600px;=
+ display: table-cell; vertical-align: top; width: 600px;"> <div style=3D"li=
+ne-height: inherit; width: 100% !important;"><!--[if (!mso)&(!IE)]><!--> <d=
+iv style=3D"line-height: inherit; border: 0px solid transparent; padding: 5=
+px 0px 5px 0px;"><!--<![endif]--><!--[if mso]><table width=3D"100%" cellpad=
+ding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 1=
+0px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-fami=
+ly: Tahoma, sans-serif"><![endif]--> <div style=3D"color: #c5c5c5; font-fam=
+ily: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida S=
+ans, Tahoma, sans-serif; line-height: 1.2; padding: 10px;"> <div style=3D"l=
+ine-height: 1.2; font-size: 12px; color: #c5c5c5; font-family: Montserrat, =
+Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans=
+-serif; mso-line-height-alt: 14px;"> <p style=3D"font-size: 12px; line-heig=
+ht: 1.2; word-break: break-word; text-align: center; mso-line-height-alt: 1=
+4px; margin: 0;"><span style=3D"line-height: inherit; font-size: 12px;"><ti=
+tle></title> <p> <br> <br> <span style=3D"=E2=80=9Ccolor:#ffffff;=E2=80=9C"=
+>This email was sent to millinman@hotmail.com because you made a great deci=
+sion to receive our newsletter. <br> <br> &nbsp; </span> </p> <p><span styl=
+e=3D"=E2=80=9Ccolor:#ffffff;=E2=80=9C"><font size=3D"=E2=80=9C2=E2=80=9D" f=
+ace=3D"=E2=80=9CTimes=E2=80=9D"><span style=3D"=E2=80=9Ccaret-color:" rgb(5=
+1,=3D"" 51,=3D"" 51);=E2=80=9C=3D"">Trading involves risk. The information =
+provided is NOT trading advice. Neither the Editors, the Publisher, nor any=
+ of their respective affiliates make any guarantee or other promise as to a=
+ny results that may be obtained from the newsletter. Past performance is no=
+ guarantee of future performance. This recipient of this email assumes resp=
+onsibility for conducting its own due diligence on the aforementioned compa=
+ny or entity and assumes full responsibility, and releases the sender from =
+liability for any purchase or order made from any company or entity mention=
+ed or recommended in this email.</span> <br style=3D"=E2=80=9Ccaret-color:"=
+ rgb(51,=3D"" 51,=3D"" 51);=3D"" text-size-adjust:=3D"" auto;=E2=80=9D=3D""=
+> <br style=3D"=E2=80=9Ccaret-color:" rgb(51,=3D"" 51,=3D"" 51);=3D"" text-=
+size-adjust:=3D"" auto;=E2=80=9D=3D""> <span style=3D"=E2=80=9Ccaret-color:=
+" rgb(51,=3D"" 51,=3D"" 51);=E2=80=9C=3D"">The information provided is for =
+educational purposes only. Please contact your financial advisor for specif=
+ic financial advice tailored to your personal circumstances. Actual results=
+ may differ. Nothing here constitutes a recommendation respecting the parti=
+cular security illustrated.</span></span></font></span> </p> <p> <br> <span=
+ style=3D"=E2=80=9Ccolor:#ffffff;=E2=80=9C"><span style=3D"=E2=80=9Cbackgro=
+und-color:null;=E2=80=9C">Copyright =C2=A9 2025&nbsp;Web Impact.</span> <br=
+> <br> <span style=3D"=E2=80=9Ccolor:#ffffff;=E2=80=9C"><span style=3D"=E2=
+=80=9Cbackground-color:null;=E2=80=9C">This offer is brought to you by Web =
+Impact LLC. Al Jerozolimskie 85, 02-001 Warsaw, Poland. If you would like t=
+o unsubscribe from receiving offers brought to you by Web Impact LLC click =
+link below. <br> <br> All Rights Reserved.</span></span> <br> <br> <a style=
+=3D"color:#FFFFFF;text-decoration:underline;" href=3D"https://links.iterabl=
+e.com/s/u/S2k3felaZSePYgi7ow78T-EZ8ziWazGRZ_tf1-XEN-OaqjL9m3Z8Ah90TIV-kwVLP=
+W6XRkNN6Iy1VlC5HOh0fiH-r3_Jtj0SekQGmrt_BXouti_N1zxMIoYs2F4Ph3ZGf59IG7LBtvjz=
+AicmwAsIa7hh4rEufJae7mwU7Nh-oJyMxO_Tg6rnvfH_b02Cdz8fpbpVB6rv5bVeopCF/JskZcp=
+Bjcao2vSTGaicEzBfPPJPq13eZ/7"><span style=3D"color:#ffffff;"><span style=3D=
+"background-color:null;">Unsubscribe</span></span></a> </p></span></p> </di=
+v> </div> <!--[if mso]></td></tr></table><![endif]--><!--[if (!mso)&(!IE)]>=
+<!--></div> <!--<![endif]--></div> </div> <!--[if (mso)|(IE)]></td></tr></t=
+able><![endif]--><!--[if (mso)|(IE)]></td></tr></table></td></tr></table><!=
+[endif]--></div> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![end=
+if]--></td> </tr> </tbody> </table> <!--[if (IE)]></div><![endif]--> </body=
+> </html>=
+
+------=_Part_275516_857770205.1742044805141--

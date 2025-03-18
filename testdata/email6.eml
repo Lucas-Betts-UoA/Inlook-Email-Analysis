@@ -1,0 +1,1117 @@
+Received: from TYZPR02MB7123.apcprd02.prod.outlook.com (::1) by
+ JH0PR02MB7138.apcprd02.prod.outlook.com with HTTPS; Fri, 14 Mar 2025 12:39:55
+ +0000
+Received: from BLAPR03CA0147.namprd03.prod.outlook.com (2603:10b6:208:32e::32)
+ by TYZPR02MB7123.apcprd02.prod.outlook.com (2603:1096:405:2e::6) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.25; Fri, 14 Mar
+ 2025 12:39:53 +0000
+Received: from BL6PEPF0001AB55.namprd02.prod.outlook.com
+ (2603:10b6:208:32e:cafe::f7) by BLAPR03CA0147.outlook.office365.com
+ (2603:10b6:208:32e::32) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.26 via Frontend Transport; Fri,
+ 14 Mar 2025 12:39:51 +0000
+Authentication-Results: spf=pass (sender IP is 54.240.11.1)
+ smtp.mailfrom=mail.freebitco.in; dkim=pass (signature was verified)
+ header.d=freebitco.in;dkim=pass (signature was verified)
+ header.d=amazonses.com;dmarc=pass action=none
+ header.from=freebitco.in;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of mail.freebitco.in
+ designates 54.240.11.1 as permitted sender) receiver=protection.outlook.com;
+ client-ip=54.240.11.1; helo=a11-1.smtp-out.amazonses.com; pr=C
+Received: from a11-1.smtp-out.amazonses.com (54.240.11.1) by
+ BL6PEPF0001AB55.mail.protection.outlook.com (10.167.241.7) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.20
+ via Frontend Transport; Fri, 14 Mar 2025 12:39:51 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:4DA9F608AE11ADD3B25079B3ABBA636B5DA20F31EFEEA76348323474297718F0;UpperCasedChecksum:54ADE5F5AA885D966A26FAC29C2CE2C3D825A0DA5F056065797AE61F5313F731;SizeAsReceived:1364;Count:11
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6bfsazuwdjwygvkpmqnrngf3x3h66v3n; d=freebitco.in; t=1741955991;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Message-ID;
+	bh=zW9nSDkSmgr+pKBxfksPi0nmKabfuTub7AB9Ga37Kco=;
+	b=TxJwPCM11vBGReRoFvhM65ZIX5VM8FBlBQeZjexUpcbQhZOiHOjNOpg4DL6nuPo8
+	UIyOogHKW8SEJHDpY6gv4ilW+vhJH4mB1hy/Ptecv9DQR7XNcv/9U8wrYLPP/UlHVFa
+	w6JfBmfeLLartoIARffh/6oQ7ZqYeEAI/m/HneYE=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1741955991;
+	h=Date:From:To:Subject:MIME-Version:Content-Type:Message-ID:Feedback-ID;
+	bh=zW9nSDkSmgr+pKBxfksPi0nmKabfuTub7AB9Ga37Kco=;
+	b=Tqd5OYIPZuJ/mdZFkBPXSl7LZPNR0B3QojoUpUShwaKVhrJF4xTN4jIcFNiKxtnJ
+	qHZg6CcSo6q+xfe8hSv4tPCiQzqlaJMExmv+E1+dvmrZ++5neyLHjSUInvus/Ka1Hw+
+	Xo8cX2NwHaupU3F0GXidkGQ8GNdDBFKocLmkjf8M=
+Date: Fri, 14 Mar 2025 12:39:51 +0000
+From: "Freebitco.in" <noreply@freebitco.in>
+To: millinman@hotmail.com
+Subject: This Sunday, You Could Win $7,500
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_1178558_1563500959.1741955991213"
+Message-ID: <0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000@email.amazonses.com>
+Feedback-ID: ::1.us-east-1.MVmH78pKwgzdVO6Jiir6zTSigWGGKIZdI/B4KRZ+f+c=:AmazonSES
+X-SES-Outgoing: 2025.03.14-54.240.11.1
+X-IncomingHeaderCount: 11
+Return-Path: 0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000@mail.freebitco.in
+X-MS-Exchange-Organization-ExpirationStartTime: 14 Mar 2025 12:39:51.5779
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 852a57e6-a123-49ce-f491-08dd62f550a1
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: BL6PEPF0001AB55:EE_|TYZPR02MB7123:EE_|JH0PR02MB7138:EE_
+X-MS-Exchange-Organization-AuthSource: BL6PEPF0001AB55.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/14/2025 12:36:41 PM
+X-MS-Office365-Filtering-Correlation-Id: 852a57e6-a123-49ce-f491-08dd62f550a1
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 54.240.11.1
+X-SID-PRA: NOREPLY@FREEBITCO.IN
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 9
+X-Microsoft-Antispam: BCL:2;ARA:1444111002|42300799018|9000799050|21080799006|58200799018|47200799021|1680799057|68400799013|3025599003|461199028|9400799030|10300799035|1290799030|4302099013|3412199025|440099028|150899861|4601999015|160899965|1122599019|1370799030|1380799030|1360799030|56899033|1602099012|2406899039;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 14 Mar 2025 12:39:51.5310
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 852a57e6-a123-49ce-f491-08dd62f550a1
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: BL6PEPF0001AB55.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: TYZPR02MB7123
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.7390446
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90012020)(91020020)(91040095)(9050020)(9100341)(944500132)(4810010)(4910033)(9710001)(9610028)(9520007)(10115022)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?em1qZzVIRCtrb1RVNGtwQ2JjMGV0ZDlVTzIvZDVSSWVVbGROcUlxSHROeVk1?=
+ =?utf-8?B?V2hrZFl0REtibVIvZmZ1Y1JlYkpIVjdCYUtUTFdkd3k0S1pwVEs3UURHWFNH?=
+ =?utf-8?B?d2lkMG5Ja0pLYU0ycUpCa1pZVkFBM3BWYUN5RTJ6Y2dTek9WVXpGTllIOE4x?=
+ =?utf-8?B?SHpoM1ZlOXlzaU4zUDcyTzkwYnhLWVRsNHZ6djhhN1c4NnUwanN2c1UvUjA4?=
+ =?utf-8?B?MEVpWmJTYjJjdXRNeHJBSklaQ3ZkUEFHWlB4ZFBRbXNOTFEra3FRcml4RHVN?=
+ =?utf-8?B?U081SEtNVGQzb2N1WnRxdzk4SzQyM0FyM09BOWp4VGNWZWR5bC9vWnprRUJm?=
+ =?utf-8?B?aFFxSFphRnFkaUR1TTlrd2RGVGVrVHVYMUkrb2xTajlmL0tZQWswTmVDSGU1?=
+ =?utf-8?B?TngvZ1dnbC8ySEJZdHgvN0ZGZVhPbVlURmJqbUJWQURQN0tyMG1ibThscFFD?=
+ =?utf-8?B?S3E0cVhJWU9SNExPRWFYNVV2R0Y2OWgycHhRSHB1MDlzZG5vamt0ZnJxandJ?=
+ =?utf-8?B?V0xIZGtjbEJGYkcrcHlvOE1Td2NiTEZUL0JDR3JmWExVbzhiNDcvRHJQTFR4?=
+ =?utf-8?B?ZVpjcEZnSElOVnltbVBGaVdISVJSVjgvZVhCK3NDUCtUVlhDRWRaMU9GaVV0?=
+ =?utf-8?B?UjIwTVZiR1NvL0tiRHRFQkVRbmE4TGRiQzhoQVJPTWRJMXdsNDc1bGJWaU1M?=
+ =?utf-8?B?NkFsVjdTQXB0RTdzazFFSU9STXFFcThYSkZDVUV2Vk1oVEpMd3lDM3R0cHRn?=
+ =?utf-8?B?LzJ0ZWRsKzlVNzRaU1kzbXpwRjlRN2JtRTc3cis4UXVlZENHZ1pCM1BRa3Jx?=
+ =?utf-8?B?Z1NWckpXU3VPYTR1VGl1ZkJIeE40RXZZOFhFTTR0N3hScnlFUlc0TnE3cjFZ?=
+ =?utf-8?B?NVFadmVvR1J2dVo5VW5oOWMxWE1nUXpwS0hNMFNjZ0FGV044dTcvZnpvRm9B?=
+ =?utf-8?B?NytiQjFFSnBCUkFINklYU2FjVGxrb01YSG5GZTdxdUppTmZ6eGJDMTJaL2hx?=
+ =?utf-8?B?RkpvRnBETnRqc3VPWDAyQTgrVWx6MUttTjlkUHZRQ2hqanJOaXl6S3o0Ri9z?=
+ =?utf-8?B?WjlTc0hnNGQ0TnhsZ0NhNVFTQkxHTEl4SWpVWDRuYVRRR0xxNVVkSjdsanQw?=
+ =?utf-8?B?MGs1VDVqNlVRVldtVnFIMS9xWS80eFdNOXhvRDhzK3RYUHVjZzlVM0kwL002?=
+ =?utf-8?B?bU5jQ3FjaTV4bXRqN2NFUW9PYmZuWEtWWjd6TG04M1VzcGRhYmJpU0JQRzVE?=
+ =?utf-8?B?Rk0yTVhBRkdZWVd3YmI1WFZ1a0FCbHFlNDExb1oxcllKUndIZUg3Y2h1d00y?=
+ =?utf-8?B?MmZ6Ny9FeVdra245UzU3cTBlU09IRkhaQU1ibzhpTkFwYVBya0ZYQ1RDVEpP?=
+ =?utf-8?B?a1VGaUR3TXZIYWplUFJ2cG5nV081eWh6MTU5TTB4bFc5L1Q2L25GWHh2eVpF?=
+ =?utf-8?B?Sm9lakZUaHNzYytYS3dBTkMySkpONWhVLzkwRGhmeTBoL1F6dWd4TEVVT0VP?=
+ =?utf-8?B?UlY2QVNqUDRORDJxaVJXblUyekcyQlVZcnk1RHlUcEh1R0FWQnVFYUlNaS9q?=
+ =?utf-8?B?WlBiL1ZaRlZYcEtIQTJzdG9LWXl5SGoyYjEyVGt1YThjWkRTSnZ1OUlZZHpr?=
+ =?utf-8?B?ZDI4QnQvT3Z0SlNYL3B4TEdlZnFTa2JFK2R2OWlWYktFUUJZb3VNRGNTVUc0?=
+ =?utf-8?B?cFNpS3lDQWJFZFVEOEZsSUppSzNuOTB4U3ZaUk1LSUluaXFTZmcrZThxWXVy?=
+ =?utf-8?B?ZHRxemtscVUvQSswOGdGK0JHc29XN0VlVVBVTTJqSEFXQ2puem5wNGQ3bkx4?=
+ =?utf-8?B?dnMrd0RrK2JpeFVDd2JpdXdNRDh6cUxZdFRwUUVvTXdSZFZyTDVQOEJkOGRM?=
+ =?utf-8?B?bmhrR3Z4blQrQmthUXRsRno3cDg0d1FlTmtOT0VYS1ovKzRteU5TeWhZUFNS?=
+ =?utf-8?B?Q1JoUko0bmJUNGJuanBldjc4SEpYMWw5NE5pNjMzOHk3QW42dWhEdStKMzBr?=
+ =?utf-8?B?MWhXaUJ4cFBBRFhzU3dhR05LQ0h1QUpTUFRlSEdGK0R6NXpkQ2F1RXprck02?=
+ =?utf-8?B?cTFOQ3grdGVUTjRvVFRIblBBcGpTMkhmWTd5SDE0U2p5dDdkRDZCUkYvcVN2?=
+ =?utf-8?B?dkNlVXlsRjFzSnRwVnM3UktDb1J3ajg3SUpYREFhaFJhT2w0THVGUk1uQ3Zh?=
+ =?utf-8?B?Zmx1NTg0MzZpeW1sTEF4ZGJzVkVJWTNVSXFLUTBYSDRkckErWE1odHZaZVhM?=
+ =?utf-8?B?b1hpemdsNlBuNENBaVlsaG05S1BCdHViSjBrcW9MK09ETVJQQm9VUWkwWFRP?=
+ =?utf-8?B?YnpWbnpPWUlWQkZueHN6NU5CRWpKYzVGR1A2RjQyWFNTa3RXWjhoejZpbFZP?=
+ =?utf-8?B?OC83VkE5ZXhVTEJNYm9LcTJPWUJBRS9OZkt0WmE1aVhwMTJ3YTBuQXByUFFC?=
+ =?utf-8?B?d3ZHTWlnbkhTMi83amEwOGlGZ0lRSUVzdXltTjBDL2dBdCtiS3pnNUlyelkr?=
+ =?utf-8?B?RUdwSjIwcU1lUVZ6TmpjcWlQcVVwWUxoUFN1bTVrYk5JQ1VYL1l2WGtMU2l4?=
+ =?utf-8?B?VDdhbWY4MkJQNVd5R1B5TUg0YUxjWDFkVE94RHFjcldoQUc4aDhVc0JNcmFw?=
+ =?utf-8?B?akg4SlNta3I4ZUNyaWYvQkt5SzFlc2pQREQrank4TFBxVkhiN3NHZ0ZweTgz?=
+ =?utf-8?B?WHBMd3hqTFZ0ZnlvSXdwS2pKMXh6ellobDVCcC8zYVl0Rnkyb1ZBWm9FUy9S?=
+ =?utf-8?B?T3BvV2hSbTRDUHBsRVhhem5DM0toRVlOUXlLbVNlbVdjRGN6dHBRdDhFc0Fh?=
+ =?utf-8?B?RnRnemhnSmNDRTl0WkZRWjUrVGdKYnVBVHlNeERhcGQxZGg5UVErVUg1WEtC?=
+ =?utf-8?B?WHpSRzN3M1diVXJDRGZIN3pWZjJhZU5oVW1QSFVXSUZjTGY1a0tMcjRuK1NU?=
+ =?utf-8?B?enBFUWQwRVVKMFlIRlczRjJnNmpBSDQrL1V0ZXZtTWF4TWxaSlBBcVUyZjhD?=
+ =?utf-8?B?REtNYmZpWjR1cm9GVHU4MTZ6SG1yV2JsR0c1TDhLNkc5Y3ZZTEZid0ZhZFU0?=
+ =?utf-8?B?Q1dBU1BJUSt0ajZZZmxKeU1JemtaVkhCVXU1Y0h2VGhxZmFCNlFydnRPL3Bz?=
+ =?utf-8?B?QXVSaTRhVFhuMEtNUDhwMklVS2pJalVKNFBwTVpzdDVvWHh3STRXQ0g2SVlq?=
+ =?utf-8?B?M0V5c0F5cm9oRG5nOWg4V2JFa3QycXVQZzB2SmRXaWVhbFVrTTlST1Fja2Y5?=
+ =?utf-8?B?RVB0ODZaejg4V29EZWMzUW4vd0FkTjdLZkdCdUgyNjZGQlVjTGx1cCt6SGl1?=
+ =?utf-8?B?c1J1VlJHaWx2YlZzbTVaa1NPa0k5SzhwNG9QZUZBVnFacnVKRjY3cW9XdmZQ?=
+ =?utf-8?B?VXVFNzhmSDY2RUczcmo5T3lDRFQxYU5NclR3UDVINTZLWVgrTE90U1lWd3F3?=
+ =?utf-8?B?NFUxWUJHdXdsS3Q1eFdsQTE2aWpJeGlBK2NkZ0QvR1pYZmdRTTF5UTdqQ3dr?=
+ =?utf-8?B?eTdScnMwWEc1NWdCVmM4amRDVDhNTG1Jbzl0OXVUQ25XZHUyNkt4Q2xSOUR3?=
+ =?utf-8?B?TDQwSk5yLzllU0tISitXNWVGOVlFV2VxRDhPUi9lVTFhLzRVbWtBd0NvN25m?=
+ =?utf-8?B?d0lRWFp3Z0xEYVRqZ2dIU0o5bjJMbXN3Z1MyMHU2ci92cEVKbmk1RUZzaWNS?=
+ =?utf-8?B?aXlWTUhwVGl2RmNtMU5XSHZoUE9nRU9sM3NrbXFjTTcyc3RBcUQyb213SVlD?=
+ =?utf-8?B?dzd6U210dmRtdXVXQnRFVGxGTlpXZ09nUjZtUFBmQkt5Zk1lL0lCajY1VnNz?=
+ =?utf-8?B?UTNhemtOL0JlZEcyb0ZqcXFsWlRXUzdFQ0VremZJWHBUR1FSZCs5QTJlYjE1?=
+ =?utf-8?B?R2ZTcUlBNGx2c2pmTElraDY0cnpQVWk5UHhzb1E4VnpiSHFWMUhSKzczVHd4?=
+ =?utf-8?B?NVNjTE5pV3V5bkVaZ0VoY0kxRkcxeGFhMmxqc3NwdlU3YjlPWU1NREo3TVd2?=
+ =?utf-8?B?YjdsTkR1c0tNaVkxTkF5YnJZdjRWQzBSSEd6NlJlTXlVWjJSOEVybnBSMkUy?=
+ =?utf-8?B?bHd1QklXWWNVSEZDVGJTajdEWWNINUV5Q0poVnE4N01xODBVNlVyYVdpY3NK?=
+ =?utf-8?B?em5teHBZZml3NDdjclRLMVoyRTFGZ3ArRE9kYUhRd1UrZ0tzbnBhL3lZaUs1?=
+ =?utf-8?B?T2JKVEtIQkllbUpYQTRGck0vNWEwSmdBTm9XaWh1K1BCb05HZW84UTRVQjRh?=
+ =?utf-8?B?WDZtTmRxUS84NUlSeklpdzlJMHdFV1pFRjRLN2VraDZSZzFKQ0VMa2hmMUNp?=
+ =?utf-8?B?UVRsQnl4TGJiYStTend5MDB5ZDVkMytrWmFsaXJQaUdrN0ZuOFc0bWdhOXlw?=
+ =?utf-8?B?MlpTSG5JV3JCQ014RWk4K1d4L2p6UlJaOVk3S0pVLzRXNngyVEVqQ3h3dnFL?=
+ =?utf-8?B?bk1JSEFiUVZpNTR3cVlLZGthK2k1TEMvSVRHNDBKdmV6Rk50Y3ZNNkFXY3o0?=
+ =?utf-8?B?KytSOTV6eFJHalRVYzNmOEV3L0V0cXM5N0RqMy9aeDdQUDdSK1lmWmU1ZmFY?=
+ =?utf-8?B?djVEeU8wUitpcVNyc21MaUpQdWUvRGplMC92a1hmWjFtanY4SkFiUk55UVZG?=
+ =?utf-8?B?QUttV0NDTmd6NTBQTjYzZlp1WW1jOXRCb1BVS2ttYldoalVUMU5wY0xUUndH?=
+ =?utf-8?Q?dmvPEEG1fBfzLT8=3D?=
+MIME-Version: 1.0
+
+------=_Part_1178558_1563500959.1741955991213
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+\nWIN $7,500\nWEEKLY LOTTERY\n\n> CHANCE TO WIN\n$7,500 EVERY SUNDAY\n\nDiv=
+e into the thrill of our Weekly Lottery a provably fair draw where 10 FreeB=
+itco.in users can win a share of $7,500 BTC weekly. Boost your winning chan=
+ces by collecting as many Lottery Tickets as possible.\n\n> HOW TO COLLECT =
+LOTTERY TICKETS\n\n - FREE ROLLS: Every free roll rewards you with 2 free t=
+ickets\n\n - REFERRAL FREE ROLLS: Every free roll played by your referral r=
+ewards you with 1 free ticket\n\n - MULTIPLY BTC/BETTING: Earn 1 free ticke=
+t for every 500 satoshi you wager on the Multiply BTC/Betting page\n\n - WH=
+EEL OF FORTUNE: You can earn up to 5000 Free tickets with every Wheel of Fo=
+rtune free spin\n\n - BUY LOTTERY TICKETS: Buy tickets on the Lottery page =
+for 1 satoshi each\n\nThe Weekly Lottery runs from Monday to Sunday, every =
+week. Stock up on Lottery Tickets and you could win a share of the $7,500 P=
+rize Pool every Sunday!\n\nCollect Lottery Tickets - https://freebitco.in/?=
+op=3Dhome&tab=3Dlottery&utm_source=3DWeekly-lottery&utm_medium=3Demail&utm_=
+campaign=3DFirst-button-click\n
+------=_Part_1178558_1563500959.1741955991213
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml"><head><!--[if gte mso 9]><xml><o:Office=
+DocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:Offi=
+ceDocumentSettings></xml><![endif]-->
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8"> <=
+meta content=3D"width=3Ddevice-width" name=3D"viewport"> <!--[if !mso]><!--=
+> <meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"> <!--<![endif]=
+--> <title></title> <!--[if !mso]><!--> <link href=3D"https://fonts.googlea=
+pis.com/css2?family=3DLato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,=
+300;1,400;1,700;1,900&amp;display=3Dswap" rel=3D"stylesheet" type=3D"text/c=
+ss"> <!--<![endif]--> <style type=3D"text/css"> body { margin: 0; padding: =
+0; } table, td, tr { vertical-align: top; border-collapse: collapse; } * { =
+line-height: inherit; } a[x-apple-data-detectors=3Dtrue] { color: inherit !=
+important; text-decoration: none !important; } .ie-browser table { table-la=
+yout: fixed; } [owa] .img-container div, [owa] .img-container button { disp=
+lay: block !important; } [owa] .fullwidth button { width: 100% !important; =
+} [owa] .block-grid .col { display: table-cell; float: none !important; ver=
+tical-align: top; } .ie-browser .block-grid, .ie-browser .num12, [owa] .num=
+12, [owa] .block-grid { width: 720px !important; } .ie-browser .mixed-two-u=
+p .num4, [owa] .mixed-two-up .num4 { width: 240px !important; } .ie-browser=
+ .mixed-two-up .num8, [owa] .mixed-two-up .num8 { width: 480px !important; =
+} .ie-browser .block-grid.two-up .col, [owa] .block-grid.two-up .col { widt=
+h: 360px !important; } .ie-browser .block-grid.three-up .col, [owa] .block-=
+grid.three-up .col { width: 360px !important; } .ie-browser .block-grid.fou=
+r-up .col [owa] .block-grid.four-up .col { width: 180px !important; } .ie-b=
+rowser .block-grid.five-up .col [owa] .block-grid.five-up .col { width: 144=
+px !important; } .ie-browser .block-grid.six-up .col, [owa] .block-grid.six=
+-up .col { width: 120px !important; } .ie-browser .block-grid.seven-up .col=
+, [owa] .block-grid.seven-up .col { width: 102px !important; } .ie-browser =
+.block-grid.eight-up .col, [owa] .block-grid.eight-up .col { width: 90px !i=
+mportant; } .ie-browser .block-grid.nine-up .col, [owa] .block-grid.nine-up=
+ .col { width: 80px !important; } .ie-browser .block-grid.ten-up .col, [owa=
+] .block-grid.ten-up .col { width: 60px !important; } .ie-browser .block-gr=
+id.eleven-up .col, [owa] .block-grid.eleven-up .col { width: 54px !importan=
+t; } .ie-browser .block-grid.twelve-up .col, [owa] .block-grid.twelve-up .c=
+ol { width: 50px !important; } </style> <style id=3D"media-query" type=3D"t=
+ext/css"> @media only screen and (min-width: 740px) { .block-grid { width: =
+720px !important; } .block-grid .col { vertical-align: top; } .block-grid .=
+col.num12 { width: 720px !important; } .block-grid.mixed-two-up .col.num3 {=
+ width: 180px !important; } .block-grid.mixed-two-up .col.num4 { width: 240=
+px !important; } .block-grid.mixed-two-up .col.num8 { width: 480px !importa=
+nt; } .block-grid.mixed-two-up .col.num9 { width: 540px !important; } .bloc=
+k-grid.two-up .col { width: 360px !important; } .block-grid.three-up .col {=
+ width: 240px !important; } .block-grid.four-up .col { width: 180px !import=
+ant; } .block-grid.five-up .col { width: 144px !important; } .block-grid.si=
+x-up .col { width: 120px !important; } .block-grid.seven-up .col { width: 1=
+02px !important; } .block-grid.eight-up .col { width: 90px !important; } .b=
+lock-grid.nine-up .col { width: 80px !important; } .block-grid.ten-up .col =
+{ width: 72px !important; } .block-grid.eleven-up .col { width: 65px !impor=
+tant; } .block-grid.twelve-up .col { width: 60px !important; } } @media (ma=
+x-width: 740px) { .block-grid, .col { min-width: 320px !important; max-widt=
+h: 100% !important; display: block !important; } .block-grid { width: 100% =
+!important; } .col { width: 100% !important; } .col>div { margin: 0 auto; }=
+ img.fullwidth, img.fullwidthOnMobile { max-width: 100% !important; } .no-s=
+tack .col { min-width: 0 !important; display: table-cell !important; } .no-=
+stack.two-up .col { width: 50% !important; } .no-stack .col.num4 { width: 3=
+3% !important; } .no-stack .col.num8 { width: 66% !important; } .no-stack .=
+col.num4 { width: 33% !important; } .no-stack .col.num3 { width: 25% !impor=
+tant; } .no-stack .col.num6 { width: 50% !important; } .no-stack .col.num9 =
+{ width: 75% !important; } .video-block { max-width: none !important; } .mo=
+bile_hide { min-height: 0px; max-height: 0px; max-width: 0px; display: none=
+; overflow: hidden; font-size: 0px; } .desktop_hide { display: block !impor=
+tant; max-height: none !important; } } </style></head><body class=3D"clean-=
+body" style=3D"margin: 0; padding: 0; -webkit-text-size-adjust: 100%; backg=
+round-color: #FFFFFF;"> <style id=3D"media-query-bodytag" type=3D"text/css"=
+> @media (max-width: 740px) { .block-grid { min-width: 320px!important; max=
+-width: 100%!important; width: 100%!important; display: block!important; } =
+.col { min-width: 320px!important; max-width: 100%!important; width: 100%!i=
+mportant; display: block!important; } .col > div { margin: 0 auto; } img.fu=
+llwidth { max-width: 100%!important; height: auto!important; } img.fullwidt=
+hOnMobile { max-width: 100%!important; height: auto!important; } .no-stack =
+.col { min-width: 0!important; display: table-cell!important; } .no-stack.t=
+wo-up .col { width: 50%!important; } .no-stack.mixed-two-up .col.num4 { wid=
+th: 33%!important; } .no-stack.mixed-two-up .col.num8 { width: 66%!importan=
+t; } .no-stack.three-up .col.num4 { width: 33%!important } .no-stack.four-u=
+p .col.num3 { width: 25%!important } } </style> <!--[if IE]><div class=3D"i=
+e-browser"><![endif]--> <table bgcolor=3D"#FFFFFF" cellpadding=3D"0" cellsp=
+acing=3D"0" class=3D"nl-container" role=3D"presentation" style=3D"table-lay=
+out: fixed; vertical-align: top; min-width: 320px; Margin: 0 auto; border-s=
+pacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspa=
+ce: 0pt; background-color: #FFFFFF; width: 100%;" valign=3D"top" width=3D"1=
+00%"> <tbody> <tr style=3D"vertical-align: top;" valign=3D"top"> <td style=
+=3D"word-break: break-word; vertical-align: top; border-collapse: collapse;=
+" valign=3D"top"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0"><tr><td align=3D"center" style=3D"backgro=
+und-color:#FFFFFF"><![endif]--> <div style=3D"background-color:#f1f3f4;"> <=
+div class=3D"block-grid" style=3D"margin: 0 auto; min-width: 320px; max-wid=
+th: 720px; overflow-wrap: break-word; word-wrap: break-word; word-break: br=
+eak-word; background-color: transparent;;"> <div style=3D"border-collapse: =
+collapse;display: table;width: 100%;background-color:transparent;"> <!--[if=
+ (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bord=
+er=3D"0" style=3D"background-color:transparent;"><tr><td align=3D"center"><=
+table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:720px=
+"><tr class=3D"layout-full-width" style=3D"background-color:transparent"><!=
+[endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"720" style=3D"=
+background-color:transparent;width:720px; border-top: 0px solid transparent=
+; border-left: 0px solid transparent; border-bottom: 0px solid transparent;=
+ border-right: 0px solid transparent;" valign=3D"top"><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-=
+right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![end=
+if]--> <div class=3D"col num12" style=3D"min-width: 320px; max-width: 720px=
+; display: table-cell; vertical-align: top;;"> <div style=3D"width:100% !im=
+portant;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0px solid t=
+ransparent; border-left:0px solid transparent; border-bottom:0px solid tran=
+sparent; border-right:0px solid transparent; padding-top:5px; padding-botto=
+m:5px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]--> <p style=
+=3D"font-size: 20px; line-height: 30px; text-align: center; margin: 0;"><sp=
+an style=3D"font-size: 22px;"><strong><span style=3D"line-height: 26px; fon=
+t-size: 16px;">A Provably Fair Way to Win the Lottery Every Week</span></st=
+rong> </span> </p> <div style=3D"font-size:14px;text-align:center;font-fami=
+ly:'Lato', Tahoma, Verdana, Segoe, sans-serif">If you cannot see the email =
+below, please click here to see the <a href=3D"https://bq11v59f.r.us-east-1=
+.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Demail_web_version%26emai=
+l_id=3DXlu1Eqxpic45Xy71Ke84rwrg05PBc7F76IGyqjQyaSTnj%26email=3Dmillinman@ho=
+tmail.com%26unsub=3D8f58a36a0e147cc35249f37d5a66b3a030c73debf38d2a756f4e63f=
+0c271ffe3%26userid=3D47359620%26eoh=3D439b0ec04f733a49e3839787877e8f8c233f9=
+a35bb5b42fb7a055c3af7e94a55%26email_verify_id=3D0%26email_verify_hash=3Da/1=
+/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/pF8ynWns9OqV-=
+qGULl-yf9TQSEo=3D417" target=3D"_blank">web version</a>.</div> <!--[if (!ms=
+o)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]><=
+/td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table></td></=
+tr></table><![endif]--> </div> </div> </div> <!--[if (mso)|(IE)]><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td align=
+=3D"center" style=3D"background-color:#FFFFFF"><![endif]--> <div style=3D"b=
+ackground-color:#f1f3f4;"> <div class=3D"block-grid mixed-two-up" style=3D"=
+margin: 0 auto; min-width: 320px; max-width: 720px; overflow-wrap: break-wo=
+rd; word-wrap: break-word; word-break: break-word; background-color: #f1f3f=
+4;"> <div style=3D"border-collapse: collapse;display: table;width: 100%;bac=
+kground-color:transparent;"> <!--[if (mso)|(IE)]><table width=3D"100%" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color:#121=
+212;"><tr><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" b=
+order=3D"0" style=3D"width:720px"><tr class=3D"layout-full-width" style=3D"=
+background-color:transparent"><![endif]--> <!--[if (mso)|(IE)]><td align=3D=
+"center" width=3D"180" style=3D"background-color:transparent;width:180px; b=
+order-top: 0px solid transparent; border-left: 0px solid transparent; borde=
+r-bottom: 0px solid transparent; border-right: 0px solid transparent;" vali=
+gn=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-top:=
+5px; padding-bottom:5px;"><![endif]--> <!--[if (mso)|(IE)]></td></tr></tabl=
+e><![endif]--> <!--[if (mso)|(IE)]></td><td align=3D"center" width=3D"540" =
+style=3D"background-color:transparent;width:540px; border-top: 0px solid tr=
+ansparent; border-left: 0px solid transparent; border-bottom: 0px solid tra=
+nsparent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px=
+;"><![endif]--> <div class=3D"col num9" style=3D"display: table-cell; verti=
+cal-align: top; min-width: 320px; max-width: 540px;"> <div style=3D"width:1=
+00% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0px =
+solid transparent; border-left:0px solid transparent; border-bottom:0px sol=
+id transparent; border-right:0px solid transparent; padding-top:5px; paddin=
+g-bottom:5px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]--> <!-=
+-[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=
+=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; padding-to=
+p: 10px; padding-bottom: 10px; font-family: Tahoma, Verdana, sans-serif"><!=
+[endif]--> <div style=3D"color:#FFFFFF;font-family:'Lato', Tahoma, Verdana,=
+ Segoe, sans-serif;line-height:150%;padding-top:5px;padding-right:10px;padd=
+ing-bottom:5px;padding-left:10px;"> <div style=3D"font-size: 12px; line-hei=
+ght: 18px; color: #F0BC46; font-family: 'Lato', Tahoma, Verdana, Segoe, san=
+s-serif;"> <p style=3D"font-size: 14px; line-height: 22px; text-align: cent=
+er; margin: 0 auto;max-width: 590px;"><span style=3D"font-size: 14px;font-w=
+eight: 400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color:#00=
+0;">Dear FreeBitco.in User, You are receiving this email because you are an=
+ active user at FreeBitco.in. Your User ID 47359620 was last active on 2025=
+-03-12.</span></p> </div> </div> <!--[if mso]></td></tr></table><![endif]--=
+> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if=
+ (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr><=
+/table></td></tr></table><![endif]--> </div> </div> </div> <div style=3D"ba=
+ckground-color:#f1f3f4;"> <div class=3D"block-grid" style=3D"margin: 0 auto=
+; min-width: 320px; max-width: 720px; overflow-wrap: break-word; word-wrap:=
+ break-word; word-break: break-word; background-color: #000;"> <div style=
+=3D"border-collapse: collapse;display: table;width: 100%;background-color:t=
+ransparent;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td a=
+lign=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" sty=
+le=3D"width:720px"><tr class=3D"layout-full-width" style=3D"background-colo=
+r:transparent"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=
+=3D"720" style=3D"background-color:transparent;width:720px; border-top: 0px=
+ solid transparent; border-left: 0px solid transparent; border-bottom: 0px =
+solid transparent; border-right: 0px solid transparent;" valign=3D"top"><ta=
+ble width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td=
+ style=3D"padding-right: 0px; padding-left: 0px; padding-top:0px; padding-b=
+ottom:0px;"><![endif]--> <div class=3D"col num12" style=3D"min-width: 320px=
+; max-width: 720px; display: table-cell; vertical-align: top;;"> <div style=
+=3D"width:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"bord=
+er-top:0px solid transparent; border-left:0px solid transparent; border-bot=
+tom:0px solid transparent; border-right:0px solid transparent; padding-top:=
+0px; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"> <!--[if m=
+so]></td></tr></table><![endif]--> <div align=3D"center" class=3D"img-conta=
+iner center autowidth fullwidth" style=3D"padding-right: 0px;padding-left: =
+0px;"> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D"padding-right: 0=
+px;padding-left: 0px;" align=3D"center"><![endif]--> <a href=3D"https://bq1=
+1v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dhome%26=
+tab=3Dlottery%26utm_source=3DWeekly-lottery%26utm_medium=3Demail%26utm_camp=
+aign=3DBanner-click/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67=
+-000000/YVVK8pSmQiaiIY_pGdXhw12wiKc=3D417" target=3D"_blank"> <img align=3D=
+"center" alt=3D"Weekly Lottery" border=3D"0" class=3D"center autowidth full=
+width" src=3D"https://sirv.freebitco.in/1706175455_l6FsYTcO.png" style=3D"o=
+utline: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear=
+: both; height: auto; float: none; border: none; width: 100%; max-width: 72=
+0px; display: block;" title=3D"" width=3D"720"></a> <!--[if mso]></td></tr>=
+</table><![endif]--> </div> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif=
+]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[=
+if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--> </div> </di=
+v> </div><div style=3D"background-color:#f1f3f4;"><div class=3D"block-grid"=
+ style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; overflow-wrap=
+: break-word; word-wrap: break-word; word-break: break-word; background-col=
+or: #fff;"><div style=3D"border-collapse: collapse;display: table;width: 10=
+0%;background-color:transparent;"><!--[if (mso)|(IE)]><table width=3D"100%"=
+ cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color=
+:#000000;"><tr><td align=3D"center"><table cellpadding=3D"0" cellspacing=3D=
+"0" border=3D"0" style=3D"width:720px"><tr class=3D"layout-full-width" styl=
+e=3D"background-color:transparent"><![endif]--><!--[if (mso)|(IE)]><td alig=
+n=3D"center" width=3D"720" style=3D"background-color:transparent;width:720p=
+x; border-top: 0px solid transparent; border-left: 0px solid transparent; b=
+order-bottom: 0px solid transparent; border-right: 0px solid transparent;" =
+valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bo=
+rder=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-=
+top:5px; padding-bottom:5px;"><![endif]--><div class=3D"col num12" style=3D=
+"min-width: 320px; max-width: 720px; display: table-cell; vertical-align: t=
+op;;"><div style=3D"width:100% !important;"><!--[if (!mso)&(!IE)]><!--><div=
+ style=3D"border-top:0px solid transparent; border-left:0px solid transpare=
+nt; border-bottom:0px solid transparent; border-right:0px solid transparent=
+; padding-top:10px; padding-bottom:0px; padding-right: 0px; padding-left: 0=
+px;"><!--<![endif]--><!--[if mso]><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px; padding=
+-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family: Tahoma, =
+Verdana, sans-serif"><![endif]--><div style=3D"color:#FFFFFF;font-family:'L=
+ato', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;padding-top:0px;p=
+adding-right:0px;padding-bottom:0;padding-left:0px;"><div style=3D"font-siz=
+e: 12px; line-height: 18px; color: #FFFFFF; font-family: 'Lato', Tahoma, Ve=
+rdana, Segoe, sans-serif;"><p style=3D"font-size: 14px; line-height: 18px; =
+text-align: center; margin: 0 auto;max-width: 560px; padding: 35px 10px 5px=
+;"><span style=3D"font-size: 26px;"><span style=3D"color: #242424; line-hei=
+ght: 24px; font-size: 22px;"><strong><span style=3D"line-height: 12px; font=
+-size: 18px;"><span style=3D"line-height: 24px; font-size: 26px;font-weight=
+: 900;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;">CHANCE TO WI=
+N</span></span></strong></span></span></p><p style=3D"font-size: 14px; line=
+-height: 18px; text-align: center; margin: 0; padding: 0px 10px 5px;"><span=
+ style=3D"font-size: 26px;"><span style=3D"color: #FF5116; line-height: 24p=
+x; font-size: 22px;"><strong><span style=3D"line-height: 12px; font-size: 1=
+8px;"><span style=3D"line-height: 24px; font-size: 26px;font-weight: 900;fo=
+nt-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;">$7,500 EVERY SUNDAY<=
+/span></span></strong></span></span></p><p style=3D"font-size: 14px; line-h=
+eight: 18px; text-align: center; margin: 0 auto;max-width: 520px; padding: =
+10px 10px 15px;"><span style=3D"font-size: 26px;"><span style=3D"color: #00=
+0; line-height: 24px; font-size: 22px;"><strong><span style=3D"line-height:=
+ 12px; font-size: 18px;"><span style=3D"line-height: 24px; font-size: 16px;=
+font-weight: 400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;">D=
+ive into the thrill of our Weekly Lottery  a provably fair draw where 10 Fr=
+eeBitco.in users can win a share of $7,500 BTC weekly. Boost your winning c=
+hances by collecting as many Lottery Tickets as possible.</span></span></st=
+rong></span></span></p></div></div><!--[if mso]></td></tr></table><![endif]=
+--><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (ms=
+o)|(IE)]></td></tr></table><![endif]--><!--[if (mso)|(IE)]></td></tr></tabl=
+e></td></tr></table><![endif]--></div></div></div> <div style=3D"background=
+-color:#f1f3f4;"> <div class=3D"block-grid" style=3D"margin: 0 auto; min-wi=
+dth: 320px; max-width: 720px; overflow-wrap: break-word; word-wrap: break-w=
+ord; word-break: break-word; background-color: #fff;"> <div style=3D"border=
+-collapse: collapse;display: table;width: 100%;background-color:transparent=
+;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td align=3D"ce=
+nter"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"widt=
+h:720px"><tr class=3D"layout-full-width" style=3D"background-color:transpar=
+ent"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"720" st=
+yle=3D"background-color:transparent;width:720px; border-top: 0px solid tran=
+sparent; border-left: 0px solid transparent; border-bottom: 0px solid trans=
+parent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px=
+;"><![endif]--> <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 720px; display: table-cell; vertical-align: top;;"> <div style=3D"width=
+:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0p=
+x solid transparent; border-left:0px solid transparent; border-bottom:0px s=
+olid transparent; border-right:0px solid transparent; padding-top:5px; padd=
+ing-bottom:40px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]--> =
+<div align=3D"center" class=3D"button-container" style=3D"padding-top:0px;p=
+adding-right:10px;padding-bottom:0px;padding-left:10px;"> <!--[if mso]><tab=
+le width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D=
+"border-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-ta=
+ble-rspace:0pt;"><tr><td style=3D"padding-top: 10px; padding-right: 10px; p=
+adding-bottom: 10px; padding-left: 10px" align=3D"center"><v:roundrect xmln=
+s:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:=
+office:word" href=3D"" style=3D"height:37.5pt; width:305.25pt; v-text-ancho=
+r:middle;" arcsize=3D"0%" stroke=3D"false" fillcolor=3D"#78FFD2"><w:anchorl=
+ock/><v:textbox inset=3D"0,0,0,0"><center style=3D"color:#000000; font-fami=
+ly:Tahoma, Verdana, sans-serif; font-size:20px"><![endif]--><a href=3D"http=
+s://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3D=
+home%26tab=3Dlottery%26utm_source=3DWeekly-lottery%26utm_medium=3Demail%26u=
+tm_campaign=3DFirst-button-click/1/0100019594ab0682-93e961f8-aa53-4824-aefa=
+-e643c33ceb67-000000/kvy8D6lfWRjqqPFduHf1Bb-RLkU=3D417" target=3D"_blank" s=
+tyle=3D"text-decoration:none;display:inline-block;color:#fff;background-col=
+or:#FF7E00;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius=
+:30px;width:auto; width:auto;;border-top:1px solid #FF7E00;border-right:1px=
+ solid #FF7E00;border-bottom:1px solid #FF7E00;border-left:1px solid #FF7E0=
+0;padding-top:5px;padding-bottom:5px;font-family:'Lato', Tahoma, Verdana, S=
+egoe, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;=
+"><span style=3D"padding-left:20px;padding-right:20px;font-size:20px;displa=
+y:inline-block;"><span style=3D"font-size: 16px; line-height: 32px;"><span =
+style=3D"font-size: 16px; line-height: 40px;font-weight: 900;">COLLECT LOTT=
+ERY TICKETS</span></span></span></a> <!--[if mso]></center></v:textbox></v:=
+roundrect></td></tr></table><![endif]--> </div> <!--[if mso]><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom=
+: 10px; font-family: Tahoma, Verdana, sans-serif"><![endif]--> <!--[if mso]=
+></td></tr></table><![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![e=
+ndif]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <=
+!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--> </div> =
+</div> </div> <div style=3D"background-color:#f1f3f4;"><div class=3D"block-=
+grid" style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; overflow=
+-wrap: break-word; word-wrap: break-word; word-break: break-word; backgroun=
+d-color: #F2F3F7;"><div style=3D"border-collapse: collapse;display: table;w=
+idth: 100%;background-color:transparent;"><!--[if (mso)|(IE)]><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"backgro=
+und-color:#000000;"><tr><td align=3D"center"><table cellpadding=3D"0" cells=
+pacing=3D"0" border=3D"0" style=3D"width:720px"><tr class=3D"layout-full-wi=
+dth" style=3D"background-color:transparent"><![endif]--><!--[if (mso)|(IE)]=
+><td align=3D"center" width=3D"720" style=3D"background-color:transparent;w=
+idth:720px; border-top: 0px solid transparent; border-left: 0px solid trans=
+parent; border-bottom: 0px solid transparent; border-right: 0px solid trans=
+parent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px;=
+ padding-top:5px; padding-bottom:5px;"><![endif]--><div class=3D"col num12"=
+ style=3D"min-width: 320px; max-width: 720px; display: table-cell; vertical=
+-align: top;;"><div style=3D"width:100% !important;"><!--[if (!mso)&(!IE)]>=
+<!--><div style=3D"border-top:0px solid transparent; border-left:0px solid =
+transparent; border-bottom:0px solid transparent; border-right:0px solid tr=
+ansparent; padding-top:20px; padding-bottom:0px; padding-right: 0px; paddin=
+g-left: 0px;"><!--<![endif]--><!--[if mso]><table width=3D"100%" cellpaddin=
+g=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 10px=
+; padding-left: 10px; padding-top: 10px; padding-bottom: 10px; font-family:=
+ Tahoma, Verdana, sans-serif"><![endif]--><div style=3D"color:#FFFFFF;font-=
+family:'Lato', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;padding-=
+top:0px;padding-right:0px;padding-bottom:0;padding-left:0px;"><div style=3D=
+"font-size: 12px; line-height: 18px; color: #FFFFFF; font-family: 'Lato', T=
+ahoma, Verdana, Segoe, sans-serif;"><p style=3D"font-size: 14px; line-heigh=
+t: 18px; text-align: center; margin: 0 auto;max-width: 560px; padding: 30px=
+ 10px 5px;"><span style=3D"font-size: 26px;"><span style=3D"color: #151716;=
+ line-height: 24px; font-size: 22px;"><strong><span style=3D"line-height: 1=
+2px; font-size: 18px;"><span style=3D"line-height: 24px; font-size: 24px;fo=
+nt-weight: 900;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;">HOW=
+ TO COLLECT</span></span></strong></span></span></p><p style=3D"font-size: =
+14px; line-height: 18px; text-align: center; margin: 0; padding: 0px 10px 2=
+5px;"><span style=3D"font-size: 26px;"><span style=3D"color: #151716; line-=
+height: 24px; font-size: 22px;"><strong><span style=3D"line-height: 12px; f=
+ont-size: 18px;"><span style=3D"line-height: 24px; font-size: 24px;font-wei=
+ght: 900;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;">LOTTERY T=
+ICKETS</span></span></strong></span></span></p></div></div><!--[if mso]></t=
+d></tr></table><![endif]--><!--[if (!mso)&(!IE)]><!--></div><!--<![endif]--=
+></div></div><!--[if (mso)|(IE)]></td></tr></table><![endif]--><!--[if (mso=
+)|(IE)]></td></tr></table></td></tr></table><![endif]--></div></div></div> =
+<div style=3D"background-color:#f1f3f4;"> <div class=3D"block-grid two-up" =
+style=3D"background:#F2F3F7;margin: 0 auto; min-width: 320px; max-width: 72=
+0px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-wo=
+rd; padding: 5px 0;"> <div style=3D"border-collapse: collapse;display: tabl=
+e;width: 100%;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><t=
+d align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"width:720px"><tr class=3D"layout-full-width" style=3D"background-c=
+olor:#FFFFFF"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=
+=3D"360" style=3D"background-color:#FFFFFF;width:360px; border-top: 0px sol=
+id transparent; border-left: 0px solid transparent; border-bottom: 0px soli=
+d transparent; border-right: 0px solid transparent;" valign=3D"top"><table =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td sty=
+le=3D"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-botto=
+m:5px;"><![endif]--> <div class=3D"col num6" style=3D"min-width: 320px; max=
+-width: 360px; display: table-cell; vertical-align: top;;"> <div style=3D"w=
+idth:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-to=
+p:0px solid transparent; border-left:0px solid transparent; border-bottom:0=
+px solid transparent; border-right:0px solid transparent; padding-top:5px; =
+padding-bottom:5px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]-=
+-> <div align=3D"center" class=3D"img-container center autowidth" style=3D"=
+padding-right: 0px;padding-left: 0px;"> <!--[if mso]><table width=3D"100%" =
+cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D"line-height:0=
+px"><td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center"><!=
+[endif]--> <a href=3D"https://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F=
+%2Ffreebitco.in%2F%3Fop=3Dhome%26tab=3Dlottery%26utm_source=3DWeekly-lotter=
+y%26utm_medium=3Demail%26utm_campaign=3DImg-click/1/0100019594ab0682-93e961=
+f8-aa53-4824-aefa-e643c33ceb67-000000/ZDk9xhbTFNAiQmbcX-DO3TPz2_o=3D417" ta=
+rget=3D"_blank"><img align=3D"center" alt=3D"Image" border=3D"0" class=3D"c=
+enter autowidth" src=3D"https://sirv.freebitco.in/1622698124_hYS89cRg.png" =
+style=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bicu=
+bic; clear: both; border: 0; height: auto; float: none; width: 100%; max-wi=
+dth: 143px; display: block;" title=3D"" width=3D"143"></a> <p style=3D"font=
+-size: 14px; line-height: 18px; text-align: center; margin: 0 auto;max-widt=
+h: 590px; padding: 10px 10px 10px;"><span style=3D"font-size: 26px;"><span =
+style=3D"font-size: 26px;"><strong><span style=3D"line-height: 22px; font-s=
+ize: 18px;"><span style=3D"line-height: 18px; font-size: 18px;font-weight: =
+400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color: #131416;f=
+ont-weight: 600;">FREE ROLLS</span></span> </strong> </span> </span> </p> <=
+p style=3D"font-size: 14px; line-height: 18px; text-align: center; margin: =
+0 auto;max-width: 590px; padding: 0px 10px 10px;"><span style=3D"font-size:=
+ 26px;"><span style=3D"font-size: 26px;"><strong><span style=3D"line-height=
+: 22px; font-size: 18px;"><span style=3D"line-height: 18px; font-size: 16px=
+;font-weight: 400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;co=
+lor: #131416;font-weight: 400;">Every free roll rewards you <br>with 2 free=
+ tickets</span></span> </strong> </span> </span> </p> <!--[if mso]></td></t=
+r></table><![endif]--> </div> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![end=
+if]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!-=
+-[if (mso)|(IE)]></td><td align=3D"center" width=3D"360" style=3D"backgroun=
+d-color:#FFFFFF;width:360px; border-top: 0px solid transparent; border-left=
+: 0px solid transparent; border-bottom: 0px solid transparent; border-right=
+: 0px solid transparent;" valign=3D"top"><table width=3D"100%" cellpadding=
+=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; =
+padding-left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]--> <div =
+class=3D"col num6" style=3D"min-width: 320px; max-width: 360px; display: ta=
+ble-cell; vertical-align: top;;"> <div style=3D"width:100% !important;"> <!=
+--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0px solid transparent; b=
+order-left:0px solid transparent; border-bottom:0px solid transparent; bord=
+er-right:0px solid transparent; padding-top:5px; padding-bottom:5px; paddin=
+g-right: 0px; padding-left: 0px;"> <!--<![endif]--> <!--[if mso]><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 5px; padding-left: 5px; padding-top: 5px; padding-bottom=
+: 5px; font-family: Tahoma, Verdana, sans-serif"><![endif]--> <div align=3D=
+"center" class=3D"img-container center autowidth" style=3D"padding-right: 0=
+px;padding-left: 0px;"> <!--[if mso]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0"><tr style=3D"line-height:0px"><td style=3D=
+"padding-right: 0px;padding-left: 0px;" align=3D"center"><![endif]--> <a hr=
+ef=3D"https://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%=
+2F%3Fop=3Dhome%26tab=3Dlottery%26utm_source=3DWeekly-lottery%26utm_medium=
+=3Demail%26utm_campaign=3DImg-click/2/0100019594ab0682-93e961f8-aa53-4824-a=
+efa-e643c33ceb67-000000/DQhNWG-JwOz3ObLH-z1xD4xAjX0=3D417" target=3D"_blank=
+"><img align=3D"center" alt=3D"Image" border=3D"0" class=3D"center autowidt=
+h" src=3D"https://sirv.freebitco.in/1622698133_AaonHK8y.png" style=3D"outli=
+ne: none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: bo=
+th; border: 0; height: auto; float: none; width: 100%; max-width: 103px; di=
+splay: block;" title=3D"" width=3D"103"></a> <p style=3D"font-size: 14px; l=
+ine-height: 18px; text-align: center; margin: 0 auto;max-width: 590px; padd=
+ing: 10px 10px 10px;"><span style=3D"font-size: 26px;"><span style=3D"font-=
+size: 26px;"><strong><span style=3D"line-height: 22px; font-size: 18px;"><s=
+pan style=3D"line-height: 18px; font-size: 18px;font-weight: 400;font-famil=
+y:'Lato', Tahoma, Verdana, Segoe, sans-serif;color: #131416;font-weight: 60=
+0;">REFERRAL FREE ROLLS</span></span> </strong> </span> </span> </p> <p sty=
+le=3D"font-size: 14px; line-height: 18px; text-align: center; margin: 0 aut=
+o;max-width: 590px; padding: 0px 10px 10px;"><span style=3D"font-size: 26px=
+;"><span style=3D"font-size: 26px;"><strong><span style=3D"line-height: 22p=
+x; font-size: 18px;"><span style=3D"line-height: 18px; font-size: 16px;font=
+-weight: 400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color: =
+#131416;font-weight: 400;">Every free roll played by your referral <br>rewa=
+rds you with 1 free ticket</span></span> </strong> </span> </span> </p> <!-=
+-[if mso]></td></tr></table><![endif]--> </div> <!--[if mso]></td></tr></ta=
+ble><![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div>=
+ </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(I=
+E)]></td></tr></table></td></tr></table><![endif]--> </div> </div> </div> <=
+div style=3D"background-color:#f1f3f4;"> <div class=3D"block-grid two-up" s=
+tyle=3D"background:#F2F3F7;margin: 0 auto; min-width: 320px; max-width: 720=
+px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-wor=
+d; padding: 5px 0;"> <div style=3D"border-collapse: collapse;display: table=
+;width: 100%;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td=
+ align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" s=
+tyle=3D"width:720px"><tr class=3D"layout-full-width" style=3D"background-co=
+lor:#FFFFFF"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D=
+"360" style=3D"background-color:#FFFFFF;width:360px; border-top: 0px solid =
+transparent; border-left: 0px solid transparent; border-bottom: 0px solid t=
+ransparent; border-right: 0px solid transparent;" valign=3D"top"><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=
+=3D"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:=
+5px;"><![endif]--> <div class=3D"col num6" style=3D"min-width: 320px; max-w=
+idth: 360px; display: table-cell; vertical-align: top;;"> <div style=3D"wid=
+th:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:=
+0px solid transparent; border-left:0px solid transparent; border-bottom:0px=
+ solid transparent; border-right:0px solid transparent; padding-top:5px; pa=
+dding-bottom:5px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]-->=
+ <div align=3D"center" class=3D"img-container center autowidth" style=3D"pa=
+dding-right: 0px;padding-left: 0px;"> <!--[if mso]><table width=3D"100%" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr style=3D"line-height:0px=
+"><td style=3D"padding-right: 0px;padding-left: 0px;" align=3D"center"><![e=
+ndif]--> <a href=3D"https://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2=
+Ffreebitco.in%2F%3Fop=3Dhome%26tab=3Dlottery%26utm_source=3DWeekly-lottery%=
+26utm_medium=3Demail%26utm_campaign=3DImg-click/3/0100019594ab0682-93e961f8=
+-aa53-4824-aefa-e643c33ceb67-000000/maqxrGOv0LQK7e_wi7x5ftLYpUs=3D417" targ=
+et=3D"_blank"><img align=3D"center" alt=3D"Image" border=3D"0" class=3D"cen=
+ter autowidth" src=3D"https://sirv.freebitco.in/1622699445_5ylrKDMq.png" st=
+yle=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bicubi=
+c; clear: both; border: 0; height: auto; float: none; width: 100%; max-widt=
+h: 143px; display: block;" title=3D"" width=3D"143"></a> <p style=3D"font-s=
+ize: 14px; line-height: 18px; text-align: center; margin: 0 auto;max-width:=
+ 590px; padding: 10px 10px 10px;"><span style=3D"font-size: 26px;"><span st=
+yle=3D"font-size: 26px;"><strong><span style=3D"line-height: 22px; font-siz=
+e: 18px;"><span style=3D"line-height: 18px; font-size: 18px;font-weight: 40=
+0;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif;color: #131416;fon=
+t-weight: 600;">MULTIPLY BTC/BETTING</span></span> </strong> </span> </span=
+> </p> <p style=3D"font-size: 14px; line-height: 18px; text-align: center; =
+margin: 0 auto;max-width: 590px; padding: 0px 10px 10px;"><span style=3D"fo=
+nt-size: 26px;"><span style=3D"font-size: 26px;"><strong><span style=3D"lin=
+e-height: 22px; font-size: 18px;"><span style=3D"line-height: 18px; font-si=
+ze: 16px;font-weight: 400;font-family:'Lato', Tahoma, Verdana, Segoe, sans-=
+serif;color: #131416;font-weight: 400;">Earn 1 free ticket for every 500 <b=
+r>satoshi you wager on the Multiply<br> BTC/Betting page</span></span> </st=
+rong> </span> </span> </p> <!--[if mso]></td></tr></table><![endif]--> </di=
+v> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[i=
+f (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td><td a=
+lign=3D"center" width=3D"360" style=3D"background-color:#FFFFFF;width:360px=
+; border-top: 0px solid transparent; border-left: 0px solid transparent; bo=
+rder-bottom: 0px solid transparent; border-right: 0px solid transparent;" v=
+align=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" bor=
+der=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; padding-t=
+op:5px; padding-bottom:5px;"><![endif]--> <div class=3D"col num6" style=3D"=
+min-width: 320px; max-width: 360px; display: table-cell; vertical-align: to=
+p;;"> <div style=3D"width:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <d=
+iv style=3D"border-top:0px solid transparent; border-left:0px solid transpa=
+rent; border-bottom:0px solid transparent; border-right:0px solid transpare=
+nt; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: =
+0px;"> <!--<![endif]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 5px; paddi=
+ng-left: 5px; padding-top: 5px; padding-bottom: 5px; font-family: Tahoma, V=
+erdana, sans-serif"><![endif]--> <div align=3D"center" class=3D"img-contain=
+er center autowidth" style=3D"padding-right: 0px;padding-left: 0px;"> <!--[=
+if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0"><tr style=3D"line-height:0px"><td style=3D"padding-right: 0px;padding-l=
+eft: 0px;" align=3D"center"><![endif]--> <a href=3D"https://bq11v59f.r.us-e=
+ast-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dhome%26tab=3Dlotter=
+y%26utm_source=3DWeekly-lottery%26utm_medium=3Demail%26utm_campaign=3DImg-c=
+lick/4/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/x8_6Kbj=
+XNuqfgB02YjHg9MN9HV8=3D417" target=3D"_blank"><img align=3D"center" alt=3D"=
+Image" border=3D"0" class=3D"center autowidth" src=3D"https://sirv.freebitc=
+o.in/1622699458_REFAekXW.png" style=3D"outline: none; text-decoration: none=
+; -ms-interpolation-mode: bicubic; clear: both; border: 0; height: auto; fl=
+oat: none; width: 100%; max-width: 143px; display: block;" title=3D"" width=
+=3D"143"></a> <p style=3D"font-size: 14px; line-height: 18px; text-align: c=
+enter; margin: 0 auto;max-width: 590px; padding: 10px 10px 10px;"><span sty=
+le=3D"font-size: 26px;"><span style=3D"font-size: 26px;"><strong><span styl=
+e=3D"line-height: 22px; font-size: 18px;"><span style=3D"line-height: 18px;=
+ font-size: 18px;font-weight: 400;font-family:'Lato', Tahoma, Verdana, Sego=
+e, sans-serif;color: #131416;font-weight: 600;">WHEEL OF FORTUNE</span></sp=
+an> </strong> </span> </span> </p> <p style=3D"font-size: 14px; line-height=
+: 18px; text-align: center; margin: 0 auto;max-width: 590px; padding: 0px 1=
+0px 10px;"><span style=3D"font-size: 26px;"><span style=3D"font-size: 26px;=
+"><strong><span style=3D"line-height: 22px; font-size: 18px;"><span style=
+=3D"line-height: 18px; font-size: 16px;font-weight: 400;font-family:'Lato',=
+ Tahoma, Verdana, Segoe, sans-serif;color: #131416;font-weight: 400;">You c=
+an earn up to 5000 Free tickets <br>with every Wheel of Fortune<br> free sp=
+in</span></span> </strong> </span> </span> </p> <!--[if mso]></td></tr></ta=
+ble><![endif]--> </div> <!--[if mso]></td></tr></table><![endif]--> <!--[if=
+ (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|(I=
+E)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table></=
+td></tr></table><![endif]--> </div> </div> </div> <div style=3D"background-=
+color:#f1f3f4;"> <div class=3D"block-grid" style=3D"margin: 0 auto; min-wid=
+th: 320px; max-width: 720px; overflow-wrap: break-word; word-wrap: break-wo=
+rd; word-break: break-word; background-color: #F2F3F7;"> <div style=3D"bord=
+er-collapse: collapse;display: table;width: 100%;background-color:transpare=
+nt;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspaci=
+ng=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td align=3D"=
+center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"wi=
+dth:720px"><tr class=3D"layout-full-width" style=3D"background-color:transp=
+arent"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"720" =
+style=3D"background-color:transparent;width:720px; border-top: 0px solid tr=
+ansparent; border-left: 0px solid transparent; border-bottom: 0px solid tra=
+nsparent; border-right: 0px solid transparent;" valign=3D"top"><table width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D=
+"padding-right: 0px; padding-left: 0px; padding-top:0px; padding-bottom:0px=
+;"><![endif]--> <div class=3D"col num12" style=3D"min-width: 320px; max-wid=
+th: 720px; display: table-cell; vertical-align: top;;"> <div style=3D"width=
+:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0p=
+x solid transparent; border-left:0px solid transparent; border-bottom:0px s=
+olid transparent; border-right:0px solid transparent; padding-top:10px; pad=
+ding-bottom:5px; padding-right: 0px; padding-left: 0px;"> <!--[if mso]></td=
+></tr></table><![endif]--> <div align=3D"center" class=3D"img-container cen=
+ter autowidth fullwidth" style=3D"padding-right: 0px;padding-left: 0px;"> <=
+!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0"><tr style=3D"line-height:0px"><td style=3D"padding-right: 0px;paddi=
+ng-left: 0px;" align=3D"center"><![endif]--> <a href=3D"https://bq11v59f.r.=
+us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dhome%26tab=3Dlo=
+ttery%26utm_source=3DWeekly-lottery%26utm_medium=3Demail%26utm_campaign=3DI=
+mg-click/5/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/KOB=
+3Fcc4vjBuNuGEWWo9yZYX2qA=3D417" target=3D"_blank"> <img align=3D"center" al=
+t=3D"Image" border=3D"0" class=3D"center autowidth fullwidth" src=3D"https:=
+//sirv.freebitco.in/1622699467_TrhWpNYL.png" style=3D"outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; clear: both; height: auto=
+; float: none; border: none; max-width: 143px; display: block;" title=3D"" =
+width=3D"143"></a> <!--[if mso]></td></tr></table><![endif]--> </div> <!--[=
+if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|=
+(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table>=
+</td></tr></table><![endif]--> </div> </div> </div> <div style=3D"backgroun=
+d-color:#f1f3f4;"> <div class=3D"block-grid" style=3D"margin: 0 auto; min-w=
+idth: 320px; max-width: 720px; overflow-wrap: break-word; word-wrap: break-=
+word; word-break: break-word; background-color: #F2F3F7;"> <div style=3D"bo=
+rder-collapse: collapse;display: table;width: 100%;background-color:transpa=
+rent;"> <!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td align=
+=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=
+=3D"width:720px"><tr class=3D"layout-full-width" style=3D"background-color:=
+transparent"><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D=
+"720" style=3D"background-color:transparent;width:720px; border-top: 0px so=
+lid transparent; border-left: 0px solid transparent; border-bottom: 0px sol=
+id transparent; border-right: 0px solid transparent;" valign=3D"top"><table=
+ width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td st=
+yle=3D"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-bott=
+om:5px;"><![endif]--> <div class=3D"col num12" style=3D"min-width: 320px; m=
+ax-width: 720px; display: table-cell; vertical-align: top;"> <div style=3D"=
+width:100% !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-t=
+op:10px solid transparent; border-left:0px solid transparent; border-bottom=
+:0px solid transparent; border-right:0px solid transparent; padding-top:0px=
+; padding-bottom:25px; padding-right: 0px; padding-left: 0px;"> <!--<![endi=
+f]--> <!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0=
+" border=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; pa=
+dding-top: 10px; padding-bottom: 10px; font-family: Tahoma, Verdana, sans-s=
+erif"><![endif]--> <div style=3D"color:#FFFFFF;font-family:'Lato', Tahoma, =
+Verdana, Segoe, sans-serif;line-height:150%;padding-top:0px;padding-right:1=
+0px;padding-bottom:0;padding-left:10px;"> <div style=3D"font-size: 12px; li=
+ne-height: 18px; color: #FFFFFF; font-family: 'Lato', Tahoma, Verdana, Sego=
+e, sans-serif;"> <p style=3D"font-size: 14px; line-height: 18px; text-align=
+: center; margin: 0 auto;max-width: 590px; padding: 0px 10px 10px;"><span s=
+tyle=3D"font-size: 26px;"><span style=3D"font-size: 26px;"><strong><span st=
+yle=3D"line-height: 22px; font-size: 18px;"><span style=3D"line-height: 18p=
+x; font-size: 18px;font-weight: 400;font-family:'Lato', Tahoma, Verdana, Se=
+goe, sans-serif;color: #131416;font-weight: 600;">BUY LOTTERY TICKETS</span=
+></span> </strong> </span> </span> </p> <p style=3D"font-size: 14px; line-h=
+eight: 18px; text-align: center; margin: 0 auto;max-width: 590px; padding: =
+0px 10px 10px;"><span style=3D"font-size: 26px;"><span style=3D"font-size: =
+26px;"><strong><span style=3D"line-height: 22px; font-size: 18px;"><span st=
+yle=3D"line-height: 18px; font-size: 16px;font-weight: 400;font-family:'Lat=
+o', Tahoma, Verdana, Segoe, sans-serif;color: #131416;font-weight: 400;">Bu=
+y tickets on the Lottery page <br>for 1 satoshi each</span></span> </strong=
+> </span> </span> </p> </div> </div> <!--[if mso]></td></tr></table><![endi=
+f]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!-=
+-[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></=
+tr></table></td></tr></table><![endif]--> </div> </div> </div><div style=3D=
+"background-color:#f1f3f4;"><div class=3D"block-grid" style=3D"margin: 0 au=
+to; min-width: 320px; max-width: 720px; overflow-wrap: break-word; word-wra=
+p: break-word; word-break: break-word; background-color: #F2F3F7;"><div sty=
+le=3D"border-collapse: collapse;display: table;width: 100%;background-color=
+:transparent;"><!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0" style=3D"background-color:#000000;"><tr><td =
+align=3D"center"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" st=
+yle=3D"width:720px"><tr class=3D"layout-full-width" style=3D"background-col=
+or:transparent"><![endif]--><!--[if (mso)|(IE)]><td align=3D"center" width=
+=3D"720" style=3D"background-color:transparent;width:720px; border-top: 0px=
+ solid transparent; border-left: 0px solid transparent; border-bottom: 0px =
+solid transparent; border-right: 0px solid transparent;" valign=3D"top"><ta=
+ble width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td=
+ style=3D"padding-right: 0px; padding-left: 0px; padding-top:5px; padding-b=
+ottom:5px;"><![endif]--><div class=3D"col num12" style=3D"min-width: 320px;=
+ max-width: 720px; display: table-cell; vertical-align: top;;"><div style=
+=3D"width:100% !important;"><!--[if (!mso)&(!IE)]><!--><div style=3D"border=
+-top:0px solid transparent; border-left:0px solid transparent; border-botto=
+m:0px solid transparent; border-right:0px solid transparent; padding-top:5p=
+x; padding-bottom:0px; padding-right: 0px; padding-left: 0px;"><!--<![endif=
+]--><!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" =
+border=3D"0"><tr><td style=3D"padding-right: 10px; padding-left: 10px; padd=
+ing-top: 10px; padding-bottom: 10px; font-family: Tahoma, Verdana, sans-ser=
+if"><![endif]--><div style=3D"color:#FFFFFF;font-family:'Lato', Tahoma, Ver=
+dana, Segoe, sans-serif;line-height:150%;padding-top:0px;padding-right:0px;=
+padding-bottom:0;padding-left:0px;"><div style=3D"font-size: 12px; line-hei=
+ght: 18px; color: #FFFFFF; font-family: 'Lato', Tahoma, Verdana, Segoe, san=
+s-serif;"><p style=3D"font-size: 14px; line-height: 18px; text-align: cente=
+r; margin: 0 auto;max-width: 520px; padding: 10px 10px 15px;"><span style=
+=3D"font-size: 26px;"><span style=3D"color: #131416; line-height: 24px; fon=
+t-size: 22px;"><strong><span style=3D"line-height: 12px; font-size: 18px;">=
+<span style=3D"line-height: 24px; font-size: 16px;font-weight: 400;font-fam=
+ily:'Lato', Tahoma, Verdana, Segoe, sans-serif;">The Weekly Lottery runs fr=
+om Monday to Sunday, every week. Stock up on Lottery Tickets and you could =
+win a share of the $7,500 Prize Pool every Sunday!</span></span></strong></=
+span></span></p></div></div><!--[if mso]></td></tr></table><![endif]--><!--=
+[if (!mso)&(!IE)]><!--></div><!--<![endif]--></div></div><!--[if (mso)|(IE)=
+]></td></tr></table><![endif]--><!--[if (mso)|(IE)]></td></tr></table></td>=
+</tr></table><![endif]--></div></div></div> <div style=3D"background-color:=
+#f1f3f4;"> <div class=3D"block-grid" style=3D"margin: 0 auto; min-width: 32=
+0px; max-width: 720px; overflow-wrap: break-word; word-wrap: break-word; wo=
+rd-break: break-word; background-color: #F2F3F7;"> <div style=3D"border-col=
+lapse: collapse;display: table;width: 100%;background-color:transparent;"> =
+<!--[if (mso)|(IE)]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0" style=3D"background-color:#000000;"><tr><td align=3D"center=
+"><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:72=
+0px"><tr class=3D"layout-full-width" style=3D"background-color:transparent"=
+><![endif]--> <!--[if (mso)|(IE)]><td align=3D"center" width=3D"720" style=
+=3D"background-color:transparent;width:720px; border-top: 0px solid transpa=
+rent; border-left: 0px solid transparent; border-bottom: 0px solid transpar=
+ent; border-right: 0px solid transparent;" valign=3D"top"><table width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"padd=
+ing-right: 0px; padding-left: 0px; padding-top:5px; padding-bottom:5px;"><!=
+[endif]--> <div class=3D"col num12" style=3D"min-width: 320px; max-width: 7=
+20px; display: table-cell; vertical-align: top;;"> <div style=3D"width:100%=
+ !important;"> <!--[if (!mso)&(!IE)]><!--> <div style=3D"border-top:0px sol=
+id transparent; border-left:0px solid transparent; border-bottom:0px solid =
+transparent; border-right:0px solid transparent; padding-top:5px; padding-b=
+ottom:45px; padding-right: 0px; padding-left: 0px;"> <!--<![endif]--> <div =
+align=3D"center" class=3D"button-container" style=3D"padding-top:0px;paddin=
+g-right:10px;padding-bottom:0px;padding-left:10px;"> <!--[if mso]><table wi=
+dth=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"bord=
+er-spacing: 0; border-collapse: collapse; mso-table-lspace:0pt; mso-table-r=
+space:0pt;"><tr><td style=3D"padding-top: 10px; padding-right: 10px; paddin=
+g-bottom: 10px; padding-left: 10px" align=3D"center"><v:roundrect xmlns:v=
+=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:off=
+ice:word" href=3D"" style=3D"height:37.5pt; width:305.25pt; v-text-anchor:m=
+iddle;" arcsize=3D"0%" stroke=3D"false" fillcolor=3D"#78FFD2"><w:anchorlock=
+/><v:textbox inset=3D"0,0,0,0"><center style=3D"color:#000000; font-family:=
+Tahoma, Verdana, sans-serif; font-size:20px"><![endif]--><a href=3D"https:/=
+/bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dhom=
+e%26tab=3Dlottery%26utm_source=3DWeekly-lottery%26utm_medium=3Demail%26utm_=
+campaign=3DSecond-button-click/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e=
+643c33ceb67-000000/r7cqqKmVgtpr4LVEjJkJ8_iZKms=3D417" target=3D"_blank" sty=
+le=3D"text-decoration:none;display:inline-block;color:#fff;background-color=
+:#FF7E00;border-radius:30px;-webkit-border-radius:30px;-moz-border-radius:3=
+0px;width:auto; width:auto;;border-top:1px solid #FF7E00;border-right:1px s=
+olid #FF7E00;border-bottom:1px solid #FF7E00;border-left:1px solid #FF7E00;=
+padding-top:5px;padding-bottom:5px;font-family:'Lato', Tahoma, Verdana, Seg=
+oe, sans-serif;text-align:center;mso-border-alt:none;word-break:keep-all;">=
+<span style=3D"padding-left:20px;padding-right:20px;font-size:20px;display:=
+inline-block;"><span style=3D"font-size: 16px; line-height: 32px;"><span st=
+yle=3D"font-size: 16px; line-height: 40px;font-weight: 900;">COLLECT LOTTER=
+Y TICKETS</span></span></span></a> <!--[if mso]></center></v:textbox></v:ro=
+undrect></td></tr></table><![endif]--> </div> <!--[if mso]><table width=3D"=
+100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td style=3D"pad=
+ding-right: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10=
+px; font-family: Tahoma, Verdana, sans-serif"><![endif]--> <!--[if mso]></t=
+d></tr></table><![endif]--> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif=
+]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[=
+if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--> </div> </di=
+v> </div> <div style=3D"background-color:#f1f3f4;"> <div class=3D"block-gri=
+d" style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; overflow-wr=
+ap: break-word; word-wrap: break-word; word-break: break-word; background-c=
+olor: #fff;"> <div style=3D"border-collapse: collapse;display: table;width:=
+ 100%;background-color:transparent;"> <!--[if (mso)|(IE)]><table width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-c=
+olor:#000000;"><tr><td align=3D"center"><table cellpadding=3D"0" cellspacin=
+g=3D"0" border=3D"0" style=3D"width:720px"><tr class=3D"layout-full-width" =
+style=3D"background-color:transparent"><![endif]--> <!--[if (mso)|(IE)]><td=
+ align=3D"center" width=3D"720" style=3D"background-color:transparent;width=
+:720px; border-top: 0px solid transparent; border-left: 0px solid transpare=
+nt; border-bottom: 0px solid transparent; border-right: 0px solid transpare=
+nt;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
+0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0px; pad=
+ding-top:5px; padding-bottom:5px;"><![endif]--> <div class=3D"col num12" st=
+yle=3D"min-width: 320px; max-width: 720px; display: table-cell; vertical-al=
+ign: top;"> <div style=3D"width:100% !important;"> <!--[if (!mso)&(!IE)]><!=
+--> <div style=3D"border-top:0px solid transparent; border-left:0px solid t=
+ransparent; border-bottom:0px solid transparent; border-right:0px solid tra=
+nsparent; padding-top:1px; padding-bottom:1px; padding-right: 0px; padding-=
+left: 0px;"> <!--<![endif]--> <div align=3D"center" class=3D"img-container =
+center autowidth" style=3D"padding-right: 0px;padding-left: 0px;"> <!--[if =
+mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
+><tr style=3D"line-height:0px"><td style=3D"padding-right: 0px;padding-left=
+: 0px;" align=3D"center"><![endif]--> <div style=3D"font-size:1px;"> </div>=
+ <a href=3D"https://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebit=
+co.in%2Fstatic%2Fhtml%2Fwof_new%2Findex.html%3Fu=3D47359620%26t=3D9kH6EGAKU=
+pFCcReT1lTQi98tjz7t5z13%26utm_medium=3Demail/1/0100019594ab0682-93e961f8-aa=
+53-4824-aefa-e643c33ceb67-000000/a8xxogJaF5PTLlBTMTJej859mn0=3D417" target=
+=3D"_blank"> <img align=3D"center" alt=3D"Image" border=3D"0" class=3D"cent=
+er autowidth" src=3D"https://sirv.freebitco.in/1692190980_8TWzlMXp.png" sty=
+le=3D"outline: none; text-decoration: none; -ms-interpolation-mode: bicubic=
+; clear: both; height: auto; float: none; border: none; width: 100%; max-wi=
+dth: 720px; display: block;" title=3D"" width=3D"720"></a> <!--[if mso]></t=
+d></tr></table><![endif]--> </div> <!--[if (!mso)&(!IE)]><!--> </div> <!--<=
+![endif]--> </div> </div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--=
+> <!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]--> </di=
+v> </div> </div> <div style=3D"background-color:#f1f3f4;"> <div class=3D"bl=
+ock-grid" style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; over=
+flow-wrap: break-word; word-wrap: break-word; word-break: break-word; backg=
+round-color: #fff;"> <div style=3D"border-collapse: collapse;display: table=
+;width: 100%;background-color:transparent;"> <!--[if (mso)|(IE)]><table wid=
+th=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"backg=
+round-color:#000000;"><tr><td align=3D"center"><table cellpadding=3D"0" cel=
+lspacing=3D"0" border=3D"0" style=3D"width:720px"><tr class=3D"layout-full-=
+width" style=3D"background-color:transparent"><![endif]--> <!--[if (mso)|(I=
+E)]><td align=3D"center" width=3D"720" style=3D"background-color:transparen=
+t;width:720px; border-top: 0px solid transparent; border-left: 0px solid tr=
+ansparent; border-bottom: 0px solid transparent; border-right: 0px solid tr=
+ansparent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" cellspac=
+ing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-left: 0=
+px; padding-top:5px; padding-bottom:5px;"><![endif]--> <div class=3D"col nu=
+m12" style=3D"min-width: 320px; max-width: 720px; display: table-cell; vert=
+ical-align: top;"> <div style=3D"width:100% !important;"> <!--[if (!mso)&(!=
+IE)]><!--> <div style=3D"border-top:0px solid transparent; border-left:0px =
+solid transparent; border-bottom:0px solid transparent; border-right:0px so=
+lid transparent; padding-top:0px; padding-bottom:1px; padding-right: 0px; p=
+adding-left: 0px;"> <!--<![endif]--> <div align=3D"center" class=3D"img-con=
+tainer center autowidth" style=3D"padding-right: 0px;padding-left: 0px;"> <=
+!--[if mso]><table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0"><tr style=3D"line-height:0px"><td style=3D"padding-right: 0px;paddi=
+ng-left: 0px;" align=3D"center"><![endif]--> <div style=3D"font-size:1px;">=
+ </div> <p style=3D"min-width: 320px;margin: 0 auto;max-width: 720px;text-a=
+lign: center;" class=3D"img-container center autowidth"><a href=3D"https://=
+bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dhome=
+%26tab=3Dloyalty_token%26utm_medium=3Demail%26utm_campaign=3Dbottom-banner/=
+1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/8tytvDyZ6ySH=
+YmBnk5QVuw-n9z8=3D417" target=3D"_blank"><img src=3D"https://sirv.freebitco=
+.in/1615646503_FZGVsRiH.png"></a></p> <!--[if mso]></td></tr></table><![end=
+if]--> </div> <!--[if (!mso)&(!IE)]><!--> </div> <!--<![endif]--> </div> </=
+div> <!--[if (mso)|(IE)]></td></tr></table><![endif]--> <!--[if (mso)|(IE)]=
+></td></tr></table></td></tr></table><![endif]--> </div> </div> </div> <div=
+ style=3D"background-color:#f1f3f4;"> <div class=3D"block-grid" style=3D"ma=
+rgin: 0 auto; min-width: 320px; max-width: 720px; overflow-wrap: break-word=
+; word-wrap: break-word; word-break: break-word; background-color: #0E0E0E;=
+"> <div style=3D"border-collapse: collapse;display: table;width: 100%;backg=
+round-color:transparent;"> <div style=3D"background-color: transparent;"> <=
+div class=3D"block-grid" style=3D"margin: 0 auto; min-width: 320px; max-wid=
+th: 720px; overflow-wrap: break-word; word-wrap: break-word; word-break: br=
+eak-word; background-color: transparent;"> <div style=3D"border-collapse: c=
+ollapse;display: table;width: 100%;background-color:transparent;"> <div cla=
+ss=3D"col num12" style=3D"min-width: 320px; max-width: 720px; display: tabl=
+e-cell; vertical-align: top;;"> <div style=3D"background-color:#000000;widt=
+h:100% !important;"> <div style=3D"border-top:0px solid transparent; border=
+-left:0px solid transparent; border-bottom:0px solid transparent; border-ri=
+ght:0px solid transparent; padding-top:5px; padding-bottom:0px; padding-rig=
+ht: 0px; padding-left: 0px;"> <div style=3D"color:#555555;font-family:'Lato=
+', Tahoma, Verdana, Segoe, sans-serif;line-height:150%;padding-top:20px;pad=
+ding-right:10px;padding-bottom:0px;padding-left:10px;"> <div style=3D"font-=
+size: 12px; line-height: 18px; color: #fff; font-family: 'Lato', Tahoma, Ve=
+rdana, Segoe, sans-serif;"> <p style=3D"font-size: 14px; line-height: 27px;=
+ text-align: center; margin: 0;"><span style=3D"font-size: 16px;">Get Lates=
+t News</span></p> </div> </div> </div> </div> </div> </div> </div> </div> <=
+div style=3D"background-color:#000000;"> <div class=3D"block-grid" style=3D=
+"Margin: 0 auto; min-width: 320px; overflow-wrap: break-word; word-wrap: br=
+eak-word; word-break: break-word; background-color: #000000;"> <div style=
+=3D"border-collapse: collapse;display: table;width: 100%;background-color:#=
+000000;"> <div class=3D"col num12" style=3D"min-width: 320px; display: tabl=
+e-cell; vertical-align: top;;"> <div style=3D"width:100% !important;"> <div=
+ style=3D"border-top:0px solid transparent; border-left:0px solid transpare=
+nt; border-bottom:0px solid transparent; border-right:0px solid transparent=
+; padding-top:5px; padding-bottom:5px; padding-right: 0px; padding-left: 0p=
+x;"> <table cellpadding=3D"0" cellspacing=3D"0" class=3D"social_icons" styl=
+e=3D"table-layout: fixed; vertical-align: top; border-spacing: 0; border-co=
+llapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;" valign=3D"=
+top" width=3D"100%"> <tbody> <tr style=3D"vertical-align: top;" valign=3D"t=
+op"> <td style=3D"word-break: break-word; vertical-align: top; padding-top:=
+ 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; borde=
+r-collapse: collapse;" valign=3D"top"> <table activate=3D"activate" align=
+=3D"center" alignment=3D"alignment" cellpadding=3D"0" cellspacing=3D"0" cla=
+ss=3D"social_table" style=3D"table-layout: fixed; vertical-align: top; bord=
+er-spacing: 0; border-collapse: undefined; mso-table-tspace: 0; mso-table-r=
+space: 0; mso-table-bspace: 0; mso-table-lspace: 0;" to=3D"to" valign=3D"to=
+p"> <tbody> <tr align=3D"center" style=3D"vertical-align: top; display: inl=
+ine-block; text-align: center;" valign=3D"top"> <td style=3D"word-break: br=
+eak-word; vertical-align: top; padding-bottom: 5px; padding-right: 3px; pad=
+ding-left: 3px; border-collapse: collapse;" valign=3D"top"> <a href=3D"http=
+s://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Ftwitter.com%2Ffreebitco=
+%2F/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/Ohlh5yt7=
+k_t8l4GCKqg6PBhQxwI=3D417" target=3D"_blank" title=3D"Twitter"><img alt=3D"=
+Twitter" height=3D"30" src=3D"https://sirv.freebitco.in/1692954390_hP3iOwPw=
+.png" style=3D"outline: none; text-decoration: none; -ms-interpolation-mode=
+: bicubic; clear: both; height: auto; float: none; border: none; display: b=
+lock;" title=3D"Twitter" width=3D"30"></a> </td> <td style=3D"word-break: b=
+reak-word; vertical-align: top; padding-bottom: 5px; padding-right: 3px; pa=
+dding-left: 3px; border-collapse: collapse;" valign=3D"top"> <a href=3D"htt=
+ps://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%2Fwww.facebook.com%2Fthe=
+officialfreebitco.in%2F/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33c=
+eb67-000000/SuGfiShDgFLT2dsHqe410hoV9-0=3D417" target=3D"_blank" title=3D"F=
+acebook"><img alt=3D"Facebook" height=3D"30" src=3D"https://sirv.freebitco.=
+in/1692954363_IwohWult.png" style=3D"outline: none; text-decoration: none; =
+-ms-interpolation-mode: bicubic; clear: both; height: auto; float: none; bo=
+rder: none; display: block;" title=3D"Facebook" width=3D"30"></a> </td> <td=
+ style=3D"word-break: break-word; vertical-align: top; padding-bottom: 5px;=
+ padding-right: 3px; padding-left: 3px; border-collapse: collapse;" valign=
+=3D"top"> <a href=3D"https://bq11v59f.r.us-east-1.awstrack.me/L0/https:%2F%=
+2Fwww.instagram.com%2Ffreebitcoinofficialaccount%2F/1/0100019594ab0682-93e9=
+61f8-aa53-4824-aefa-e643c33ceb67-000000/jc4crbrmyPSp_uqGUc-IO27sO3A=3D417" =
+target=3D"_blank" title=3D"Instagram"><img alt=3D"Instagram" height=3D"30" =
+src=3D"https://sirv.freebitco.in/1692954377_D8JV74UK.png" style=3D"outline:=
+ none; text-decoration: none; -ms-interpolation-mode: bicubic; clear: both;=
+ height: auto; float: none; border: none; display: block;" title=3D"Instagr=
+am" width=3D"30"></a> </td> <td style=3D"word-break: break-word; vertical-a=
+lign: top; padding-bottom: 5px; padding-right: 3px; padding-left: 3px; bord=
+er-collapse: collapse;" valign=3D"top"> <a href=3D"https://bq11v59f.r.us-ea=
+st-1.awstrack.me/L0/https:%2F%2Fbitcointalk.org%2Findex.php%3Ftopic=3D32095=
+9.0/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/U8nkUpdX=
+OkU5lNPZBIjIP26UjTA=3D417" target=3D"_blank" title=3D"BitcoinTalk"><img alt=
+=3D"BitcoinTalk" height=3D"30" src=3D"https://sirv.freebitco.in/1692954335_=
+7Ep2IgTJ.png" style=3D"outline: none; text-decoration: none; -ms-interpolat=
+ion-mode: bicubic; clear: both; height: auto; float: none; border: none; di=
+splay: block;" title=3D"BitcoinTalk" width=3D"30"></a> </td> </tr> </tbody>=
+ </table> </td> </tr> </tbody> </table> </div> </div> </div> </div> </div> =
+</div> <div style=3D"background-color:#000000;"> <div class=3D"block-grid" =
+style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; overflow-wrap:=
+ break-word; word-wrap: break-word; word-break: break-word; background-colo=
+r: transparent;;"> <div style=3D"border-collapse: collapse;display: table;w=
+idth: 100%;background-color:transparent;"> <div class=3D"col num12" style=
+=3D"min-width: 320px; max-width: 720px; display: table-cell; vertical-align=
+: top;"> <div style=3D"background-color:#000000;width:100% !important;"> <d=
+iv style=3D"border-top:0px solid transparent; border-left:0px solid transpa=
+rent; border-bottom:0px solid transparent; border-right:0px solid transpare=
+nt; padding-top:10px; padding-bottom:25px; padding-right: 0px; padding-left=
+: 0px;"> <div align=3D"center" class=3D"img-container center autowidth" sty=
+le=3D"padding-right: 20px;padding-left: 20px;"> <a href=3D"https://bq11v59f=
+.r.us-east-1.awstrack.me/L0/https:%2F%2Ffreebitco.in%2F%3Futm_source=3DWeek=
+ly-lottery%26utm_medium=3Demail%26utm_campaign=3DLogo-image-click/1/0100019=
+594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/ACjqD3TwzcxUbA3ONNnyX=
+VlMXE4=3D417" target=3D"_blank"><img align=3D"center" alt=3D"FreeBitcoin" b=
+order=3D"0" class=3D"center autowidth" src=3D"https://sirv.freebitco.in/169=
+2954437_ovTyj69G.png" style=3D"outline: none; text-decoration: none; -ms-in=
+terpolation-mode: bicubic; clear: both; border: 0; height: auto; float: non=
+e; width: 100%; max-width: 223px; display: block;" title=3D"FreeBitcoin" wi=
+dth=3D"223"></a> </div> </div> </div> </div> </div> </div> </div> </div> </=
+div> </div> <div style=3D"background-color:#f1f3f4;"> <div class=3D"block-g=
+rid" style=3D"margin: 0 auto; min-width: 320px; max-width: 720px; overflow-=
+wrap: break-word; word-wrap: break-word; word-break: break-word; background=
+-color: transparent;;"> <div style=3D"border-collapse: collapse;display: ta=
+ble;width: 100%;background-color:transparent;"> <!--[if (mso)|(IE)]><table =
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"ba=
+ckground-color:transparent;"><tr><td align=3D"center"><table cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0" style=3D"width:720px"><tr class=3D"layou=
+t-full-width" style=3D"background-color:transparent"><![endif]--> <!--[if (=
+mso)|(IE)]><td align=3D"center" width=3D"720" style=3D"background-color:tra=
+nsparent;width:720px; border-top: 0px solid transparent; border-left: 0px s=
+olid transparent; border-bottom: 0px solid transparent; border-right: 0px s=
+olid transparent;" valign=3D"top"><table width=3D"100%" cellpadding=3D"0" c=
+ellspacing=3D"0" border=3D"0"><tr><td style=3D"padding-right: 0px; padding-=
+left: 0px; padding-top:5px; padding-bottom:5px;"><![endif]--> <div class=3D=
+"col num12" style=3D"min-width: 320px; max-width: 720px; display: table-cel=
+l; vertical-align: top;"> <div style=3D"width:100% !important;"> <!--[if (!=
+mso)&(!IE)]><!--> <div style=3D"border-top:0px solid transparent; border-le=
+ft:0px solid transparent; border-bottom:0px solid transparent; border-right=
+:0px solid transparent; padding-top:5px; padding-bottom:5px; padding-right:=
+ 0px; padding-left: 0px;"> <!--<![endif]--> <div style=3D"font-size:12px;te=
+xt-align:center;font-family:'Lato', Tahoma, Verdana, Segoe, sans-serif">Thi=
+s email was sent to millinman@hotmail.com because you have registered an ac=
+count at FreeBitco.in. To unsubscribe from future promotional notification =
+emails, please opt-out <a href=3D"https://bq11v59f.r.us-east-1.awstrack.me/=
+L0/https:%2F%2Ffreebitco.in%2F%3Fop=3Dunsubscribe%26t=3Dpromotional%26u=3D4=
+7359620%26h=3D8f58a36a0e147cc35249f37d5a66b3a030c73debf38d2a756f4e63f0c271f=
+fe3/1/0100019594ab0682-93e961f8-aa53-4824-aefa-e643c33ceb67-000000/a6hoBrgE=
+SeIDI4IRMOKLGbyIQcM=3D417" target=3D"_blank">here</a>.</div> <!--[if (!mso)=
+&(!IE)]><!--> </div> <!--<![endif]--> </div> </div> <!--[if (mso)|(IE)]></t=
+d></tr></table><![endif]--> <!--[if (mso)|(IE)]></td></tr></table></td></tr=
+></table><![endif]--> </div> </div> </div> <!--[if (mso)|(IE)]></td></tr></=
+table><![endif]--> </td> </tr> </tbody> </table> <!--[if (IE)]></div><![end=
+if]--><img src=3D"https://aws-ses-webhooks.sd.workers.dev/?email=3Dmillinma=
+n@hotmail.com&amp;h=3D439b0ec04f733a49e3839787877e8f8c233f9a35bb5b42fb7a055=
+c3af7e94a55&amp;t=3DXlu1Eqxpic45Xy71Ke84rwrg05PBc7F76IGyqjQyaSTnj"><img alt=
+=3D"" src=3D"https://bq11v59f.r.us-east-1.awstrack.me/I0/0100019594ab0682-9=
+3e961f8-aa53-4824-aefa-e643c33ceb67-000000/F9IGf-0pbDD9KJ-JeGPOKseRbq4=3D41=
+7" style=3D"display: none; width: 1px; height: 1px;">
+</body></html>=
+
+------=_Part_1178558_1563500959.1741955991213--

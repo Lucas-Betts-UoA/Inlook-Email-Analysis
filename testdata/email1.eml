@@ -1,0 +1,598 @@
+Received: from SY3PPFED689F3AA.AUSP300.PROD.OUTLOOK.COM (::1) by
+ SY7P300MB0845.AUSP300.PROD.OUTLOOK.COM with HTTPS; Sat, 15 Mar 2025 01:32:08
+ +0000
+Received: from KL1PR01CA0142.apcprd01.prod.exchangelabs.com
+ (2603:1096:820:4::34) by SY3PPFED689F3AA.AUSP300.PROD.OUTLOOK.COM
+ (2603:10c6:18::4b5) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.29; Sat, 15 Mar
+ 2025 01:31:48 +0000
+Received: from HK3PEPF0000021B.apcprd03.prod.outlook.com
+ (2603:1096:820:4:cafe::1e) by KL1PR01CA0142.outlook.office365.com
+ (2603:1096:820:4::34) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.28 via Frontend Transport; Sat,
+ 15 Mar 2025 01:31:47 +0000
+Authentication-Results: spf=softfail (sender IP is 8.219.25.27)
+ smtp.mailfrom=ccresj.org; dkim=pass (signature was verified)
+ header.d=ccresj.org;dmarc=pass action=none
+ header.from=ccresj.org;compauth=pass reason=100
+Received-SPF: SoftFail (protection.outlook.com: domain of transitioning
+ ccresj.org discourages use of 8.219.25.27 as permitted sender)
+Received: from out25-27.sg.a.dm.aliyun.com (8.219.25.27) by
+ HK3PEPF0000021B.mail.protection.outlook.com (10.167.8.37) with Microsoft SMTP
+ Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.20 via
+ Frontend Transport; Sat, 15 Mar 2025 01:31:47 +0000
+X-AliDM-RcptTo: bHVjYXMuYmV0dHNAYXVja2xhbmQuYWMubno=
+Feedback-ID: default:am.vau@ccresj.org:batch:271130
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=ccresj.org; s=aliyun-ap-southeast-1;
+	t=1742002306; h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type;
+	bh=2G1vQ4Vf7zS2QgbpWThI4miPbhIPPJeUfnsQvrvq5YM=;
+	b=T81TIidOgtp5V9OLwhjrlZVOJwQSGI8ZkE7KyhaB4p/fn7qdFzr0K8VL3GOQPy/hzg/1KHjN84WQMttsfcXhyEIY8r2WNBD6AIBNeKrPFYbGSoG828gShi1Mp8qa/9FMhZw0g426uINbSgHWALMkHsDysw4JBGofAFJvOYNf5ao=
+Received: from iZrsboxim1eyjiZ(mailfrom:Am.Vau@ccresj.org fp:SMTPD_4w3hOxrHF0v cluster:dm-ay35sg-a)
+          by smtp.aliyun-inc.com(127.0.0.1);
+          Sat, 15 Mar 2025 09:31:46 +0800
+X-EnvId: 8000000078318997692
+Date: Sat, 15 Mar 2025 09:31:46 +0800 (CST)
+From: Vaughan Aminaa <Am.Vau@ccresj.org>
+Reply-To: Am.Vau@ccresj.org
+To: lucas.betts@auckland.ac.nz
+Message-ID: <c418a097-f0a3-495f-a91d-3cf90757829a@ccresj.org>
+Subject: =?GBK?Q?=3F=A7=D6l=3Fom=A7=D6_to_Send_Yo?=
+ =?GBK?Q?ur_Art=3F=3Fl=A7=D6/=A6=A1bstr=A7=D1=3Ft?=
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Return-Path: am.vau@ccresj.org
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Mar 2025 01:31:47.2072
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: a5e469be-f76e-41aa-236b-08dd636126e6
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: d1b36e95-0d50-42e9-958f-b63fa906beaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: HK3PEPF0000021B:EE_|SY3PPFED689F3AA:EE_|SY7P300MB0845:EE_
+X-MS-Exchange-Organization-AuthSource: HK3PEPF0000021B.apcprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id: a5e469be-f76e-41aa-236b-08dd636126e6
+X-MS-Exchange-AtpMessageProperties: SA|SL
+X-MS-Exchange-Organization-SCL: 5
+X-Forefront-Antispam-Report: CIP:8.219.25.27;CTRY:SG;LANG:en;SCL:5;SRV:;IPV:NLI;SFV:SPM;H:out25-27.sg.a.dm.aliyun.com;PTR:out25-27.sg.a.dm.aliyun.com;CAT:SPM;SFTY:9.25;SFS:(13230040)(5062899012)(30052699003)(41022699024)(12012899012)(2092899012)(3072899012)(13003099007)(8096899003)(43540500003);DIR:INB;SFTY:9.25;
+X-Microsoft-Antispam: BCL:0;ARA:13230040|5062899012|30052699003|41022699024|12012899012|2092899012|3072899012|13003099007|8096899003|43540500003;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Mar 2025 01:31:47.0666
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a5e469be-f76e-41aa-236b-08dd636126e6
+X-MS-Exchange-CrossTenant-Id: d1b36e95-0d50-42e9-958f-b63fa906beaa
+X-MS-Exchange-CrossTenant-AuthSource: HK3PEPF0000021B.apcprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SY3PPFED689F3AA
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:21.8305776
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:J;OFR:SpamFilterAuthJ;ENG:(910005)(944506478)(944626604)(4710137)(4715020)(920097)(930097)(3100021)(140003);RF:JunkEmail;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?a3czaEQ2UzNyTnNZOVk4TkpOdlllWDN2b2ZOY1BRdnFqWGV6Y2RHUjMvd1pH?=
+ =?utf-8?B?ZDBycWlmcVVFdTFscmowRFJxb0syZFRLSWE5QUFTYjFwZFJQYVU3akdVZURK?=
+ =?utf-8?B?djc2eDRzbGxqOFp0M0lDSnBoVHgxMCtoRm5GR1JaUFVvSERRbEpLSk1sL3VJ?=
+ =?utf-8?B?ejU1d0hSaFdxQUo4SDh0SE5SdExZUGZqNXVvUE16b0V5WGJGY2k5eUZRUU5i?=
+ =?utf-8?B?L2V0NXhHRVM4UzREQmpTdG9zOEZLNjhsaFlLOXhCMjhQbHVlSHBKalJWcTFT?=
+ =?utf-8?B?UUlWT1B2MEI2MldFK1ZnMHhiamN5OUpmTW1iSTJGT3hGd2FRTTE2RXphdjJ0?=
+ =?utf-8?B?dHZjRXhFczhiaU9zL0pXY2NUWU1RRnhEWWtoQUg4UjkrbUloUFBFWFhNOVRz?=
+ =?utf-8?B?eWlUTXNXNVhGa05XaFZ3eGhjL0FxMlc0NjJkNmR5Z3FuWW1ReGRuZTVjZTZh?=
+ =?utf-8?B?VTVnaXRVaGRkVUxqK0VnSzdmaXRkWUs5SWhvRDVZSzUyNjdlQVNrS3dIems5?=
+ =?utf-8?B?UWF1RXpOc0FUOFplYWxSQ0U0VE9XOXN5b1lORVR5SlE4dXJsMERwUFB0NTc1?=
+ =?utf-8?B?eVRzYXg0K2V6M25NMktJbVB5N0xiMnlITHRjRHF5Uk9XenhrR29uUTZWek1P?=
+ =?utf-8?B?ZGx0MTBWN0NTbHlDM0w4ZTJJeVRHaGpBekR3U21ubEpZcFZYbzVaSUNjdVkr?=
+ =?utf-8?B?bkdVeDlRQkY3VTF1Y1k3VWo5cTAzRTh3ZHQxVDdEeGY2MXJvRFZ1MEg1aEdq?=
+ =?utf-8?B?N0E2SnRUblIrVXlLcUxTMzZNZVVkNFd2c05WbGd6L2ZYTUUvTjllN2NEbGZ5?=
+ =?utf-8?B?V1ZoWVJmaFV4dENOb2VNYlhuVUJuQ1QycHN2VmQvMElkdS9SZVJUMVQ1TlAr?=
+ =?utf-8?B?andxZWpyUUx1TlhueE1yV0Q0U0NiaWpwbWVQOXZPOTFITkFaREh2aGI0Qjgr?=
+ =?utf-8?B?YXZBR1FXbk9raUJEWEUwdUpXaENWT2F5a2FJZ1dQUU54d3VPOEIzRFgraWp1?=
+ =?utf-8?B?OGxMRHhoby9aWUt3b3RmbHUyMnBkUVVlK1U2L1NTSGwxTUZ0anphaTJ5a0V0?=
+ =?utf-8?B?K2xySnNHQkVMZXYrdFZlSmdxU25yOFlJZWNXaXBxaDB0VXRReGZad09ZSE1W?=
+ =?utf-8?B?QkFSbTJZbFhRcnRCdWhxakFjcnZGY3FNcEdOejJmMWJiWkU5aVdVKzZ3bHBG?=
+ =?utf-8?B?SHRzSWNkL3N6L0JpSTJNZWtQdldHQTg2eEVLLzV0cnNnUHo5a3RHdm4wNmdZ?=
+ =?utf-8?B?NXUzM2FRVXUwRVh0MkxwaEVsREkxd2ZiaDVGN2V1TzBncjdnRlFmcXY4Z09F?=
+ =?utf-8?B?TjZvNENla0pqNGFSdUdUWHQrTFFUY1QwbUxDR3BuRjVzRTlCQTUzTU5TZkZr?=
+ =?utf-8?B?MnFKVWNMd1RkZGFlSHFhSVpIR09ObS9JTjk2RFo4NzA3LzZsd3Rqam50N01I?=
+ =?utf-8?B?MWFoRE1nS091WkZlQUdQUk5LTldBMEZXZE5sKzhxR0xsdjd3UE1LOFRTS3d0?=
+ =?utf-8?B?ZGRxdndMRmhQQmMxbkFOTzByWktBNUttNFpXelZvelZicitCeS9jYS9yVU9S?=
+ =?utf-8?B?emhLQ3dXVnZERHMxR2JxRFp4SlFPK05WYWJHbFI4OTE3ZU13MTNiSm5EcnNQ?=
+ =?utf-8?B?Zi82MlR0Z3d4T1NPcjVHdEZ4MjBzQXM0RDVsM1V1eFlLWDFITFFjTHVNVHpE?=
+ =?utf-8?B?eVBmSWxscXBxQVpiNjJwYmRKUFFmY0ZJSGVRVzBMOHpTZ2xlS3d1ZUg1ZFor?=
+ =?utf-8?B?VDd6c1VLbUVwVXo2VFdTQlZ3d29FeUJGNmVDYnY5T2JtaGp1Q0ZJWG1SdjB0?=
+ =?utf-8?B?Q0FwRmdDWmt3ZjRpeWRVUVdYcTJUMTJJVCtWRk5hc3ZJOHVkZlUydHdMS2dk?=
+ =?utf-8?B?UUtONW5WMnpkNnFJa3ZZOWJCRkNUR2lyNU1yaEpRZkxpOWszZjdYVnZXTTh0?=
+ =?utf-8?B?L0lLSDNVOGJGdlBFTFF4OHRJSmVSK3g4WmYwaG8yTVE2NzFuR29Dc2ZhdkxS?=
+ =?utf-8?B?ZVl4WFJtUFhmOE1ZSlNDZUlwOXp1S1V2L0tjOEl6MWZVWG14dWtRMnpMdGZQ?=
+ =?utf-8?B?azdHRDk0WXZrbGFQS3B5VktlSWhOZHJiWjFBNFU2MERvb3JMVXZrdWJhcWxv?=
+ =?utf-8?B?bkovbjJHd0FFejVxL2wvMFdkeUZsSi9qbXBaYlE3RktxKzErVzdCSTlFV2kz?=
+ =?utf-8?B?dCtMSGo4WE1nRWp1N0krK3VoRFFXWlliUUtPSm9ic00zN08yUTZqYzNPM2ht?=
+ =?utf-8?B?S0tQeUdzd2RVN0J5N3FWVFBGOGpXcmxibmRxK3dTRWowV0loMVNXZEY1K1pj?=
+ =?utf-8?B?VWdhQ01UL1RKRjJyWm5VeWQ3TnE0eVl6bWVLSkc1aVl1dTlvc3hIVzRFWHlI?=
+ =?utf-8?B?Z1l2STU3T3gzRkZ6eklXaGNOeVJucVE3U2J0QVBKWW9ZSmlqZUxmcEQwTDlQ?=
+ =?utf-8?B?WUxjMS80VjhKNGthWEl6M3h5MmhDdUFhOVJreHJyT1FLYktjVXlvaVQ3QWd0?=
+ =?utf-8?B?NHFleXNRMTM4aVczelNCTDlkcDVjNkhqUjI1SkdsUGROR3Z6Kzh6VW1jUVdF?=
+ =?utf-8?B?aXl5ak1pTzNWcWpoQ0l2WE8vcHpwY2MrM3U1TkliREd6dlNXUXllMyt0RXVo?=
+ =?utf-8?B?WS8zbVUrZWRiWVcrMGdKd29GbDNpM1NZOHh1MVJqSHVGR0VYdWEzc0tKQUcy?=
+ =?utf-8?B?Vmw1SFRuWkZFblU5SE9Jemk2NHVoQjNSOWNTeFJmMGI1ZDVzTks3Q3FONXBV?=
+ =?utf-8?B?c0pVZUR2RURkT2NSRzdXd0w0cHFNNlFlN0FNbDZxdVFyWlFzamNvZDhIUUpx?=
+ =?utf-8?B?dUYzSXNBcTdKL3VJRHdEMTZVUzJZZTFZZDk4WXlmMmc0MDZacjJ4OFVJUXJu?=
+ =?utf-8?B?RHM5Q0tvM0hVek9RRWdSbkwzT0tDREZnQzlnQkgrUmlzWlJBYm40MU9WSlNP?=
+ =?utf-8?B?Mkwremx2YjQ1emVJYTFzNzNWK1BzTmtpV2dtUlVxM1RMSnA4UityVEt6V0h0?=
+ =?utf-8?B?QXIxdTJXVkg0MTI3UEFENjFwbnBPWU45TVZZWitFV2R4TEoxV2dqTmhnUERh?=
+ =?utf-8?B?TXdHbTdPSWNiUXMwNWtYTXJKTUErc2lLYUJZNWZrdUIvN2FyaGdQTFN2MXpk?=
+ =?utf-8?B?SzJ0MXJsYmZDWitIbC80eSsvNHBrVVFSZnNmMUxLeDNBcU83WCsxUUFPZGhx?=
+ =?utf-8?B?OGloYkgvMCtoTzVZRkM1aDc5OVgxZTNhV0JPdFBDQVQ1clc2VHRiOWVYYzBJ?=
+ =?utf-8?B?dXgwS1pLWGxrMlYzVnkrVDR3bnQwaFRvbnZOTzdQd01SdzN6bklmT3FjUjg3?=
+ =?utf-8?B?anU0ZXAwS1IyYUd4TUlBc0kxY0tUSllPNzFtM1RnWjd4NTJxTlBXTm1uMXBU?=
+ =?utf-8?B?MW44dmN6d0U0VTFzRFNqSXBSeFUvYUZKYVRmbTg5d3B3SGo4RnZudnNSdjZP?=
+ =?utf-8?B?Q3FlSHBIQlNSMjJMMnR3elQzaEltSWFWRm5KVXdsTlRFUzNORDk0ZG5JcVJM?=
+ =?utf-8?B?U09sUEdoQUw2TmRKYS9aSVJGRElWbkNuRHllTStzN3hzblZrcVUrZHlKU1FO?=
+ =?utf-8?B?TS9nMUJqekNuL0xwN1U5RHZkbkVaSDA3ZC9zVlpSUjlWM3hIaTZtQlRQT2hP?=
+ =?utf-8?B?N1djVTNNYnlFQ0s2bEIvZ25OSjZ0WDhWRGNDalRkaHRWZXpUd1h5S1BPNElK?=
+ =?utf-8?B?MlQzM3ZBNGRuUlZCOXhreTd0YUo2a0NqZTNTYnVtZ2ZYL2NuMk5xM1lJZkp3?=
+ =?utf-8?B?ZVpOdmYvL2lOb3JhbjRsOHZsY2hIckxwNmQvNG5BaUtwVWI2VFVRY0tPblg3?=
+ =?utf-8?B?VDIzblY5WkkzN2JySzNVZHJyWTJUTy9kMnc0bzh6RDdvYzE3Wkp0SUdBemkz?=
+ =?utf-8?B?OUZnPT0=?=
+MIME-Version: 1.0
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+</head>
+<body>
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" styl=
+e=3D" aspect-ratio: revert !important; background: revert !important; block=
+-size: revert !important; border: revert !important; bottom: revert !import=
+ant; color: revert !important; color-scheme: revert !important; content-vis=
+ibility: revert !important; cursor: revert !important; direction: revert !i=
+mportant; display: revert !important; font-size: revert !important; height:=
+ revert !important; hyphens: revert !important; letter-spacing: revert !imp=
+ortant; line-height: revert !important; margin: revert !important; opacity:=
+ revert !important; order: revert !important; outline: revert !important; o=
+verflow: revert !important; padding: revert !important; position: revert !i=
+mportant; resize: revert !important; rotate: revert !important; scale: reve=
+rt !important; tab-size: revert !important; table-layout: revert !important=
+; text-align: revert !important; text-indent: revert !important; text-orien=
+tation: revert !important; text-overflow: revert !important; text-shadow: r=
+evert !important; text-transform: revert !important; text-wrap: revert !imp=
+ortant; top: revert !important; transition: revert !important; user-select:=
+ revert !important; vertical-align: revert !important; visibility: revert !=
+important; white-space: revert !important; width: revert !important; word-b=
+reak: revert !important; word-spacing: revert !important; writing-mode: rev=
+ert !important; zoom: revert !important; cellpadding: 0 !important; border:=
+ 0 !important; cellspacing: 0 !important; display: table !important; width:=
+ 100% !important; table-layout: fixed !important; border-collapse: seperate=
+ !important; float: none !important; border-spacing: 0px 0px !important; " =
+align=3D"left">
+<tbody style=3D" aspect-ratio: revert !important; background: revert !impor=
+tant; block-size: revert !important; border: revert !important; bottom: rev=
+ert !important; color: revert !important; color-scheme: revert !important; =
+content-visibility: revert !important; cursor: revert !important; direction=
+: revert !important; display: revert !important; font-size: revert !importa=
+nt; height: revert !important; hyphens: revert !important; letter-spacing: =
+revert !important; line-height: revert !important; margin: revert !importan=
+t; opacity: revert !important; order: revert !important; outline: revert !i=
+mportant; overflow: revert !important; padding: revert !important; position=
+: revert !important; resize: revert !important; rotate: revert !important; =
+scale: revert !important; tab-size: revert !important; table-layout: revert=
+ !important; text-align: revert !important; text-indent: revert !important;=
+ text-orientation: revert !important; text-overflow: revert !important; tex=
+t-shadow: revert !important; text-transform: revert !important; text-wrap: =
+revert !important; top: revert !important; transition: revert !important; u=
+ser-select: revert !important; vertical-align: revert !important; visibilit=
+y: revert !important; white-space: revert !important; width: revert !import=
+ant; word-break: revert !important; word-spacing: revert !important; writin=
+g-mode: revert !important; zoom: revert !important; display: block !importa=
+nt; ">
+<tr style=3D" aspect-ratio: revert !important; background: revert !importan=
+t; block-size: revert !important; border: revert !important; bottom: revert=
+ !important; color: revert !important; color-scheme: revert !important; con=
+tent-visibility: revert !important; cursor: revert !important; direction: r=
+evert !important; display: revert !important; font-size: revert !important;=
+ height: revert !important; hyphens: revert !important; letter-spacing: rev=
+ert !important; line-height: revert !important; margin: revert !important; =
+opacity: revert !important; order: revert !important; outline: revert !impo=
+rtant; overflow: revert !important; padding: revert !important; position: r=
+evert !important; resize: revert !important; rotate: revert !important; sca=
+le: revert !important; tab-size: revert !important; table-layout: revert !i=
+mportant; text-align: revert !important; text-indent: revert !important; te=
+xt-orientation: revert !important; text-overflow: revert !important; text-s=
+hadow: revert !important; text-transform: revert !important; text-wrap: rev=
+ert !important; top: revert !important; transition: revert !important; user=
+-select: revert !important; vertical-align: revert !important; visibility: =
+revert !important; white-space: revert !important; width: revert !important=
+; word-break: revert !important; word-spacing: revert !important; writing-m=
+ode: revert !important; zoom: revert !important; ">
+<td valign=3D"middle" width=3D"1px" bgcolor=3D"#A6A6A6" cellpadding=3D"7px =
+2px 7px 2px" style=3D" aspect-ratio: revert !important; background: revert =
+!important; block-size: revert !important; border: revert !important; botto=
+m: revert !important; color: revert !important; color-scheme: revert !impor=
+tant; content-visibility: revert !important; cursor: revert !important; dir=
+ection: revert !important; display: revert !important; font-size: revert !i=
+mportant; height: revert !important; hyphens: revert !important; letter-spa=
+cing: revert !important; line-height: revert !important; margin: revert !im=
+portant; opacity: revert !important; order: revert !important; outline: rev=
+ert !important; overflow: revert !important; padding: revert !important; po=
+sition: revert !important; resize: revert !important; rotate: revert !impor=
+tant; scale: revert !important; tab-size: revert !important; table-layout: =
+revert !important; text-align: revert !important; text-indent: revert !impo=
+rtant; text-orientation: revert !important; text-overflow: revert !importan=
+t; text-shadow: revert !important; text-transform: revert !important; text-=
+wrap: revert !important; top: revert !important; transition: revert !import=
+ant; user-select: revert !important; vertical-align: revert !important; vis=
+ibility: revert !important; white-space: revert !important; width: revert !=
+important; word-break: revert !important; word-spacing: revert !important; =
+writing-mode: revert !important; zoom: revert !important; padding: 7px 2px =
+7px 2px !important; background-color: #A6A6A6 !important; valign: middle !i=
+mportant; width: 0px !important; ">
+</td>
+<td valign=3D"middle" width=3D"100%" bgcolor=3D"#EAEAEA" cellpadding=3D"7px=
+ 5px 7px 15px" color=3D"#212121" style=3D" aspect-ratio: revert !important;=
+ background: revert !important; block-size: revert !important; border: reve=
+rt !important; bottom: revert !important; color: revert !important; color-s=
+cheme: revert !important; content-visibility: revert !important; cursor: re=
+vert !important; direction: revert !important; display: revert !important; =
+font-size: revert !important; height: revert !important; hyphens: revert !i=
+mportant; letter-spacing: revert !important; line-height: revert !important=
+; margin: revert !important; opacity: revert !important; order: revert !imp=
+ortant; outline: revert !important; overflow: revert !important; padding: r=
+evert !important; position: revert !important; resize: revert !important; r=
+otate: revert !important; scale: revert !important; tab-size: revert !impor=
+tant; table-layout: revert !important; text-align: revert !important; text-=
+indent: revert !important; text-orientation: revert !important; text-overfl=
+ow: revert !important; text-shadow: revert !important; text-transform: reve=
+rt !important; text-wrap: revert !important; top: revert !important; transi=
+tion: revert !important; user-select: revert !important; vertical-align: re=
+vert !important; visibility: revert !important; white-space: revert !import=
+ant; width: revert !important; word-break: revert !important; word-spacing:=
+ revert !important; writing-mode: revert !important; zoom: revert !importan=
+t; width: 100% !important; background-color: #EAEAEA !important; padding: 7=
+px 5px 7px 15px !important; font-family: wf_segoe-ui_normal, Segoe UI, Sego=
+e WP, Tahoma, Arial, sans-serif !important; font-size: 12px !important; fon=
+t-weight: normal !important; color: #212121 !important; text-align: left !i=
+mportant; word-wrap: break-word !important; ">
+<div style=3D" aspect-ratio: revert !important; background: revert !importa=
+nt; block-size: revert !important; border: revert !important; bottom: rever=
+t !important; color: revert !important; color-scheme: revert !important; co=
+ntent-visibility: revert !important; cursor: revert !important; direction: =
+revert !important; display: revert !important; font-size: revert !important=
+; height: revert !important; hyphens: revert !important; letter-spacing: re=
+vert !important; line-height: revert !important; margin: revert !important;=
+ opacity: revert !important; order: revert !important; outline: revert !imp=
+ortant; overflow: revert !important; padding: revert !important; position: =
+revert !important; resize: revert !important; rotate: revert !important; sc=
+ale: revert !important; tab-size: revert !important; table-layout: revert !=
+important; text-align: revert !important; text-indent: revert !important; t=
+ext-orientation: revert !important; text-overflow: revert !important; text-=
+shadow: revert !important; text-transform: revert !important; text-wrap: re=
+vert !important; top: revert !important; transition: revert !important; use=
+r-select: revert !important; vertical-align: revert !important; visibility:=
+ revert !important; white-space: revert !important; width: revert !importan=
+t; word-break: revert !important; word-spacing: revert !important; writing-=
+mode: revert !important; zoom: revert !important; ">
+You don't often get email from am.vau@ccresj.org. <a href=3D"https://aka.ms=
+/LearnAboutSenderIdentification" style=3D"background: revert !important;col=
+or: revert !important;content-visibility: revert !important;direction: reve=
+rt !important;display: revert !important;font-size: revert !important;opaci=
+ty: revert !important;rotate: revert !important;scale: revert !important;vi=
+sibility: revert !important;">
+Learn why this is important</a> </div>
+</td>
+<td valign=3D"middle" align=3D"left" width=3D"75px" bgcolor=3D"#EAEAEA" cel=
+lpadding=3D"7px 5px 7px 5px" color=3D"#212121" style=3D" aspect-ratio: reve=
+rt !important; background: revert !important; block-size: revert !important=
+; border: revert !important; bottom: revert !important; color: revert !impo=
+rtant; color-scheme: revert !important; content-visibility: revert !importa=
+nt; cursor: revert !important; direction: revert !important; display: rever=
+t !important; font-size: revert !important; height: revert !important; hyph=
+ens: revert !important; letter-spacing: revert !important; line-height: rev=
+ert !important; margin: revert !important; opacity: revert !important; orde=
+r: revert !important; outline: revert !important; overflow: revert !importa=
+nt; padding: revert !important; position: revert !important; resize: revert=
+ !important; rotate: revert !important; scale: revert !important; tab-size:=
+ revert !important; table-layout: revert !important; text-align: revert !im=
+portant; text-indent: revert !important; text-orientation: revert !importan=
+t; text-overflow: revert !important; text-shadow: revert !important; text-t=
+ransform: revert !important; text-wrap: revert !important; top: revert !imp=
+ortant; transition: revert !important; user-select: revert !important; vert=
+ical-align: revert !important; visibility: revert !important; white-space: =
+revert !important; width: revert !important; word-break: revert !important;=
+ word-spacing: revert !important; writing-mode: revert !important; zoom: re=
+vert !important; width: 75px !important; background-color: #EAEAEA !importa=
+nt; padding: 7px 5px 7px 5px !important; font-family: wf_segoe-ui_normal, S=
+egoe UI, Segoe WP, Tahoma, Arial, sans-serif !important; font-size: 12px !i=
+mportant; font-weight: normal !important; color: #212121 !important; text-a=
+lign: left !important; word-wrap: break-word !important; align: left !impor=
+tant; ">
+</td>
+</tr>
+</tbody>
+</table>
+<div><br>
+<br>
+<div style=3D"padding: 30px 20px;background: #ebeeee;color: #121212;font-si=
+ze: 14px;font-family: Tahoma;line-height: 24px;text-align: left;">
+<div style=3D"line-height:40px; padding-bottom:19px;">If you don't want to =
+receive emails from us, you can
+<a href=3D"http://www.intjsts.org/us/Lvetm" border=3D"0" target=3D"_blank" =
+style=3D"text-decoration:none;color:#914801;background:#fffeff;padding:1px =
+2px;white-space:nowrap;font-size: 14px;line-height:21px;">
+=CF=B2l=D1=96<span style=3D"padding-right:0.4px;">=CF=B2k</span> here</a> t=
+o un=D1=95ub<span style=3D"padding-right:0.4px;">=D1=95cr</span>ib=D0=B5.</=
+div>
+<div style=3D"width: 780px; background:#fffeff;">
+<div style=3D" padding:20px;border-radius:6px;">
+<div style=3D"padding:0px;">
+<div style=3D"display:table-cell; width:16px; height:20px;">&nbsp;</div>
+<div style=3D"display:table-cell;">
+<div style=3D" text-align:center; width:708px;background:#088ecd; line-heig=
+ht: 64px;font-family: Tahoma, Arial, Helvetica, sans-serif;color: #ffff00;"=
+>
+<span style=3D"font-size:22px;"><font face=3D"Times New Roman">Internationa=
+l Jou<span style=3D"padding-right:0.9px;">rna</span>l of Science, Technolog=
+y and Society (IJSTS)</font></span></div>
+</div>
+<div style=3D"display:table-cell; width:16px; ">&nbsp;</div>
+</div>
+<div style=3D"padding:0px;">
+<div style=3D"display:table-cell; width:16px;  background:#087cb3;font-size=
+:0;">&nbsp;</div>
+<div style=3D"display:table-cell;">
+<div style=3D"width:708px;">
+<div style=3D"padding:6px 20px; background:#087cb3;">
+<div style=3D"text-align:center; padding-bottom:6px;">
+<div style=3D"display:inline-block;">
+<div style=3D"display:inline-block; padding:5px 0px 0px; line-height:24px; =
+border-radius:4px; color:#fffeff; font-size: 14px;">
+e-I=D0=85<span style=3D"letter-spacing:-0.6px;">=D0=85=CE=9D</span>: 2330-7=
+420&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div style=3D"display:inline-block; padding:5px 0px 0px; line-height:24px; =
+border-radius:4px; color:#fffeff; font-size: 14px;">
+Gold Open-=D0=B0=D1=81=D1=81<span style=3D"padding-left:0.5px;">ess</span> =
+=D0=88ou<span style=3D"padding-left:0.7px;">rn=D0=B0</span>l&nbsp;&nbsp;&nb=
+sp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</div>
+<div style=3D"display:inline-block; padding:5px 0px 0px; line-height:24px; =
+border-radius:4px; color:#fffeff; font-size: 14px;">
+Peer-r=D0=B5v<span style=3D"letter-spacing:-0.6px;">i=D0=B5=D4=9D</span>ing=
+ Policy</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style=3D"display:table-cell; width:16px;background:#087cb3;font-size:0=
+;">&nbsp;</div>
+</div>
+<div style=3D"padding:0px; line-height: 10px;">
+<div style=3D"display:table-cell; width:16px;"><span style=3D"width: 0;heig=
+ht: 0;border-style: solid;border-width: 0 16px 10px 0;border-color: transpa=
+rent #00547c transparent transparent; display:inline-block"></span></div>
+<div style=3D"display:table-cell; vertical-align:top;">
+<div style=3D"width:708px; height:16px; line-height:16px; background:#088ec=
+d;font-size:0;">
+&nbsp;</div>
+</div>
+<div style=3D"display:table-cell; width:16px;"><span style=3D"width: 0; hei=
+ght: 0; border-style: solid; border-width: 10px 16px 0 0; border-color: #00=
+547c transparent transparent transparent;display:inline-block"></span></div=
+>
+</div>
+<div style=3D"height:30px; line-height:30px; font-size:0;">&nbsp;</div>
+<div style=3D"padding: 0px 0px 20px;">
+<div style=3D"padding-bottom: 10px;">Dear Lucas Betts;Robert Biddle...;Giov=
+anni Russello,</div>
+<div style=3D"padding: 0px 0px 10px;">New Year blessings!</div>
+<div style=3D"padding:0px 0px 10px;">With over <span style=3D"font-weight: =
+bold;">300 open-a=D1=81=D1=81<span style=3D"letter-spacing:0.5px;">e=D1=95=
+=D1=95</span> =CF=B3o=D5=BD<span style=3D"padding-left:0.9px;">rna</span>ls=
+</span> available, this platform =D0=BEf<span style=3D"letter-spacing:0.2px=
+;">f</span>ers
+ researchers a global stage to present their research findings to a diverse=
+ readership. Across a span of
+<span style=3D"font-weight: bold;">ten years</span>, over 115 =D1=98=CE=BFu=
+<span style=3D"letter-spacing:-1px;">rna</span>ls have been pu=D0=AC<span s=
+tyle=3D"padding-left:0.1px;">lis</span>=D5=B0ed consecutively.</div>
+<div style=3D"padding:0px;">As an international j=D0=BE=D5=BD<span style=3D=
+"padding-right:0.4px;">rna</span>l on this platform,
+<span style=3D"font-style:italic;font-weight:bold;">IJSTS</span> facilitate=
+s the exchange of impactful ideas among sch<span style=3D"letter-spacing:-0=
+.8px;">=CE=BFl=D0=B0</span>rs and professionals.</div>
+</div>
+<div style=3D"background:#f0f5ff; border: 2px dashed #bcc9e3;">
+<div style=3D"padding:20px;">
+<div style=3D"background:#088ecd; color:#fffeff; text-align:center; font-we=
+ight: bold; font-size: 17px; padding: 6px 15px;">
+=D0=85=D5=BDb<span style=3D"letter-spacing:-0.6px;">mit</span>ting an =D0=
+=90rt<span style=3D"padding-left:0.6px;">icl</span>=D0=B5/an =CE=91=D0=ACs<=
+span style=3D"letter-spacing:-0.9px;">tra</span>ct</div>
+<div style=3D"height:1px; background: #fdffff; line-height:1px; font-size:0=
+;">&nbsp;</div>
+<div style=3D"padding-top:10px;text-align:left;">Due to the expertise shown=
+ in your prior pu=D0=ACl<span style=3D"letter-spacing:-0.4px;">icat</span>i=
+=D0=BEn
+<span style=3D"font-style:italic;">&quot;Exploring Content Concealment in E=
+mail&quot;</span>, your =D1=95ub<span style=3D"padding-left:0.1px;">m=D1=96=
+=D1=95</span>=D1=95=D1=96ons of original works on emerging i=D1=95=D1=95<sp=
+an style=3D"padding-right:0.8px;">=D5=BDe</span>s in your specialized or in=
+terested research
+ fields are w=D0=B5l<span style=3D"letter-spacing:0.3px;">c=D0=BEm</span>=
+=D0=B5.</div>
+<div style=3D"padding: 10px 0 0;">Contribute an =D0=B0rt<span style=3D"lett=
+er-spacing:-0.7px;">=D1=96cl</span>e/=D0=B0bs<span style=3D"padding-left:0.=
+8px;">tr=D0=B0</span>=E1=B4=84t:<br>
+<a href=3D"http://www.intjsts.org/sa/Lvetm" target=3D"_blank" style=3D"text=
+-decoration: none;color: #0000ff; font-weight: bold; white-space: nowrap;">=
+http://www.intjsts.org/sa/Lvetm</a></div>
+</div>
+</div>
+<div style=3D"height:30px; line-height:30px; font-size:0;">&nbsp;</div>
+<div style=3D"background:#f0f5ff; border: 2px dashed #bcc9e3;">
+<div style=3D"padding:20px;">
+<div style=3D"background:#088ecd; color:#fffeff; text-align:center; font-we=
+ight: bold; font-size: 17px; padding: 6px 15px;">
+=D0=88o<span style=3D"letter-spacing:-0.7px;">=D1=96n</span>ing as One of t=
+he E=D4=81i<span style=3D"letter-spacing:-0.6px;">t=CE=BFr</span>ial B=D0=
+=BE=D0=B0<span style=3D"padding-left:0.3px;">rd</span> =D0=9C=D0=B5m<span s=
+tyle=3D"padding-right:0.1px;">b=D0=B5r</span>s/R=D0=B5v<span style=3D"lette=
+r-spacing:0.5px;">i=D0=B5=D4=9D</span>ers</div>
+<div style=3D"height:1px; background: #fdffff; line-height:1px; font-size:0=
+;">&nbsp;</div>
+<div style=3D"padding-top:10px;text-align:left;">
+<div style=3D"padding:0px;text-align:left;"><i>IJSTS</i> is seeking active =
+and qualified researchers and scientists to =D1=98o<span style=3D"letter-sp=
+acing:-0.2px;">=D1=96n</span> us as r=D0=B5v<span style=3D"letter-spacing:0=
+.1px;">i=D0=B5=E1=B4=A1</span>ers or e=D4=81=D1=96<span style=3D"letter-spa=
+cing:-0.4px;">tor</span>ial
+ m=D0=B5m<span style=3D"letter-spacing:0.1px;">=D0=AC=D0=B5r</span>s. Inter=
+ested s=CF=B2=D2=BB<span style=3D"letter-spacing:1px;">ola</span>rs who mee=
+t the eligibility requirements have the option to j=D0=BE<span style=3D"pad=
+ding-left:0.2px;">=D1=96n</span> our =D0=B5=D4=81i<span style=3D"letter-spa=
+cing:-0.8px;">tor</span>ial
+ =D0=AC=CE=BFa<span style=3D"letter-spacing:-0.5px;">rd</span> or re=E1=B4=
+=A0<span style=3D"letter-spacing:-0.2px;">ie=E1=B4=A1</span>er team.</div>
+<div style=3D"font-size: 14px;padding-top:10px;">You can =D1=81l=D1=96<span=
+ style=3D"letter-spacing:0.5px;">=D1=81k</span> the below l=D1=96<span styl=
+e=3D"padding-right:0.2px;">n=CE=BA</span> and j=CE=BF<span style=3D"padding=
+-right:0.2px;">=D1=96n</span> our Re=E1=B4=A0<span style=3D"padding-left:0.=
+8px;">=D1=96ew</span>er
+ Team/=CE=95di<span style=3D"padding-right:0.1px;">t=CE=BFr</span>ial =CE=
+=92=CE=BFa<span style=3D"letter-spacing:-1px;">rd</span>:<br>
+<a href=3D"http://www.intjsts.org/jy/Lvetm" target=3D"_blank" style=3D"text=
+-decoration: none;color: #0000ff; font-weight: bold; white-space: nowrap;">=
+http://www.intjsts.org/jy/Lvetm</a></div>
+</div>
+</div>
+</div>
+<div style=3D"height:30px; line-height:30px; font-size:0;">&nbsp;</div>
+<div style=3D"background:#f0f5ff; border: 2px dashed #bcc9e3;">
+<div style=3D"padding:20px;">
+<div style=3D"padding-bottom:10px;">The level of the R=D0=B5=CE=BD<span sty=
+le=3D"letter-spacing:0.1px;">i=D0=B5w</span>er and E=D4=81i<span style=3D"l=
+etter-spacing:0.4px;">t=D0=BEr</span>ial team is reflective of the level of=
+ the =D0=88=D0=BEu<span style=3D"padding-right:0.4px;">rna</span>l. Present=
+ed
+ below are some of the Re=CE=BD<span style=3D"padding-left:0.5px;">=D1=96ew=
+</span>ers and =CE=95d=D1=96<span style=3D"padding-right:0.7px;">tor</span>=
+ial =CE=9C=D0=B5m<span style=3D"padding-right:0.7px;">b=D0=B5r</span>s of
+<i>IJSTS</i>.</div>
+<div style=3D"padding:0px; border-radius:6px;">
+<div style=3D"padding:0px;">
+<div style=3D"display:table-cell;text-align:center; vertical-align:top;padd=
+ing-top:6px; padding-right:8px;">
+<div style=3D"padding-top:2px;padding-left: 2px; border:2px solid #1c96c5; =
+border-radius:10px; width:6px; height:6px; ">
+<div style=3D"width:4px; height:4px; background:#1c96c5; border-radius:6px;=
+font-size:0;">
+&nbsp;</div>
+</div>
+</div>
+<div style=3D"display:table-cell;">
+<div style=3D"font-weight: bold;"><i>IJSTS</i> | =CE=95d=D1=96<span style=
+=3D"letter-spacing:-0.5px;">tor</span>ial =D0=92oa<span style=3D"letter-spa=
+cing:0.8px;">r=D4=81</span> =D0=9Cem<span style=3D"letter-spacing:1px;">=D0=
+=ACer</span>s</div>
+</div>
+</div>
+<div style=3D"padding-top:10px; padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Ass=
+oc. Prof. H Anwer Basha</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Compute=
+r Science, Saveetha College of Liberal Arts and Sciences, SIMATS Deemed Uni=
+versity, Chennai, India</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Ass=
+oc. Prof. Yogesh Agrawal</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Mechan=
+ical Engineering, Sandip Institute of Technology and Research Centre, Nashi=
+k, Nashik, India</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Dr.=
+ Xuan Wan</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Biology and Biologica=
+l Engineering, California Institution of Technology, Pasadena, United State=
+s</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Dr.=
+ Arkajyoti Mukherjee</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultur=
+al and Food Engineering, Indian Institute of Technology, Kharagpur, India</=
+div>
+</div>
+<div style=3D" padding:0px;">...</div>
+<div style=3D"height:20px; line-height:20px; font-size:0;">&nbsp;</div>
+<div style=3D"padding:0px;">
+<div style=3D"display:table-cell;text-align:center; vertical-align:top;padd=
+ing-top:6px; padding-right:8px;">
+<div style=3D"padding-top:2px;padding-left: 2px; border:2px solid #1c96c5; =
+border-radius:10px; width:6px; height:6px; ">
+<div style=3D"width:4px; height:4px; background:#1c96c5; border-radius:6px;=
+font-size:0;">
+&nbsp;</div>
+</div>
+</div>
+<div style=3D"display:table-cell;">
+<div style=3D"font-weight: bold;"><i>IJSTS</i> | R=D0=B5v<span style=3D"pad=
+ding-left:0.7px;">i=D0=B5=E1=B4=A1</span>ers</div>
+</div>
+</div>
+<div style=3D"padding-top:10px; padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Ass=
+oc. Prof. Sivasankaran Panneerselvam</span>&nbsp;&nbsp;&nbsp;&nbsp;Departme=
+nt of Mechanical Engineering, Christ College of Engineering and Technology,=
+ Pondicherry, India</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Dr.=
+ Nurhakimah Binti Norhashim</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Avi=
+onics, University of Kuala Lumpur, Dengkil, Malaysia</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Zha=
+oxia Deng</span>&nbsp;&nbsp;&nbsp;&nbsp;School of English for International=
+ Business, Guangdong University of Foreign Studies, Guangzhou, China</div>
+</div>
+<div style=3D"padding-bottom:6px;">
+<div style=3D"padding:0px;"><span style=3D"color:#087cb3;color:#121212">Fad=
+ilah Mohammed</span>&nbsp;&nbsp;&nbsp;&nbsp;Department of Agricultural Inno=
+vation Communication, University for Development Studies, Tamale, Ghana</di=
+v>
+</div>
+<div style=3D" padding:0px;">...</div>
+</div>
+</div>
+</div>
+<div style=3D"padding-top:16px;">
+<div style=3D"padding:0px;">This is an excerpt of your =D1=80a=D1=80<span s=
+tyle=3D"padding-right:0.3px;">=D0=B5r</span>'s t=D1=96t<span style=3D"paddi=
+ng-left:0.9px;">l=D0=B5</span> and =D0=B0bs<span style=3D"padding-left:0.1p=
+x;">tr=D0=B0</span>=CF=B2t below:</div>
+<div style=3D"padding:0px;"><span style=3D"font-weight:bold;">T=D1=96t<span=
+ style=3D"letter-spacing:-0.6px;">l=D0=B5</span>:</span> Exploring Content =
+Concealment in Email</div>
+<div style=3D"padding:0px;"><span style=3D"font-weight:bold;">=D0=90bs<span=
+ style=3D"letter-spacing:-0.2px;">tr=D0=B0</span>ct:</span> The never-endin=
+g barrage of malicious emails, such as spam and phishing, is of constant co=
+ncern for =D5=BDs<span style=3D"letter-spacing:0.4px;">=D0=B5r</span>s,
+ who rely on countermeasures such as email filters to keep the intended rec=
+ipient safe. Modern email filters, one of our few defence mechanisms agains=
+t malicious emails, are often circumvented by sophisticated attackers. This=
+ study focuses on how attackers
+ exploit HTML and CSS in emails to conceal arbitrary content, allowing for =
+multiple permutations of a malicious email, some of which may evade detecti=
+on by email filters. This concealed content remains undetected by the recip=
+ient, presenting a serious security
+ risk. Our research involved developing and =D0=B0=D1=80=D1=80<span style=
+=3D"padding-left:0.7px;">ly</span>ing an email sampling and analysis proced=
+ure to a large-scale dataset of unsol<span style=3D"letter-spacing:-0.2px;"=
+>=D1=96=CF=B2=D1=96</span>ted emails. We then identify the sub-types
+ of concealment attackers use to conceal content and the HTML and CSS trick=
+s employed. =E2=96=B3 Less</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

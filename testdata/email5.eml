@@ -1,0 +1,669 @@
+Received: from SI1PPF90E4E448E.apcprd02.prod.outlook.com (::1) by
+ JH0PR02MB7138.apcprd02.prod.outlook.com with HTTPS; Sat, 15 Mar 2025 14:56:10
+ +0000
+Received: from SA0PR11CA0082.namprd11.prod.outlook.com (2603:10b6:806:d2::27)
+ by SI1PPF90E4E448E.apcprd02.prod.outlook.com (2603:1096:f:fff6::75d) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.28; Sat, 15 Mar
+ 2025 14:56:07 +0000
+Received: from SN1PEPF0002636C.namprd02.prod.outlook.com
+ (2603:10b6:806:d2:cafe::3e) by SA0PR11CA0082.outlook.office365.com
+ (2603:10b6:806:d2::27) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.28 via Frontend Transport; Sat,
+ 15 Mar 2025 14:56:05 +0000
+Authentication-Results: spf=pass (sender IP is 128.245.252.170)
+ smtp.mailfrom=bounce.trends.financestrailblazers.com; dkim=pass (signature
+ was verified) header.d=trends.financestrailblazers.com;dkim=pass (signature
+ was verified) header.d=s13.y.mc.salesforce.com;dmarc=pass action=none
+ header.from=trends.financestrailblazers.com;compauth=pass reason=100
+Received-SPF: Pass (protection.outlook.com: domain of
+ bounce.trends.financestrailblazers.com designates 128.245.252.170 as
+ permitted sender) receiver=protection.outlook.com; client-ip=128.245.252.170;
+ helo=mta3.trends.financestrailblazers.com; pr=C
+Received: from mta3.trends.financestrailblazers.com (128.245.252.170) by
+ SN1PEPF0002636C.mail.protection.outlook.com (10.167.241.137) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.8534.20 via Frontend Transport; Sat, 15 Mar 2025 14:56:05 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:4746B64053D7B4D877EE23A299BF7CF0A18CEC45364E4D7E5B20B4DAF38F0D99;UpperCasedChecksum:B82A87C35E349038140E90AE0A5F2BAC7E86A84E57DAF37A1258AB5AE591D33D;SizeAsReceived:2553;Count:15
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=13dkim1;
+ d=trends.financestrailblazers.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=stock@trends.financestrailblazers.com;
+ bh=FXqjMmxgLaseN7NYY6c/tpdEDVcHDr/zK8fhbuHtYZ4=;
+ b=EzQ9QLjo8AiZA2Z5Bu2N4nNa11djzmv6xW+yZqbWkIuy7KhpHrdcxq+bCCSgL13ei1ofjErN4Koh
+   N/FFQA2xbxIJ9YxxvUpphTsNVqTt6AQ540Ufg3YQdNOumctRvpRcgEkBZdEgTfilNPrt8cY0wayo
+   NwQHM87mBDHvx75+E5UGAOVYJYULSDAidvH5fwr951lOpqJYs76h60XA7NAGePDein17GU6gFtJZ
+   DYR/QnUZqr/r5DdzCkrvxfbgCn+k2YjVMG5YJhQezz1cY+qAyqW9x3x6WsYSkVi3sq3EK5Cr2Zzo
+   ygTJB2+p3cz+MMKWGaDEFN75Tw/CU991w92TPQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim13; d=s13.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=FXqjMmxgLaseN7NYY6c/tpdEDVcHDr/zK8fhbuHtYZ4=;
+ b=o3TmlUXyJB9mKiw+jAgx6ai0uheCnacOWUtRgyL8JbPVidBRmTwDXnlFboyiE2a1r0PUFsuX+u4t
+   NwjBj3MlgaUHQGIuPj7adIvXO9wBuf5195ygkKmZlm1JubIn4+VEsnBG8LnMPVtckFV2SjErvHNi
+   vYSKThWw0kq034j2G2oJhaQfwTNbilWSivpKrXu9Ui0hIBJYshS5OA8Oz6tulQyaLDFY1k6IR1et
+   QNSjn8qFGuZvcKRDB31PZp1o8Ej9aPFtb8qwnps+4wu6Tp2tW8zZpEpiYXRYoUk8PFM4Rof4AZKn
+   ArmbUhyNgh59hhVcVWSn4tJCG443zPyuP9u2DQ==
+Received: by mta3.trends.financestrailblazers.com id hqmaga2fmd4v for <millinman@hotmail.com>; Sat, 15 Mar 2025 14:55:50 +0000 (envelope-from <bounce-7670_HTML-211227267-88895-546005442-0@bounce.trends.financestrailblazers.com>)
+From: "Secret Property List - J.Swanson from FTR" <stock@trends.financestrailblazers.com>
+To: <millinman@hotmail.com>
+Subject: =?UTF-8?B?UHJlLUZvcmVjbG9zdXJlIExpc3RpbmdzIOKepQ==?=
+Date: Sat, 15 Mar 2025 08:55:50 -0600
+List-Unsubscribe: <https://click.trends.financestrailblazers.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI1NDYwMDU0NDIiLCJzIjoiMjExMjI3MjY3IiwibGlkIjoiNzY3MCIsImoiOiI4ODg5NSIsImpiIjoiMCIsImQiOiIxMzAwMDQifQ.WkHWgkw41l0Gmxv5P0-zQGFMdSJVapl-tx59llNsM0Y>, <mailto:leave-fd17137672646b2531492c-fe3116717466067a771277-fee91c787d6d01-fe31117473640478711072-ffcf14@leave.trends.financestrailblazers.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Reply-To: "FinancesTrailblazers.com" <reply-fee91c787d6d01-7670_HTML-211227267-546005442-0@trends.financestrailblazers.com>
+X-SFMC-Stack: 13
+x-job: 546005442_88895
+Message-ID: <52a07d89-6f30-4175-9ae5-a440c9f3525b@iad4s13mta1092.xt.local>
+Content-Type: multipart/alternative;
+	boundary="2svARreG9oSW=_?:"
+X-IncomingHeaderCount: 15
+Return-Path: bounce-7670_HTML-211227267-88895-546005442-0@bounce.trends.financestrailblazers.com
+X-MS-Exchange-Organization-ExpirationStartTime: 15 Mar 2025 14:56:05.7345
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: a95fe7ce-9cdd-499f-066f-08dd63d18339
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: SN1PEPF0002636C:EE_|SI1PPF90E4E448E:EE_|JH0PR02MB7138:EE_
+X-MS-Exchange-Organization-AuthSource: SN1PEPF0002636C.namprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/15/2025 2:48:48 PM
+X-MS-Office365-Filtering-Correlation-Id: a95fe7ce-9cdd-499f-066f-08dd63d18339
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 128.245.252.170
+X-SID-PRA: STOCK@TRENDS.FINANCESTRAILBLAZERS.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:5;ARA:1444111002|10300799035|9400799030|9000799050|461199028|68400799013|1680799057|58200799018|47200799021|21080799006|56899033|1380799030|1360799030|1370799030|1602099012|11135499003|440099028|4302099013|3412199025|1122599019|2406899039|6406899015|311199032;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 15 Mar 2025 14:56:05.5939
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: a95fe7ce-9cdd-499f-066f-08dd63d18339
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: SN1PEPF0002636C.namprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SI1PPF90E4E448E
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.6887314
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90012020)(91020020)(91040095)(9050020)(9100341)(944500132)(2008001181)(4810010)(4910033)(9610028)(9560006)(10180024)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?TXhCZDdrZkRtbzZkQklMS1hKNUV6d2tzRlpZZXc1bEs1MlZTZWs2Z2tEc0Rt?=
+ =?utf-8?B?QTdOZ2IzSzFndmNFc3EzUE94bW8wM3FtVkxkMkUzVzNTZXA1RnN6ZS9JaDkr?=
+ =?utf-8?B?MUcyWVBkRzUxWlUyWCtxREVONVJTcDFGNjludkdLcU40dmZGUXgzMzVqdUFR?=
+ =?utf-8?B?Nk13NnBOSEtBTTV3UFFHU2pxUnRqY1ZEVDJIZ09WYnpwN3Zpamp1T1BuNk9t?=
+ =?utf-8?B?aGJXOVpsb0M5WnJNeHY2SnZnTWx3VDlWMmhzOWhHQTJXNkRWQmJoU29tM3RB?=
+ =?utf-8?B?cDhEVHB2c2RQd0Z3NnZsd0s1SC9aci9RYVNXRExOb0ErcVZxaGZSWFd1MVlR?=
+ =?utf-8?B?YnNMTFQ2NHlndjZnK1JZSmozaTNsNTBrOEJ2VzlhWDVDRkJIaWZmZHhQQmJJ?=
+ =?utf-8?B?NzVraWhhUkZuc2VWNTJRckFIblZHOFQzWE1zNDJXQm13a0EwVUpuRGVKcGtj?=
+ =?utf-8?B?WVQxMjZXbjRVWHdSZGN6cDNSYnhKS0dlRkFYQlFtL3BCQ2pFeUpQSy9Hclk2?=
+ =?utf-8?B?UmVBOEdSZ2lWZHA1TVo3N01ZamtmVWZKa2VOOGpUaElzM3cyU0poY3FvSmEy?=
+ =?utf-8?B?bmI0Y0twdlpmZGVsTTNTTlpsajlNT0M5c25jRllQMkRRVnhkeVN4SlNpaUg0?=
+ =?utf-8?B?TlNOdVJhYjZ5QkxmWUU0STZwdldKYnUrWnBiSTZ1ak05VFhUYVlFRzBIUDJi?=
+ =?utf-8?B?dHA5V1BEU1NLYjEvT29rdFhwbHFDRW94c1M4WFd3a2tJQm8vWDl5cE9jSHpx?=
+ =?utf-8?B?S0ZpU3o2Rk5kcTc2UEcvV2tDZEJGUS9Od3EyZkZmNUNoOUVFcjJuQ0hTNVdQ?=
+ =?utf-8?B?SEtEMWwwMk40V3Ewem1qUjMzb3NycksrR1BtalpZbGFCZTdsTE1DeEo4R1dD?=
+ =?utf-8?B?TytteWRubjE0ZU43Sk44Qk5lYitIRVNqemtBOVBwek9TdmxINnBKMzBVTTJk?=
+ =?utf-8?B?dmhmbkwvRFR4UmcxMk1MNlJYUEwvc29aMFRQSnBlQ0c4VzYrSnN4SlRQWFN4?=
+ =?utf-8?B?KzVWYjhueURuRkdiUndjaTlWQSt2azNjc1FWdlV5bXloT1UzekpZZjdjZjJy?=
+ =?utf-8?B?b21VM3EvUEtDRDhTM0x5WU9kOWhHUWJzdlN0eUJyMVdEYjVqUkZXR2hNUW1R?=
+ =?utf-8?B?aFQxbTM5a3ZWRFloV29mbm5TK0FUazh4NHV4YS9CaThuQ2ZWbUJ1NFJRL3RI?=
+ =?utf-8?B?dVhIbmtCem5ueTZuZDhrcHFUNk91emdqblVJbnIvN1VsVi9wNkxBUUlTNFFM?=
+ =?utf-8?B?aC9wd2tpMVVDMnQzNEJUeWFkK1dYaCtuYTlSL0pzRjZRRWIrUC83T2tHc29i?=
+ =?utf-8?B?RXpYRVRjeHVvQ2lSdHN0UDA0WXZtckRsemtlY0JwRTFHSmRMcHBzR3pLS0Jz?=
+ =?utf-8?B?ZjRnZlMwV014eGhCcUE2WmdBUSt6bmxZeTdtdVZRUnpQVVE3aFM0ZDdGUHE5?=
+ =?utf-8?B?QXYyNkh2dTZzQWpBYkdTQjgvTGJOTE1VMTFjTlk3SnluVVcwSG9OOVg0SDM2?=
+ =?utf-8?B?aFFONkZiY2VONUZPcUNMMVlrUUhMMlhUcEk4N3dRNHBhQ1haNkNBeFZrUnNt?=
+ =?utf-8?B?TTFrM2hJamdRTTFIZ3VYZkFocGhuL0hvSDQ5c1NoZ2JYK3FVZnNoMXdjelZ2?=
+ =?utf-8?B?K1MzR0pSbmdFQ015Qk8rTmRkVlBJR3VjQ2tUYS84d1psRlUzKzJmOEg3WElS?=
+ =?utf-8?B?V0FCaytpOEd3QXBzWWhLYmJpY0diZmZGUDdOdkxZYytDUVFUSUp6ZGdjYWNL?=
+ =?utf-8?B?N21zTWN6U2dodXZFWldqbXJrT01DMkFHa0djQWZPb2w4MEZUblRac3lFWVV0?=
+ =?utf-8?B?dGVhYjBZU2pZTVVHWTNETEVZRnpDRjNsQlc2U0pDMkhZVjFRTEhNdkt3VXB0?=
+ =?utf-8?B?Z1h3dk1KSDNXdnRCWVBqWFBIaGtSOU1YQUxHTHNyWEthQjQvT1JzVGMvUGt6?=
+ =?utf-8?B?VlcreHZFaG9jbWZGS29YVWR5ZEVHZ0doOW45MDZnVWc1bnpIREQ5cXdJVzlp?=
+ =?utf-8?B?dWJnazYyWnBxcndHaFBUY2NLWmZmVG1NaVY2MnYzRW02VmVhQjdrVjdQbHdF?=
+ =?utf-8?B?T2ROb2tMWXV4dy9YMDl3WDgvVDBGWHhnS1JFVmoyK3krQkFjSzFQUHFqK2Nv?=
+ =?utf-8?B?THZ1TnVDOGZab3JFSFcvN3p3V29XVi82WWtWaldoaHFIRjBHd0JrRW5NMmV3?=
+ =?utf-8?B?cG9rMnBWUWF5OExGeU5uV3VnT2xGZmNpTHpoZitPamdHR2tBbEN6MzBQSFdp?=
+ =?utf-8?B?dnM4M3VJRlFjZnBRbTFob1NuU1RkcExocjkxaDFUa0c5Mnl0T1hjdUVVb3pj?=
+ =?utf-8?B?NjFGVzR2N0dTdjhlSXBsQVN2MXZnM1FPWSs0b0VJaVBwSGtXQ0hvbmZzYk5E?=
+ =?utf-8?B?NGdmZlFidldJUzNraEkvb0EyNFZWQzJuaEZKUW9laG9MMlVaanJ5cmNVRFVp?=
+ =?utf-8?B?YmJKcEdWYUVDWlJuZmZDQkxJWGJZY3BIdXNwU21NQWJTeUJjdVJuZlFoREtl?=
+ =?utf-8?B?THEyWEEzckRqckxYUFd3RDN3Z0FaQTNleVFYN2hGMklRZEd2TEtET1RCS1FJ?=
+ =?utf-8?B?SlNZeEkwOEdBSWFpam54MEFScit3MTFCUjJvMjVxYzNDWlZqclpIMWxhUGwv?=
+ =?utf-8?B?TXVwVTFoYVZ5MXRGa2UzTnBMeFhnRGJEWjBZVUphRjVUNmRWTHhlTlRwNWQ1?=
+ =?utf-8?B?Y05pUXpYd3B1U1M5c1V0S3Y5cmVuZXAxQnFUSHBQUCtXcHZIWDBPcjFXb3hN?=
+ =?utf-8?B?ZHJXbEVScHJjbUFKVHRkOHFzYlJLaGNjZkQvaEFjU0dGMFFSeTR5VlhTQnZM?=
+ =?utf-8?B?ZFliVUI1TFF0ZUhBbXRBS2xwM2d0S3U2am1Db3FGcjcwMHBzSm93VzZPTFll?=
+ =?utf-8?B?L1ZxQjdVdlkyL0xnMmZYNmRiMm81QVNuU0daLzRNUzJVbGFrQ0cwK3RROUV4?=
+ =?utf-8?B?b0F2OUFoSTBmVlorNENsdFhqMkI5enpkQUx1bzFDOUVJKzBzRnpLeEphY1c4?=
+ =?utf-8?B?TmJ0eHpBcUwzYjlGcThXTVFETkdOWi9EbDEwZ3dDUmZDQUhjQ0xtMnlmTSt3?=
+ =?utf-8?B?RzVqV1dEVzg5NisrZ0huem1oK1hqUmZMa3REalVDNWtBaUJPbkI5WXZpMWpP?=
+ =?utf-8?B?cFBBYjNZMzF5clVxV3g4TnowRGxSaDkrZ2EzRzVzdUJPWUdqS3pBaEVOeSts?=
+ =?utf-8?B?ZEdLMG9OVTVCU1lEb1k1MTVPVksrQlJuMi83Uk1RSXpWd3JaQ0RGMjdhWktG?=
+ =?utf-8?B?aU1NcVlMTW5IRjFrVTRXaUxaRlNzYmNhTTRhQWVPTWRXejNrdWs0L0dkZ3U0?=
+ =?utf-8?B?aFVXQXhQNzBsMXZrWW14alpmRFNhQzBPZ05ZOEM4Y2NIOUhhQ1dySmxXdS9m?=
+ =?utf-8?B?T2dMaEZsTkJuNm10SU5Ld0thajQrMlBUZmZqbmxOSnVmRm85Y0N3S0liZz09?=
+MIME-Version: 1.0
+
+--2svARreG9oSW=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+E-mail Letter
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde5d59203711365479258c9a3dea02e0544b9205570942db4686ed8c3dc02ef7d81d29ee1a0a5626b09382c9572ca9a137 
+
+
+ Have you checked your county's Pre-Foreclosure list yet?
+ 
+
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde022569cff78be685f9704e1b5bb3cfa5d332382d57710dfdd2c8810fa3b348f96792258f46979496123e032d37dc32b9 
+
+
+ If not, you might be missing out on houses that you can flip in just ONE
+ day…
+ 
+
+
+ – No loans required
+ 
+
+ – No credit checks
+ 
+
+ – No starting capital
+ 
+
+ – Zero risk involved
+ 
+
+
+ Sounds impossible? Jeromie Tucker thought so too, until he made $162,835
+
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde022569cff78be685f9704e1b5bb3cfa5d332382d57710dfdd2c8810fa3b348f96792258f46979496123e032d37dc32b9 
+Click
+ to Access the List! 
+
+More breaking news below…(ADs)
+
+	- ➜
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde573e97929d6a213479e7363f5a528dd8f1e66c75e874d4d7e1107ef4a799e7b30c22ecb98324d0849d60581ae73cef54 
+
+ Trump Exposes Missing Billions & a War-Changing Weapon
+  (Behind the Markets)
+	- ➜
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dded5413b2dc535564c0ba27d9fc7daf7737c7c3ab57519568ccd9f065f5cd8d74fecdc32befbdb8b2ffbc7b7b8d6bdf7d6 
+
+ $4.7 Trillion Gone?! Trump & Elon Just Sounded the Alarm…
+  (Eagle Pub)
+	- ➜
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde0fcf5ad4ff3aead106b1dd216453653ecd92c27952e327ba2adf75c1fdcf6d7051aedf6dcd47e5f4bc09cf8cf454c36d 
+
+ China, Russia, and Iran Just Teamed Up—Here’s How to Prepare
+  (Behind the Markets)
+
+
+ At Finances Trailblazers, we are
+ committed to serving as your vigilant
+ source
+ for unique opportunities that you can
+ leverage. The following message from one
+ of our partners is something we believe
+ deserves your careful consideration.
+ 
+
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde53e1d318b3988c1db5a9633cbdf62dde4126b5a4ad39add00f38f9882d3601a2a46417f493e19ce78d588b9285fdd71c 
+
+https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde8673b20b7ee31f3cb0cbfe249310463c6656c26de9c82d35bc993018b7eab424deae1a6187b992d6584dab64b3dd5e11 
+
+https://click.trends.financestrailblazers.com/unsub_center.aspx?qs=0f75a6328b94e52609037c1ce42fddb0e336a962ab0caa6a8745557eb2d0f9b1248d7b458d85f46fe0f6a171b5bcea6e47a4ccb854aab01f7896f38596e56b31 
+
+
+ Contact us by sending an
+ email to 
+mailto:support@financestrailblazers.com 
+support@financestrailblazers.com
+ You will receive a response
+ within 24 hours. 
+
+
+ Finances Trailblazers
+ sending this newsletter on
+ behalf of Prestige
+ Publishing LLC 
+
+
+ 200 Continental Dr Suite
+ 401, Newark, DE 19713 
+
+ © 2025 All Rights
+ Reserved.Finances
+ Trailblazers
+ 
+ https://click.trends.financestrailblazers.com/profile_center.aspx?qs=0f75a6328b94e526facdb704ba7eb93cc702fdf0f28df33ff8b0e141b9af07ee250fbfba4f64d9053913361a07e2c7174d78889fe717860f8c653448d8ccbc77
+ 
+
+
+
+--2svARreG9oSW=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>E-mail Letter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Georgia:wght@400;500;700&amp;family=Montserrat:wght@400;500;600;700;800;900&amp;family=Geologica:wght@100..900&amp;display=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://use.typekit.net/pei3heh.css');
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 100%;
+        }
+
+        * {
+            box-sizing: border-box !important;
+        }
+
+        img {
+            outline: none !important;
+            text-decoration: none !important;
+            border: none !important;
+            -ms-interpolation-mode: bicubic !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            display: block !important;
+        }
+
+
+
+
+        table td {
+            border-collapse: collapse !important;
+        }
+
+        table {
+            border-collapse: collapse !important;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        @media screen and (max-width: 598px) {
+            .hide_mobile {
+                display: none !important;
+            }
+
+            .show_mobile {
+                display: block !important;
+            }
+
+            .cell {
+                display: block !important;
+            }
+
+            .cell_top {
+                display: table-header-group !important;
+            }
+
+            .cell_bot {
+                display: table-footer-group !important;
+            }
+
+            .header_links {
+                font-size: 11px !important;
+                text-align: center !important;
+            }
+
+            .editors_logo {
+                padding: 0 20px 20px 20px !important;
+            }
+
+            .footer_wrapper {
+                padding: 20px !important;
+            }
+
+            .footer_btns {
+                width: 50% !important;
+                padding: 20px 20px 0 0 !important;
+            }
+
+            .footer_text {
+                text-align: center !important;
+            }
+        }
+    </style>
+    <!--[if (gte mso 9)|(IE)]> <xml>     <o:OfficeDocumentSettings>         <o:AllowPNG/>         <o:PixelsPerInch>96</o:PixelsPerInch>     </o:OfficeDocumentSettings> </xml> <![endif]-->
+</head>
+
+<body style="margin:0; padding:0; background-color:#ffffff;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Did you checked it? If not, you might be missing out on houses that you can flip in just ONE day…</div>
+    <center>
+        <table width="1000" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="width: 100%;max-width: 1000px;">
+            <tr>
+                <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                        <tr>
+                            <td width="1000" align="center" valign="top" bgcolor="#D3DCE9">
+                                <table cellpadding="0" cellspacing="0" width="100%" align="center" style="max-width: 1000px;width: 100%;background: url('https://financestrailblazers.com/wp-content/uploads/2024/04/email-bg.png');background-position: center bottom;background-size: cover;background-repeat: no-repeat;">
+
+
+                                    
+                                    <tr>
+                                        <td align="center">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;max-width: 600px;">
+                                                <!--[if mso | IE]>                         <tr>                             <td align="center">                                 <table class="top-inner-content-table content-inner-table" border="0"                                   cellspacing="0"                                   cellpadding="0"                                   width="600" style="width: 600px;max-width: 100%;">                         <![endif]-->
+
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde5d59203711365479258c9a3dea02e0544b9205570942db4686ed8c3dc02ef7d81d29ee1a0a5626b09382c9572ca9a137" target="_blank" style="font-size: 0;">
+                                                            <img src="https://financestrailblazers.com/wp-content/uploads/2024/12/fhjrbtg.png" alt="Logotype" title="Logotype" width="600" style="object-fit: contain; max-width: 600px; object-position: center; font-size: 13px; width: 100%;">
+                                                            <img src="https://click.trends.financestrailblazers.com/open.aspx?ffcb10-fee91c787d6d01-fe241d757261017b771070-fe31117473640478711072-ff2b13767264-fe3116717466067a771277-ffcf14&amp;d=130004&amp;bmt=0" width="1" height="1" alt="">
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <!--[if mso | IE]>                             </table>                             </td>                             </tr>                             <![endif]-->
+                                                <!--[if mso | IE]>                         <tr>                             <td align="center">                                 <table class="top-inner-content-table content-inner-table" border="0"                                   cellspacing="0"                                   cellpadding="0"                                   width="600" style="width: 600px;max-width: 100%;">                         <![endif]-->
+                                                <!-- !Content section -->
+                                                <tr>
+                                                    <td align="center" valign="top" bgcolor="#ffffff">
+                                                        <table cellpadding="0" cellspacing="0" width="600" align="center" style="max-width: 600px;width: 100%;">
+
+                                                            <tr>
+                                                                <td width="100%" align="left">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="max-width: 100%; width: 100%;">
+                                                                        <tr>
+                                                                            <td>
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                <!-- ?Promo Starts Here -->
+
+
+       
+           
+
+
+                                           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                <div style="background-color:#FFFFFF;">
+                                                                                    <!--[if mso | IE]>                                                                                     <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:600px;"                                                                                            width="600">                                                                                         <tr>                                                                                             <td style="line-height:0px;font-size: 20px;mso-line-height-rule:exactly;"><![endif]-->
+                                                                                    <div style="margin:0px auto;max-width:600px;">
+                                                                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                                                                            <tbody>
+                                                                                            <tr>
+                                                                                                <td style="direction:ltr;font-size: 20px;padding:20px 0;text-align:center;">
+                                                                                                    <!--[if mso | IE]>                                                                                                     <table role="presentation" border="0" cellpadding="0" cellspacing="0">                                                                                                         <tr>                                                                                                             <td style="vertical-align:top;width:600px;"><![endif]-->
+                                                                                                    <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size: 20px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;">
+                                                                                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
+                                                                                                            <tbody>
+                                                                                
+                                                                                                            <tr>
+                                                                                                                <td align="left" style="font-size: 20px;padding:10px 25px;word-break:break-word;">
+                                                                                                                    <div style="font-family:'Roboto', Arial, Helvetica, sans-serif;font-size: 20px;font-style:normal;font-weight:normal;line-height:1.5;text-align:left;color:#000000;">
+                                                                                                                        Have you checked your county's Pre-Foreclosure list yet?
+                                                                                                                        <br><br><center><a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde022569cff78be685f9704e1b5bb3cfa5d332382d57710dfdd2c8810fa3b348f96792258f46979496123e032d37dc32b9"><img src="https://financestrailblazers.com/wp-content/uploads/2025/03/bfbhrjbf.jpg" alt="Secret Property List" style="width: 100%; height: auto;"></a></center><br>
+                                                                                                                        If not, you might be missing out on houses that you can flip <em>in just ONE
+                                                                                                                        day</em>…
+                                                                                                                        <br><br>
+                                                                                                                        – No loans required
+                                                                                                                        <br>
+                                                                                                                        – No credit checks
+                                                                                                                        <br>
+                                                                                                                        – No starting capital
+                                                                                                                        <br>
+                                                                                                                        – Zero risk involved
+                                                                                                                        <br><br>
+                                                                                                                        Sounds impossible? Jeromie Tucker thought so too, until he made <b>$162,835</b>
+                                                                                                                        <br><br>
+                                                                                                                        <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde022569cff78be685f9704e1b5bb3cfa5d332382d57710dfdd2c8810fa3b348f96792258f46979496123e032d37dc32b9" style="font-family:'Roboto', Arial, Helvetica, sans-serif;text-decoration: underline;font-weight: 700;color: #3459B0;">Click
+                                                                                                                            to Access the List!</a>
+                                                                                                                    </div>
+                                                                                                                </td>
+                                                                                                            </tr>
+                                                                                
+                                                                                                            </tbody>
+                                                                                                        </table>
+                                                                                                    </div>
+                                                                                                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                    <!--[if mso | IE]></td></tr></table><![endif]-->
+                                                                                </div> 
+                                                                                  
+                                                                                  <div style="border: 2px solid #cbd5e1; background: #f4f4f5; padding: 20px; font-family: Arial, sans-serif; width: 560px; margin: 20px auto; text-align: left; border-radius: 8px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);">
+                                                                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                                                                                        <strong style="font-size: 22px;">More breaking news below…</strong>
+                                                                                        <span style="color: #6b7280; font-size: 14px; font-weight: bold;">(ADs)</span>
+                                                                                    </div><br>
+                                                                                    <ul style="padding-left: 0; margin: 10px 0; list-style-type: none; line-height: 1.8;">
+                                                                                        <li style="margin-bottom: 18px; font-size: 18px;">
+                                                                                            <span style="color: #3459B0; font-weight: bold;">➜</span>
+                                                                                            <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde573e97929d6a213479e7363f5a528dd8f1e66c75e874d4d7e1107ef4a799e7b30c22ecb98324d0849d60581ae73cef54" style="color: #3459B0; text-decoration: underline; font-weight: bold;">
+                                                                                               Trump Exposes Missing Billions &amp; a War-Changing Weapon
+                                                                                            </a>
+                                                                                            <span style="color: #6b7280; font-size: 14px;">(Behind the Markets)</span>
+                                                                                        </li>
+                                                                                        <li style="margin-bottom: 18px; font-size: 18px;">
+                                                                                            <span style="color: #3459B0; font-weight: bold;">➜</span>
+                                                                                            <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dded5413b2dc535564c0ba27d9fc7daf7737c7c3ab57519568ccd9f065f5cd8d74fecdc32befbdb8b2ffbc7b7b8d6bdf7d6" style="color: #3459B0; text-decoration: underline; font-weight: bold;">
+                                                                                                $4.7 Trillion Gone?! Trump &amp; Elon Just Sounded the Alarm…
+                                                                                            </a>
+                                                                                            <span style="color: #6b7280; font-size: 14px;">(Eagle Pub)</span>
+                                                                                        </li>
+                                                                                        <li style="font-size: 18px;">
+                                                                                            <span style="color: #3459B0; font-weight: bold;">➜</span>
+                                                                                            <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde0fcf5ad4ff3aead106b1dd216453653ecd92c27952e327ba2adf75c1fdcf6d7051aedf6dcd47e5f4bc09cf8cf454c36d" style="color: #3459B0; text-decoration: underline; font-weight: bold;">
+                                                                                                China, Russia, and Iran Just Teamed Up—Here’s How to Prepare
+                                                                                            </a>
+                                                                                            <span style="color: #6b7280; font-size: 14px;">(Behind the Markets)</span>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>                                                                       
+                                                                                  
+                                                                                  
+                                                                                
+
+
+                                                                               
+     
+
+
+                                                                                <!-- ?Promo Ends Here -->
+
+
+
+
+
+
+
+
+
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td align="center" style="padding: 0 40px 10px 40px;" class="editors_logo">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                                                                        <tr>
+                                                                            <td align="center">
+                                                                                <img src="https://financestrailblazers.com/wp-content/uploads/2024/12/bhbtr.png" alt="divider" title="divider" width="520" style="object-fit: contain; max-width: 520px; object-position: center; font-size: 13px; width: 100%;">
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="color: #333333; text-align: center; font-family: Lora, sans-serif; font-size: 14px; font-style: normal; font-weight: 400; line-height: 1.4;">
+                                                                                At Finances Trailblazers, we are
+                                                                                committed to serving as your vigilant
+                                                                                source
+                                                                                for unique opportunities that you can
+                                                                                leverage. The following message from one
+                                                                                of our partners is something we believe
+                                                                                deserves your careful consideration.
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!-- !End content section -->
+                                                <!--[if mso | IE]>                             </table>                             </td>                             </tr>                             <![endif]-->
+
+                                                <!--[if mso | IE]>                         <tr>                             <td align="center">                                 <table class="top-inner-content-table content-inner-table" border="0"                                   cellspacing="0"                                   cellpadding="0"                                   width="600" style="width: 600px;max-width: 100%;">                         <![endif]-->
+                                                <!-- !Footer section -->
+                                                <tr>
+                                                    <td bgcolor="#3A4657">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+
+                                                            <tr>
+                                                                <td style="padding: 30px;" class="footer_wrapper">
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                                                                        <tr>
+                                                                            <td valign="top" width="30%" class="cell_bot ">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                                                                                    <tr>
+                                                                                        <td valign="top" class="footer_btns">
+                                                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde53e1d318b3988c1db5a9633cbdf62dde4126b5a4ad39add00f38f9882d3601a2a46417f493e19ce78d588b9285fdd71c" target="_blank" style="font-size: 0;">
+                                                                                                            <img src="https://financestrailblazers.com/wp-content/uploads/2025/02/button-1.png" alt="Terms" title="Terms" width="160" style="object-fit: contain; max-width: 160px; object-position: center; font-size: 13px; width: 100%;">
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="20" width="100%" style="max-width: 100%;" class="divider">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a href="https://click.trends.financestrailblazers.com/?qs=3c7e668c57279dde8673b20b7ee31f3cb0cbfe249310463c6656c26de9c82d35bc993018b7eab424deae1a6187b992d6584dab64b3dd5e11" target="_blank" style="font-size: 0;">
+                                                                                                            <img src="https://financestrailblazers.com/wp-content/uploads/2025/02/button-2.png" alt="Privacy" title="Privacy" width="160" style="object-fit: contain; max-width: 160px; object-position: center; font-size: 13px; width: 100%;">
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td height="20" width="100%" style="max-width: 100%;" class="divider">
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>
+                                                                                                        <a href="https://click.trends.financestrailblazers.com/unsub_center.aspx?qs=0f75a6328b94e52609037c1ce42fddb0e336a962ab0caa6a8745557eb2d0f9b1248d7b458d85f46fe0f6a171b5bcea6e47a4ccb854aab01f7896f38596e56b31" target="_blank" style="font-size: 0;">
+                                                                                                            <img src="https://financestrailblazers.com/wp-content/uploads/2025/02/button-3.png" alt="Unsubscribe" title="Unsubscribe" width="160" style="object-fit: contain; max-width: 160px; object-position: center; font-size: 13px; width: 100%;">
+                                                                                                        </a>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                        <!--[if !mso 9]><!-->
+
+                                                                                        <!--<![endif]-->
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                            <td style="padding-left: 20px;" class="cell_top">
+                                                                                <table width="100%" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;">
+                                                                                    <tr>
+                                                                                        <td style="color: #ffffff; font-family: Georgia, sans-serif; font-size: 12px; font-style: normal; font-weight: 300; line-height: 1.3;" class="footer_text">
+                                                                                            Contact us by sending an
+                                                                                            email to <a href="mailto:support@financestrailblazers.com" target="_blank" title="support@financestrailblazers.com" rel="noopener" style="text-decoration: underline; color: #ffffff;"><strong>support@financestrailblazers.com
+</strong></a>
+                                                                                            You will receive a response
+                                                                                            within 24 hours. <br><br>
+                                                                                            Finances Trailblazers
+                                                                                            sending this newsletter on
+                                                                                            behalf of Prestige
+                                                                                            Publishing LLC <br><br>
+                                                                                            200 Continental Dr Suite
+                                                                                            401, Newark, DE 19713 <br>
+                                                                                            © 2025 All Rights
+                                                                                            Reserved.Finances
+                                                                                            Trailblazers
+                                                                                            <div style="display:none;font-size:1px;color:#333333;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+                                                                                                https://click.trends.financestrailblazers.com/profile_center.aspx?qs=0f75a6328b94e526facdb704ba7eb93cc702fdf0f28df33ff8b0e141b9af07ee250fbfba4f64d905269873b7e00041ca
+                                                                                            </div>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <!-- !End Footer section -->
+
+                                                <tr>
+                                                    <td height="20" width="100%" style="max-width: 100%;" class="hide_mobile"></td>
+                                                </tr>
+
+                                                <!--[if mso | IE]>                             </table>                             </td>                             </tr>                             <![endif]-->
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
+
+--2svARreG9oSW=_?:--

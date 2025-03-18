@@ -1,0 +1,183 @@
+Received: from OSQPR02MB7857.apcprd02.prod.outlook.com (::1) by
+ JH0PR02MB7138.apcprd02.prod.outlook.com with HTTPS; Thu, 13 Mar 2025 15:16:53
+ +0000
+Received: from DUZPR01CA0236.eurprd01.prod.exchangelabs.com
+ (2603:10a6:10:4b5::15) by OSQPR02MB7857.apcprd02.prod.outlook.com
+ (2603:1096:604:270::8) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.25; Thu, 13 Mar
+ 2025 15:16:50 +0000
+Received: from DU6PEPF0000A7E0.eurprd02.prod.outlook.com
+ (2603:10a6:10:4b5:cafe::44) by DUZPR01CA0236.outlook.office365.com
+ (2603:10a6:10:4b5::15) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8511.27 via Frontend Transport; Thu,
+ 13 Mar 2025 15:16:48 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.216.45)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.216.45 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.216.45; helo=mail-pj1-f45.google.com; pr=C
+Received: from mail-pj1-f45.google.com (209.85.216.45) by
+ DU6PEPF0000A7E0.mail.protection.outlook.com (10.167.8.39) with Microsoft SMTP
+ Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.20 via
+ Frontend Transport; Thu, 13 Mar 2025 15:16:48 +0000
+X-IncomingTopHeaderMarker: OriginalChecksum:F2D3D8CCD44B6F9839D96C8FB9DAE8E245D5247EA06A746896AEDD241885F3DF;UpperCasedChecksum:BCDA0F884E62B6A7DDF0521E0C72528F5EE27F361DF4CB86E1A1D78B36BE1B41;SizeAsReceived:3323;Count:20
+Received: by mail-pj1-f45.google.com with SMTP id 98e67ed59e1d1-3014cb646ecso174260a91.1
+        for <millinman@hotmail.com>; Thu, 13 Mar 2025 08:16:48 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1741879007; x=1742483807; darn=hotmail.com;
+        h=priority:importance:subject:from:to:mime-version:date:message-id
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=eEDduDk8Ef4nH1xlBcnY9fIyceXTSy3DLnDCiFHa2wA=;
+        b=JtQOv0p1drnSjPQwLFBGUjqoQzQnLjCpDuf2VcPLBsGBhz48s5/euBNs9+91+dxi0E
+         OIWk3ydqVzL87vPNltTxl4zeyW7TEsRwqRaLiBtUvFO5Qt1CT3uDb8WKyiXRbXieAyIm
+         tUc3EGbHEzz6TfmVuZff8arCaKCpHyobyeoa7mhhb/YSyDCXm6OUedokFcn2oC56Dn7E
+         2xWQJEoRX8ePzYMDPLD4ZCy2B+gj9fZ0wfis/dh/YGDXBgBaoLxUq97GgtQ/4cbtaZLR
+         hb118b3Jv2mzZwWUVykZNNyKQTyPErQ7gVefixO3WqfA+GzZWyEk7m6to2LzCrOlwoHa
+         M5BA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1741879007; x=1742483807;
+        h=priority:importance:subject:from:to:mime-version:date:message-id
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=eEDduDk8Ef4nH1xlBcnY9fIyceXTSy3DLnDCiFHa2wA=;
+        b=mKgr+HjFVgHCA9YWi2ssYaAthrG1rCt437J+MxjZObyJl/v9axOY9EQwNTyH+O5p5P
+         VvkEnBxuNSpuSCsvpAuTSu/ymygohjsid1aoyepRpI8TS93gbW/82wVPA2AtdwOFkoca
+         rwoJy6AQ7oS4IFJL6+sJ7kL/jhfp7+GTLWZ0HSDCzKu6DfME4CecpOLJ7klndCrNzxZd
+         rStRyV0A5RWcM1fhlRmwunUBO3eL2Zj2POpDpJAt9MS0ej232nw0DgWLg4lBwNPtgif4
+         AL/ALnWAHqxrYTF6Zjr8M0iEtAV55NzougpYViyhbPLRHNtBV82BNEV6vyO2V+d+rE8c
+         w7cA==
+X-Gm-Message-State: AOJu0Yyg01RR0jdUavEdUW3leZ3aVxOaasLy83P5VALotQjPSTr92jqL
+	0ebUy5kHhMbUXQJomHITgRwYsymczbgI3K+loE0xWQ3RX8GNfd9AHgIt6keJzGiLxl5w
+X-Gm-Gg: ASbGnctBVOrvJV9QacXwN6R28Ah3nF826Vv3TMc+AGk3v7R8C1QOb36W1eK6jUDaaiu
+	QwRHsanmF5PdvP56ucPcZ2BeIyxPDpxELbOVfrv6214JmBDwNPUD0Q35xgwqjRcuP+l0z2RUkSy
+	C2Kxk2jDSJS1NUPmrVdgvJL+EBbrWyWnIQxlgX+MewgGZRdV31oShEZ3kMmOxGF/L9t9wm/Ul8b
+	kjwZNneL/wULjRPuPJ1bc4z2JdZ8bR6pKDLSbF/JEikuhqT5UBt4NRJJ8AqVuPDb97Q+kz+Keiy
+	l3VVIakIZH/9psaRrsEhRXXWS++xpKtWc+gPg2Zx4IhyfQL3YsmeWdKq1hOT6RgznmjmjutPXHS
+	yCByTJ+tE6yI712Q51jPdLF1E
+X-Google-Smtp-Source: AGHT+IE2rJq8ZAUTuaJpKiYie7gK++CjM808FJm+b8GNU0l9W9Y4S6vivq8z+qpkBDoOtRGzD8xihQ==
+X-Received: by 2002:a17:90b:4ac9:b0:2ff:7031:e380 with SMTP id 98e67ed59e1d1-2ff7ce6cc5amr37303139a91.10.1741879007382;
+        Thu, 13 Mar 2025 08:16:47 -0700 (PDT)
+Return-Path: shamsiyyaabdullahi6806@gmail.com
+Received: from [10.224.1.160] ([43.157.181.122])
+        by smtp.gmail.com with ESMTPSA id 98e67ed59e1d1-301192659b4sm3952752a91.34.2025.03.13.08.16.46
+        for <millinman@hotmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 13 Mar 2025 08:16:46 -0700 (PDT)
+Message-ID: <67d2f6de.170a0220.27458e.7dd9@mx.google.com>
+Date: Thu, 13 Mar 2025 08:16:46 -0700 (PDT)
+Content-Type: multipart/mixed;
+	boundary="===============7935551572049294131=="
+to: Wade Wright <millinman@hotmail.com>
+from: Victoria Cervenka <shamsiyyaabdullahi6806@gmail.com>
+subject: Your payment has been successfully received.
+X-Mailer: X-Mailer FlexMailer v3.0.9
+X-MimeOLE: X-MimeOLE SimpleSend [v1.1.2]
+X-IncomingHeaderCount: 20
+X-MS-Exchange-Organization-ExpirationStartTime: 13 Mar 2025 15:16:48.3326
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id: 66186f1b-f8f2-4d5a-f2dd-08dd6242130a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DU6PEPF0000A7E0:EE_|OSQPR02MB7857:EE_|JH0PR02MB7138:EE_
+X-MS-Exchange-Organization-AuthSource: DU6PEPF0000A7E0.eurprd02.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/13/2025 3:05:05 PM
+X-MS-Office365-Filtering-Correlation-Id: 66186f1b-f8f2-4d5a-f2dd-08dd6242130a
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.216.45
+X-SID-PRA: SHAMSIYYAABDULLAHI6806@GMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 5
+X-Microsoft-Antispam: BCL:0;ARA:1444111002|2700799026|2100799027|970799057|5201999021|21400799023|9020799016|21080799006|461199028|1380799030|1370799030|1360799030|440099028|3412199025|21002599022;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 13 Mar 2025 15:16:48.2076
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 66186f1b-f8f2-4d5a-f2dd-08dd6242130a
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: DU6PEPF0000A7E0.eurprd02.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: OSQPR02MB7857
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:04.8427689
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.017
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;ex:0;auth:1;dest:J;OFR:SpamFilterAuthJ;ENG:(5062000308)(920221119095)(90000117)(920221120095)(90005022)(91005020)(91035115)(9050020)(9100341)(944500132)(4810010)(4910033)(10005027)(9610028)(9540006)(10160021)(9320005)(9245025)(120001);RF:JunkEmail;
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MjtHRD0xO1NDTD02
+X-Microsoft-Antispam-Message-Info:
+	=?us-ascii?Q?mnex2np3MAvM86s6LpK0iu54pCGR0Ron64iYHkG/BX0WUmVrOPiXqnME3tqD?=
+ =?us-ascii?Q?dPZhxDzzvqfEldg1T4+wTdMwnwlLUiKV7K5Uc/cEaTZbfl0pyUC/5Zko8Vvs?=
+ =?us-ascii?Q?7o+eqZ+GAKn92VaX8H0AlyvlA1r+r6SDeRRyB9YxX/MO/T1EVbnHtdMky4sL?=
+ =?us-ascii?Q?gLQBK02HWDVb64Iqpf4oh2vkOtkWl1b1XihdLXHGdPft30RPZv8f49PLsOB+?=
+ =?us-ascii?Q?rbyrml3MyEhC4PaQc243TVJOH93JOlg6sFxVPdpzL2VlgxuUSZ9CH1TtpmWq?=
+ =?us-ascii?Q?2HPFhFxdJjUPBHxxhKQpYy0CUwpQJKlQ1gYUkhwxVFe0DPw8plzmfmkWIP8V?=
+ =?us-ascii?Q?RDQry6L2wxgTsiwASwwEsFtis/3+7mc0Duqt2LF4QfJ5JN41MI78L4FyczjO?=
+ =?us-ascii?Q?yx17LMl4VBh29KRmMklcxxKl+HLZKRUK/brCwffc3kkMCEfkIr9DUh1N7qyo?=
+ =?us-ascii?Q?YgSaijpVjNq5VY+gzClB+eB51lvoiN9J3gNXnNd/SuJ3JOdoeIgntmk5cchd?=
+ =?us-ascii?Q?7k4PNS7EFr2YfaxyH+M5CAdQzlzua90FjfS3WiocBiknbUqASRx9JJnGOhFE?=
+ =?us-ascii?Q?IVTRiPWOobIQAHNhL9dE8iI6eX3unRYMHtcDdG+BWB6JSfSidNiM9wPpJs3p?=
+ =?us-ascii?Q?oG2imZWHIAGCpihlQj/fg0IIWss52hvdjv2ORDGE1v/2nZtBc0+IM0mtNOu/?=
+ =?us-ascii?Q?dR4LJQcSEagya15WfJ2Erf1Sbj6oiWK2PAHl2sOIbZTqnBZDpb5E/VTsGN8a?=
+ =?us-ascii?Q?kOfyw1TWZOQc8yIM6w3yzFAb8PqYERIyDfw2IMUNBl4PsmKQe3STm0VEAf1N?=
+ =?us-ascii?Q?6ZvadmK5wgzQofLrK8L5X+MUD411O0fIX+Tu1b8XfnjHEp9OHenPKZb1yA9j?=
+ =?us-ascii?Q?Zg5s8XHRoQIvJK5CcSzF4yYPcQORZFcy5NEHcHWby2gZl80biuRnTArH4663?=
+ =?us-ascii?Q?E7+pZozHWue1dROw17M+nv/9EqdHR55FU3Tl9jjVnZIXX45gJKVtTHcXCZmJ?=
+ =?us-ascii?Q?NkbgZFSki57GcIdYnUQ5dXqOe8/nKEXvTe0/GGQKpCvCrkUpdF/wFR7Koafi?=
+ =?us-ascii?Q?c83zhLZqDSy5+2jKqkEFeuFpaai6djBB5Kw55GbS8foyyjrA9YVe53TELcGh?=
+ =?us-ascii?Q?aAQcaTITM57NIU2jAXcLrHZ2fL4cR4kj2fSkubx1ByCIRcJA3QepSU/baGYU?=
+ =?us-ascii?Q?v2Px5023Qt5UNhNQEaqTH4TQmANL6UNE4q8dJE2DlxEiFSG+ZGT7WZ81S67l?=
+ =?us-ascii?Q?MFwV0puwFzHM4pDIjhxqtwuvJlzVfMgsHithlq2La71GXwVXQbhXPfreUDSB?=
+ =?us-ascii?Q?PueMTsXxw6OcNMg5qA+Tpy82Fx2onJT4B6d14g9ySj55aVPgnvHA/W+sTCAu?=
+ =?us-ascii?Q?UGEcnC1FfRHjdfCWrmK8yuGeOg87aDoTmAjgUJP77VT93CnnvN9ZSL9suuzt?=
+ =?us-ascii?Q?P4t+1GUsGTb1OP8b9HaFaDOwq/WujHPCx+txUiZUAQr2SCvr6EUHLwN4rFRI?=
+ =?us-ascii?Q?GCQOLhRdUzX1WLaeRUMD1lHD6aaVcqbvxqMRz0Ql+q3BxKzh+PABeVyXkb/+?=
+ =?us-ascii?Q?ijrR1tGyISd5w34uVA3JmDWp565c6+lwWHXdPYvxh86kXIHZSbt7NcTUiDeY?=
+ =?us-ascii?Q?1Z2C32ucJ9pXyJdoReLXgFC78zj4CWEDpw3bGbOixcycy3MF7DiRj3xZvo/c?=
+ =?us-ascii?Q?bm+Vg4IYEHSUX9NCY7Sxa7M7orA+89o5HgB0SfhT918gSBDAMLOu1Zn1Do5Q?=
+ =?us-ascii?Q?bNoUkVSBaQ6qJTlFrRspaJJ13FOaiLKGm0smLBVjLnhB0GOEgvMM+c3xbitf?=
+ =?us-ascii?Q?Eo97SUJaCGfJehl2amTX/IvUkGVkfQzF26ya4TXDkWw6oM5ztIYYpKy713nS?=
+ =?us-ascii?Q?Xmet+HTbL7yRRHP6s8KvyomxlVtCDZEpawOX95Djdau1SBAXXXk0BLClBdrM?=
+ =?us-ascii?Q?quhYkXrpy9Ah78BB/Pvo+NtKmUuUiEXbRApvV9Tmo/3T3dGkXJq+9xNwFyXz?=
+ =?us-ascii?Q?Aj1AeYkOmxTujwJ/k7wUAiKlW/gx7EraCHIncKMKwSftqTkxytVEOxwHLY5e?=
+ =?us-ascii?Q?KNFZ8QnBbMo7T8W8z/bhAZ/10nae+SLWx8kLEwGsvOlqtWfF2+Gd6YGoOKWa?=
+ =?us-ascii?Q?lj0HZxDVpbqYibAxE4dXN+hH+R7eoPw6zrcExUYlHRNBtlCjfvdC4pmY/s1O?=
+ =?us-ascii?Q?g4LpPANQFuFgWa9V2zT3gO3hMVcKIM14VMj/ewXd7181fqImqfhRDHKQQ61T?=
+ =?us-ascii?Q?IkNCxiXpdSWa4hINtkL/KZh20WxbZpZPG48K/fYmhif/IrwDrsjwG339VoA8?=
+ =?us-ascii?Q?pAoMvs3K+dNg+S0bqgaby59HAHn8BgjzdXVMSHvqFrKraw=3D=3D?=
+MIME-Version: 1.0
+
+--===============7935551572049294131==
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Geek Squad
+Date: Thursday, March 13, 2025
+Bill no: 700945445
+Assistance Phone: 1.855. 704.3963
+
+Dear Wade Wright,
+
+We hope this message finds you well. Your GeekSquad service agreement is scheduled for renewal, and a payment of USD400.00 will be processed within the next 12 hours for a Three Year term.
+
+Your trust in us means the world, and we're committed to ensuring your digital experience remains secure and seamless.
+
+Renewal Details:
+Item: GeekGuard Antivirus
+Quantity: 1x
+Activation Key: 66acff30-105a-4383-8167-5320d3310b32
+Total Cost: USD 400.00
+
+This payment will be automatically deducted from your account by the end of today. If you have any questions or concerns, feel free to reach out to us at 1.855. 704.3963.
+
+Protect Your Account:
+If you notice any unusual activity or unauthorized charges, please contact us immediately at 1.877. 823.7362.
+
+Warm Wishes,
+GeekSquad, Inc.
+Assistance Phone: 1 877  739-9671
+--===============7935551572049294131==--
