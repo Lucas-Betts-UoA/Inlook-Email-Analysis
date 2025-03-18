@@ -1,0 +1,15 @@
+[submodule "external/json-scheme-validator"]
+	path = external/json-scheme-validator
+	url = https://github.com/pboettch/json-schema-validator.git
+[submodule "external/fastText"]
+	path = external/fastText
+	url = https://github.com/facebookresearch/fastText.git
+[submodule "external/Crow"]
+	path = external/Crow
+	url = https://github.com/CrowCpp/Crow.git
+[submodule "external/libpqxx"]
+	path = external/libpqxx
+	url = https://github.com/jtv/libpqxx.git
+[submodule "external/json"]
+	path = external/json
+	url = https://github.com/nlohmann/json.git

@@ -1,0 +1,36 @@
+<template id="logs">
+    <div class="flex-grow-1 d-flex flex-column min-vh-0 overflow-hidden">
+        <h3>Live Logs</h3>
+        <div class="table-responsive" style="overflow-y: auto;" ref="logContainer">
+            <table class="table table-striped table-hover log-table">
+                <thead class="table-dark">
+                <tr>
+                    <th @click="sortBy('timestamp')">Timestamp ⬍</th>
+                    <th @click="sortBy('level')">Level ⬍</th>
+                    <th>Message</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr v-for="log in filteredLogs" :key="log.timestamp">
+                    <td>{{ log.timestamp }}</td>
+                    <td>
+                    <span class="badge"
+                          :class="{
+                            'bg-success': log.level.replace(/ /g,'') === 'INFO',
+                            'bg-warning': log.level.replace(/ /g,'') === 'WARNING',
+                            'bg-danger': log.level.replace(/ /g,'') === 'ERROR',
+                            'bg-secondary': log.level.replace(/ /g,'') === 'DEBUG_VERBOSE'
+                          }">
+                      {{ log.level }}
+                    </span>
+                    </td>
+                    <td>{{ log.message }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="mt-2">
+            <input v-model="logSearch" type="text" class="form-control" placeholder="Search logs...">
+        </div>
+    </div>
+</template>

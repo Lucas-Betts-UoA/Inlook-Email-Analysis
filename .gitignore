@@ -1,0 +1,9 @@
+/cmake-build-debug/
+/.idea/
+/build/
+/testdata/
+/venv/
+/.venv/
+/smallertest/
+/external/asio-1.30.2/
+/docs/

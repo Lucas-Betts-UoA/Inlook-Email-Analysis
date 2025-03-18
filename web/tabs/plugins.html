@@ -1,0 +1,109 @@
+<template id="plugins">
+    <div class="container-fluid h-100">
+        <div class="row justify-content-center h-100">
+            <div class="col-12 col-md-10 h-100 overflow-scroll">
+
+                <!-- Workflow Selection -->
+                <div class="mb-4">
+                    <h3 class="mb-2">Workflow Management</h3>
+                    <div class="row align-items-center">
+                        <label for="workflow-select" class="col-sm-3 form-label fw-bold">Select Workflow:</label>
+                        <div class="col-sm-6">
+                            <select v-model="selectedWorkflow" class="form-select" id="workflow-select">
+                                <option disabled value="">Please Select a Workflow...</option>
+                                <option v-for="workflow in workflows" :key="workflow" :value="workflow">
+                                    {{ workflow }}
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-sm-3">
+                            <span v-if="!selectedWorkflow" class="tooltip-wrapper" data-bs-toggle="tooltip" title="Select a workflow before applying.">
+                                <button class="btn btn-primary w-100" disabled>
+                                    Apply Workflow
+                                </button>
+                            </span>
+                            <button v-else class="btn btn-primary w-100" @click="setWorkflow">
+                                Apply Workflow
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plugin Controls -->
+                <div class="mb-4">
+                    <h3 class="mb-2">Plugin Controls</h3>
+                    <div class="d-flex flex-wrap gap-2">
+
+                        <!-- Instantiate Workflow -->
+                        <span v-if="instanceTree.state !== 'LOADED'" class="tooltip-wrapper" data-bs-toggle="tooltip" title="A workflow must be selected and loaded before instantiation.">
+                            <button class="btn btn-success" disabled>
+                                Instantiate Workflow
+                            </button>
+                        </span>
+                        <button v-else class="btn btn-success" @click="instantiateAllRecursiveFromRoot">
+                            Instantiate Workflow
+                        </button>
+
+                        <!-- Execute Workflow -->
+                        <span v-if="instanceTree.state !== 'READY'" class="tooltip-wrapper" data-bs-toggle="tooltip" title="Plugins must be instantiated before execution.">
+                            <button class="btn btn-primary" disabled>
+                                Execute Workflow
+                            </button>
+                        </span>
+                        <button v-else class="btn btn-primary" @click="executeAllRecursiveFromRoot">
+                            Execute Workflow
+                        </button>
+
+                        <!-- Reset Plugins -->
+                        <button class="btn btn-danger"
+                                @click="resetInstances"
+                                data-bs-toggle="tooltip"
+                                title="Reset all loaded plugins to their initial state.">
+                            Reset Plugins
+                        </button>
+
+                        <!-- Shutdown Server -->
+                        <button class="btn btn-warning"
+                                @click="shutdown"
+                                data-bs-toggle="tooltip"
+                                title="Stop the server gracefully.">
+                            Shutdown Server
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Workflow Configuration -->
+                <div class="mb-4">
+                    <h3 class="mb-2">Workflow Configuration</h3>
+                    <div class="config-panel p-3 border rounded shadow-sm bg-light">
+                        <tree-node-config-form :node="instanceTree"></tree-node-config-form>
+                        <button class="btn btn-primary mt-3"
+                                @click="saveWorkflowConfig"
+                                data-bs-toggle="tooltip"
+                                title="Save the currently configured workflow to apply in future runs.">
+                            Save Configuration
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loaded Plugins -->
+                <div class="mb-4">
+                    <h3 class="mb-2">Available Plugins</h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>Create Function ID</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="createFunc in createFuncs" :key="createFunc">
+                            <td>{{ createFunc }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>

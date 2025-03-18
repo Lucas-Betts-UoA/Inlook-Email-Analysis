@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inlook Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Marked(own) JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.5/dist/vue.global.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="icon" href="/style/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/style/apple-touch-icon.png">
+</head>
+<body>
+<div id="app" class="h-100 container-fluid outer-container">
+    <!-- Heartbeat Overlay -->
+    <div v-if="heartbeatActive" id="heartbeat-overlay">
+        <div class="modal-content">
+            <h4>Connection Lost</h4>
+            <p>Attempting to reconnect in {{ heartbeatCountdown }} seconds...</p>
+        </div>
+    </div>
+
+    <!-- Nav Tabs -->
+    <ul class="h-auto nav nav-tabs px-3 custom-tabs d-flex align-items-center justify-content-between">
+        <div class="d-flex">
+            <!-- Logo & Branding -->
+            <li class="nav-item d-flex align-items-center me-3">
+                <img src="/style/icon-512.png" alt="Logo" class="me-2" style="height: 32px;">
+                <span class="navbar-heading">Inlook Web</span>
+            </li>
+            <!-- Tabs -->
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='readme'}" href="#" @click.prevent="setTab('readme')">
+                    Readme
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='plugins'}" href="#" @click.prevent="setTab('plugins')">
+                    Plugins
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='emails'}" href="#" @click.prevent="setTab('emails')">
+                    Emails
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='logs'}" href="#" @click.prevent="setTab('logs')">
+                    Logs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='config'}" href="#" @click.prevent="setTab('config')">
+                    Config
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='docs'}" href="#" @click.prevent="setTab('docs')">
+                    Doxygen
+                </a>
+            </li>
+        </div>
+
+        <!-- GitHub Button -->
+        <li class="nav-item ms-auto">
+            <a class="btn btn-outline-secondary btn-sm d-flex align-items-center" href="https://github.com/Lucas-Betts-UoA/Inlook-Email-Analysis">
+                <i class="bi bi-github me-2">Inlook on Github</i>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Dynamic Tab Content -->
+    <div id="tab-content" class="h-100 tab-content inner-container">
+        <component :is="activeTab"></component>
+    </div>
+</div>
+
+<!-- Load global scripts -->
+<script>
+    const { createApp, defineComponent, reactive, computed } = Vue;
+</script>
+<script src="/js/components.js"></script>
+<script src="/js/index.js"></script>
+
+</body>
+</html>

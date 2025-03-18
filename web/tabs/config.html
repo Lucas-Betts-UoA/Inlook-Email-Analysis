@@ -1,0 +1,31 @@
+<template id="config">
+    <div class="flex-grow-1 d-flex flex-column min-vh-0 overflow-hidden">
+        <h3>Global Configuration</h3>
+        <div class="config-panel">
+            <textarea class="form-control" rows="10" v-model="editableGlobalConfig"
+                      :disabled="!configEditing"></textarea>
+            <div class="mt-2">
+                <button class="btn btn-warning me-2" @click="toggleConfigEditing">
+                    {{ configEditing ? "Discard and Lock" : "Unlock" }}
+                </button>
+                <button class="btn btn-success" @click="saveConfig" :disabled="!configEditing">
+                    Save and Lock
+                </button>
+            </div>
+        </div>
+
+        <h3>Current Workflow</h3>
+        <div class="config-panel">
+            <textarea class="form-control" rows="10" v-model="editableCurrentWorkflow"
+                      :disabled="!workflowEditing"></textarea>
+            <div class="mt-2">
+                <button class="btn btn-warning me-2" @click="toggleWorkflowEditing">
+                    {{ workflowEditing ? "Discard and Lock" : "Unlock" }}
+                </button>
+                <button class="btn btn-success" @click="saveWorkflow" :disabled="!workflowEditing">
+                    Save and Lock
+                </button>
+            </div>
+        </div>
+    </div>
+</template>

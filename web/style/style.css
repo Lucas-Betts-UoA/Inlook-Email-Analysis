@@ -1,0 +1,297 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #343a40;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Plugin management section */
+.plugin-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.plugin-list {
+    width: 80%;
+    max-width: 600px;
+}
+
+.plugin-card {
+    background: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plugin-card .status {
+    font-weight: bold;
+}
+
+.plugin-card .status.LOADING { color: orange; }
+.plugin-card .status.LOADED { color: green; }
+.plugin-card .status.RUNNING { color: blue; }
+.plugin-card .status.COMPLETE { color: darkgreen; }
+.plugin-card .status.FAILED { color: red; }
+.plugin-card .status.UNLOADED { color: gray; }
+
+button {
+    cursor: pointer;
+}
+
+.log-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #343a40; /* same as .table-dark background */
+}
+
+.logs-container {
+    flex-grow: 1;
+    background: black;
+    color: #dcdcdc;
+    padding: 10px;
+    font-family: monospace;
+    overflow-y: auto;
+
+    border-top: 2px solid #444;
+}
+
+.logs-container div {
+    white-space: pre-wrap;
+    height: 400px;
+    min-height: 400px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.small-header {
+    font-size: 0.85rem;
+    padding: 2px 8px;
+    flex: 1 1 auto;
+    min-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.email-body-container {
+    flex-grow: 1;
+    min-height: 0;  /* Ensures it can shrink within a flex container */
+    overflow: auto;
+    border: 1px solid #ddd;
+    background: white;
+    padding: 10px;
+}
+
+.email-body-content {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.email-container {
+    display: flex;
+    gap: 20px;
+    height: 10dvh;
+}
+
+.email-sidebar {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.email-list {
+    list-style: none;
+    flex-grow: 1;
+    padding: 0;
+    overflow-y: auto;
+    min-height: 0;
+}
+
+.email-list li {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.email-list li:hover {
+    background: #f0f0f0;
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    margin-top: auto;
+}
+
+.email-details {
+    width: 70%;
+    padding: 10px;
+}
+
+.config-panel {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    flex-grow: 1;
+    overflow: auto;
+    min-height: 350px;
+    white-space: pre-wrap;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.active {
+    display: flex;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+.popup button {
+    margin-top: 10px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .plugin-list {
+        width: 100%;
+    }
+}
+
+/* General tab styling */
+.custom-tabs {
+    background-color: #1C2541;
+    border-bottom: none;
+}
+
+.custom-tabs .nav-link {
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Active Tab */
+.custom-tabs .nav-link.active-tab {
+    background-color: #1C2541;
+    border-bottom: 3px solid #5BC0BE;
+}
+
+/* Hover Effect */
+.custom-tabs .nav-link:hover {
+    background-color: #16203D;
+}
+
+.navbar-heading {
+    color: #FFFFFF;
+}
+
+.outer-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.inner-container {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+/* Heartbeat overlay styling */
+#heartbeat-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#heartbeat-overlay .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 400px;
+}

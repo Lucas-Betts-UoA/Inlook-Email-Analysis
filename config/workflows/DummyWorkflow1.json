@@ -1,0 +1,61 @@
+{
+  "name": "SerialPluginExecutor",
+  "options": {
+    "plugins": [
+      {
+        "name": "EmailLoader",
+        "options": {
+          "emailPath": "../smallertest"
+        }
+      },
+      {
+        "name": "AttributeBagLogger",
+        "options": {
+          "logByFile": true,
+          "files": [
+            {
+              "file": "../smallertest/1729692247.M863314P2814661.txt"
+            }
+          ]
+        }
+      },
+      {
+        "name": "EmailListFilter",
+        "options": {
+          "filters": [
+            {
+              "fields": [
+                {
+                  "value": "attributeKey",
+                  "outcome": "exclude",
+                  "filterBy": "string",
+                  "filterVals": [
+                    {
+                      "filterValue": "Language predictions"
+                    }
+                  ]
+                },
+                {
+                  "value": "attributeVal",
+                  "outcome": "include",
+                  "filterBy": "string",
+                  "filterVals": [
+                    {
+                      "filterValue": "../smallertest/1729485940.2761654_3.txt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "AttributeBagLogger",
+        "options": {
+          "logByFile": false
+        }
+      }
+    ]
+  }
+}

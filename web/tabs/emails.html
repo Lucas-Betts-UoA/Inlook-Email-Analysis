@@ -1,0 +1,100 @@
+<template id="emails">
+  <div class="flex-grow-1 d-flex flex-column min-vh-0 overflow-hidden">
+    <div class="container-fluid flex-grow-1 d-flex flex-column min-vh-0 h-100 overflow-hidden">
+      <div class="row flex-grow-1 h-100">
+        <!-- Sidebar: Email List & Pagination -->
+        <div class="col-md-3 d-flex flex-column border-end px-2 h-100">
+          <h3 class="px-5 text-center">Loaded Emails</h3>
+
+          <!-- Email List-->
+          <ul class="list-group flex-grow-1 overflow-auto min-vh-0">
+            <li v-for="(email, index) in globalEmails"
+                :key="email.uniqueHash"
+                @click="viewEmail(index)"
+                class="list-group-item list-group-item-action p-2">
+
+              <!-- Email Card -->
+              <div class="card border-0">
+                <div class="card-body p-2 d-flex flex-column">
+                  <!-- Sender & Date Row -->
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-truncate small" style="max-width: 50%;">
+                      {{ email.headers.From || "Unknown Sender" }}
+                    </strong>
+                    <small class="text-muted text-truncate" style="max-width: 40%; font-size: 0.75rem;">
+                      {{ email.headers.Date || "Unknown Date" }}
+                    </small>
+                  </div>
+
+                  <!-- Subject -->
+                  <div class="text-truncate" style="font-size: 0.85rem;">
+                    {{ email.headers.Subject || "No Subject" }}
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
+
+          <!-- Pagination & Dropdown -->
+          <div class="d-flex flex-column gap-2 p-2">
+            <!-- Pagination Controls -->
+            <div class="d-flex justify-content-between align-items-center">
+              <button @click="prevPage" :disabled="currentPage === 0" class="btn btn-outline-secondary">
+                Prev
+              </button>
+
+              <!-- Page Number Display -->
+              <span class="text-muted small">
+                  Page {{ currentPage + 1 }} of {{ totalPages }}
+              </span>
+
+              <button @click="nextPage" :disabled="globalEmails.length < emailsPerPage" class="btn btn-outline-secondary">
+                Next
+              </button>
+            </div>
+
+            <!-- Dropdown for email page selection -->
+            <select v-model="emailsPerPage" @change="fetchEmails(0)" class="form-select">
+              <option v-for="num in [10, 20, 50, 100]" :key="num" :value="num">
+                Show {{ num }} emails
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Right Panel: Email Details -->
+        <div class="col-md-9 border-end px-2 h-100" v-if="selectedEmail">
+          <h3 class="px-5">Email Details</h3>
+
+          <!-- Compact Header Layout -->
+          <div class="d-flex flex-wrap justify-content-between mb-2">
+            <div class="small-header"><strong>From:</strong> {{ selectedEmail.headers["From"] || "N/A" }}</div>
+            <div class="small-header"><strong>To:</strong> {{ selectedEmail.headers["To"] || "N/A" }}</div>
+            <div class="small-header"><strong>Date:</strong> {{ selectedEmail.headers["Date"] || "N/A" }}</div>
+            <div class="small-header"><strong>Subject:</strong> {{ selectedEmail.headers["Subject"] || "N/A" }}</div>
+            <div class="small-header"><strong>Content-Type:</strong> {{ selectedEmail.headers["Content-Type"] || "N/A" }}</div>
+          </div>
+
+          <!-- Expandable "Show More" Headers -->
+          <button class="btn btn-sm btn-outline-secondary mb-2" @click="showMoreHeaders = !showMoreHeaders">
+            {{ showMoreHeaders ? "Hide Extra Headers -" : "Show More Headers +" }}
+          </button>
+
+          <table v-if="showMoreHeaders" class="table table-sm table-bordered small">
+            <tbody>
+            <tr v-for="(value, key) in filteredHeaders" :key="key">
+              <th class="bg-light text-end" style="width: 30%;">{{ key }}</th>
+              <td>{{ value }}</td>
+            </tr>
+            </tbody>
+          </table>
+          <!-- Email Body -->
+          <div class="flex flex-grow email-body-container border rounded p-3 bg-white h-100">
+            <pre class="email-body-content p-2">{{ selectedEmail.body }}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

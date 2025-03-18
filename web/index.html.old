@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inlook Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.5/dist/vue.global.min.js"></script>
+    <link rel="stylesheet" href="/stat/style.css">
+    <link rel="icon" href="/stat/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/stat/apple-touch-icon.png">
+</head>
+<body>
+    <div id="app" class="h-100 container-fluid outer-container">
+        <!-- Heartbeat Overlay -->
+        <div v-if="heartbeatActive" id="heartbeat-overlay">
+            <div class="modal-content">
+                <h4>Connection Lost</h4>
+                <p>Attempting to reconnect in {{ heartbeatCountdown }} seconds...</p>
+            </div>
+        </div>
+        <!-- Nav Tabs -->
+        <ul class="h-auto nav nav-tabs px-3 custom-tabs">
+            <!-- Logo & Branding -->
+            <li class="nav-item d-flex align-items-center me-3">
+                <img src="/stat/icon-512.png" alt="Logo" class="me-2" style="height: 32px;">
+                <span class="navbar-heading">Inlook Web</span>
+            </li>
+            <!-- Tabs -->
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='plugins'}" href="#" @click.prevent="setTab('plugins')">
+                    Plugins
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='emails'}" href="#" @click.prevent="setTab('emails')">
+                    Emails
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='logs'}" href="#" @click.prevent="setTab('logs')">
+                    Logs
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" :class="{'active-tab': activeTab==='config'}" href="#" @click.prevent="setTab('config')">
+                    Config
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class=" h-100 tab-content inner-container">
+
+        </div>
+    </div>
+
+<script>
+    const { createApp, defineComponent, reactive, computed } = Vue;
+
+    const app = Vue.createApp({
+        components: {
+            'tree-node-config-form': TreeNodeConfigForm,
+            'schema-form': SchemaForm
+        },
+        data() {
+            return {
+                //UI:
+                activeTab: 'plugins',
+                // Heartbeat:
+                heartbeatCount: 0,
+                heartbeatActive: false,
+                heartbeatCountdown: 10,
+                heartbeatInterval: null,
+                // Global configuration and emails
+                globalConfig: {},
+                // Emails:
+                globalEmails: [],
+                currentPage: 0,
+                emailsPerPage: 50,
+                selectedEmail: null,
+                totalEmails: 0,
+                showMoreHeaders: false,
+                // Logs:
+                logs: [],
+                logSearch: "",
+                sortKey: "timestamp",
+                sortAsc: true,
+                // Plugins:
+                pluginInstanceIDs: [],
+                createFuncs: [],
+                // Workflow:
+                workflows: [],
+                selectedWorkflow: "",
+                currentWorkflow: {},
+                // Instance tree:
+                instanceTree: {},
+                //Configs:
+                configEditing: false,
+                workflowEditing: false,
+                editableGlobalConfig: "",
+                editableCurrentWorkflow: "",
+            };
+        },
+        watch: {
+            globalConfig: {
+                immediate: true,
+                handler(newVal) {
+                    this.editableGlobalConfig = JSON.stringify(newVal, null, 2);
+                }
+            },
+            currentWorkflow: {
+                immediate: true,
+                handler(newVal) {
+                    this.editableCurrentWorkflow = JSON.stringify(newVal, null, 2);
+                }
+            }
+        },
+        computed: {
+            totalPages() {
+                return Math.ceil(this.totalEmails / this.emailsPerPage) || 1;
+            },
+            filteredHeaders() {
+                const importantKeys = ["From", "To", "Date", "Subject", "Content-Type"];
+                return Object.fromEntries(
+                    Object.entries(this.selectedEmail.headers).filter(([key]) => !importantKeys.includes(key))
+                );
+            },
+            filteredLogs() {
+                return this.logs
+                    .filter(log =>
+                        log.message.toLowerCase().includes(this.logSearch.toLowerCase()) ||
+                        log.level.toLowerCase().includes(this.logSearch.toLowerCase())
+                    )
+                    .sort((a, b) => {
+                        if (this.sortAsc) {
+                            return a[this.sortKey] > b[this.sortKey] ? 1 : -1;
+                        } else {
+                            return a[this.sortKey] < b[this.sortKey] ? 1 : -1;
+                        }
+                    });
+            }
+        },
+        methods: {
+            setTab(tab) {
+                this.activeTab = tab;
+                this.refreshData();
+                window.location.hash = tab;
+            },
+            toggleConfigEditing() {
+                if (this.configEditing) {
+                    // Discard changes
+                    this.editableGlobalConfig = JSON.stringify(this.globalConfig, null, 2);
+                }
+                this.configEditing = !this.configEditing;
+            },
+            toggleWorkflowEditing() {
+                if (this.workflowEditing) {
+                    // Discard changes
+                    this.editableCurrentWorkflow = JSON.stringify(this.currentWorkflow, null, 2);
+                }
+                this.workflowEditing = !this.workflowEditing;
+            },
+            saveConfig() {
+                try {
+                    this.globalConfig = JSON.parse(this.editableGlobalConfig);
+                    this.configEditing = false;
+                    alert("Global configuration saved!");
+                } catch (error) {
+                    alert("Invalid JSON format!");
+                }
+            },
+            saveWorkflow() {
+                try {
+                    this.currentWorkflow = JSON.parse(this.editableCurrentWorkflow);
+                    this.workflowEditing = false;
+                    alert("Workflow configuration saved!");
+                } catch (error) {
+                    alert("Invalid JSON format!");
+                }
+            },
+            // Helper to fetch with timeout
+            fetchWithTimeout(url, options = {}, timeout = 5000) {
+                return Promise.race([
+                    fetch(url, options),
+                    new Promise((_, reject) =>
+                        setTimeout(() => reject(new Error("Request timed out")), timeout)
+                    )
+                ]);
+            },
+            handleApiError(error) {
+                console.error(error);
+                this.heartbeatCount++;
+                if (this.heartbeatCount >= 5 && !this.heartbeatActive) {
+                    this.startHeartbeat();
+                }
+            },
+            // WebSocket open event
+            onWebSocketOpen() {
+                console.log("WebSocket connected");
+            },
+            // WebSocket close event
+            onWebSocketClose() {
+                console.log("WebSocket disconnected");
+            },
+            // WebSocket message event - dispatches to correct handler
+            onWebSocketMessage(event) {
+                try {
+                    const message = JSON.parse(event.data);
+                    console.log("WebSocket Message:", message);
+
+                    if (message.event) {
+                        this.handleWebSocketEvent(message);
+                    } else {
+                        console.warn("Received WebSocket message without event type:", message);
+                    }
+                } catch (error) {
+                    console.error("Error parsing WebSocket message:", error);
+                }
+            },
+            // Handles different WebSocket event types
+            handleWebSocketEvent(message) {
+                switch (message.event) {
+                    case "new_email":
+                        this.fetchEmails(); // Fetch new emails when backend notifies
+                        break;
+                    case "log_update":
+                        this.fetchLogs(); // Fetch new logs when notified
+                        break;
+                    case "workflow_update":
+                        this.fetchCurrentWorkflow(); // Refresh workflow config
+                        break;
+                    default:
+                        console.warn("Unhandled WebSocket event:", message.event);
+                }
+            },
+            startHeartbeat() {
+                this.heartbeatActive = true;
+                this.heartbeatCountdown = 10;
+
+                if (this.heartbeatInterval) clearInterval(this.heartbeatInterval);
+
+                this.heartbeatInterval = setInterval(() => {
+                    // Call heartbeat API endpoint every 10 seconds
+                    fetch('/api/v1/heartbeat')
+                        .then(response => {
+                            if (response.ok) {
+                                // Successful heartbeat: reset counter and remove overlay
+                                this.heartbeatCount = 0;
+                                this.heartbeatActive = false;
+                                clearInterval(this.heartbeatInterval);
+                                this.heartbeatInterval = null;
+                            } else {
+                                // Decrement countdown display
+                                this.heartbeatCountdown = this.heartbeatCountdown > 0 ? this.heartbeatCountdown - 1 : 10;
+                            }
+                        })
+                        .catch(err => {
+                            console.error("Heartbeat error:", err);
+                            this.heartbeatCountdown = this.heartbeatCountdown > 0 ? this.heartbeatCountdown - 1 : 10;
+                        });
+                }, 1000);
+            },
+            instantiateAllRecursiveFromRoot() {
+                this.fetchWithTimeout('/api/v1/instantiate-root-recursive', { method: 'POST' })
+                    .then(() => this.refreshData())
+                    .catch(error => this.handleApiError(error))
+                    .then(this.refreshData);
+                },
+            executeAllRecursiveFromRoot() {
+                this.fetchWithTimeout('/api/v1/execute-root-recursive', { method: 'POST' })
+                    .then(() => this.refreshData())
+                    .catch(error => this.handleApiError(error))
+                    .then(this.refreshData);
+                },
+            resetInstances() {
+                this.fetchWithTimeout('/api/v1/reset-all-instances', { method: 'POST' })
+                    .then(() => this.refreshData())
+                    .catch(error => this.handleApiError(error))
+                    .then(this.refreshData);
+                },
+            setWorkflow() {
+                if (!this.selectedWorkflow) {
+                    alert("Please select a workflow first.");
+                    return;
+                }
+                this.fetchWithTimeout('/api/v1/set-workflow', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ workflow: this.selectedWorkflow })
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Failed to set workflow.");
+                        }
+                    })
+                    .catch(error => this.handleApiError(error))
+                    .then(this.refreshData);
+                },
+            shutdown() {
+                this.fetchWithTimeout('/api/v1/shutdown', { method: 'POST' })
+                    .catch(error => this.handleApiError(error));
+                },
+            initLogs() {
+                this.fetchWithTimeout('/api/v1/init-logs')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.logs = data;
+                    })
+                    .then(() => this.refreshData())
+                    .catch(error => this.handleApiError(error));
+                },
+            fetchLogs() {
+                this.fetchWithTimeout('/api/v1/fetch-logs')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.logs.push(...data);
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            escapeHTML(html) {
+                const div = document.createElement("div");
+                div.textContent = html; // This prevents execution of HTML but preserves readable format
+                return div.innerHTML;   // Returns safe, escaped HTML
+            },
+            decodeQuotedPrintable(text) {
+                return text
+                    .replace(/=\r?\n/g, '') // Remove soft line breaks
+                    .replace(/=([A-Fa-f0-9]{2})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16))); // Decode hex values
+            },
+            fetchEmailCount() {
+                this.fetchWithTimeout('/api/v1/fetch-email-count')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.totalEmails = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            fetchEmails(page = 0) {
+                this.currentPage = page;
+                const startIdx = page * this.emailsPerPage;
+
+                fetch(`/api/v1/fetch-emails/${startIdx}/${this.emailsPerPage}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        // Process each email
+                        data.forEach(email => {
+                            // Check if it's quoted-printable
+                            if (email.headers["Content-Transfer-Encoding"]?.toLowerCase() === "quoted-printable") {
+                                email.body = this.decodeQuotedPrintable(email.body);
+                            }
+
+                            // Escape HTML for safe display
+                            email.body = this.escapeHTML(email.body);
+                        });
+
+                        this.globalEmails = data;
+                    })
+                    .catch(error => console.error("Error fetching emails:", error));
+            },
+
+            viewEmail(index) {
+                this.selectedEmail = { ...this.globalEmails[index] };
+                console.log("Sanitising Email", index);
+            },
+            prevPage() {
+                if (this.currentPage > 0) {
+                    this.fetchEmails(this.currentPage - 1);
+                }
+            },
+            nextPage() {
+                this.fetchEmails(this.currentPage + 1);
+            },
+            fetchGlobalConfig() {
+                this.fetchWithTimeout('/api/v1/fetch-global-config')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.globalConfig = JSON.stringify(data, null, 2);
+                    })
+                    .catch(error => this.handleApiError(error));
+                },
+            fetchCurrentWorkflow() {
+                this.fetchWithTimeout('/api/v1/fetch-current-workflow')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.currentWorkflow = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            fetchPluginInstances() {
+                this.fetchWithTimeout('/api/v1/fetch-plugin-instanceIDs')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.pluginInstanceIDs = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            fetchCreateFuncs() {
+                this.fetchWithTimeout('/api/v1/fetch-plugin-name')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.createFuncs = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            fetchInstanceTree() {
+                this.fetchWithTimeout('/api/v1/fetch-plugin-instance-tree')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.instanceTree = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            fetchWorkflows() {
+                this.fetchWithTimeout('/api/v1/fetch-workflows')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.workflows = data;
+                    })
+                    .catch(error => this.handleApiError(error));
+            },
+            saveWorkflowConfig() {
+                this.fetchWithTimeout('/api/v1/set-workflow-config', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(this.workflowConfig)
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error("Failed to save workflow config.");
+                        }
+                        return response.text();
+                    })
+                    .then(msg => {
+                        alert("Workflow configuration saved successfully!");
+                    })
+                    .catch(error => console.error("Error saving workflow config:", error))
+                    .then(this.refreshData);
+            },
+            sortBy(key) {
+                if (this.sortKey === key) {
+                    this.sortAsc = !this.sortAsc;
+                } else {
+                    this.sortKey = key;
+                    this.sortAsc = true;
+                }
+            },
+            refreshData() {
+                this.fetchEmails();
+                this.fetchCreateFuncs();
+                this.fetchPluginInstances();
+                this.fetchInstanceTree();
+                this.fetchGlobalConfig();
+                this.fetchCurrentWorkflow();
+                this.fetchWorkflows();
+                this.fetchEmailCount();
+            }
+        },
+        mounted() {
+            const tabFromHash = window.location.hash.replace("#", "");
+
+            if (tabFromHash) {
+                this.activeTab = tabFromHash;
+            }
+
+            this.refreshData();
+            this.initLogs(); // Initial logs to fetch
+
+            // Dynamically determine WebSocket connection URL
+            const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+            const wsUrl = `${protocol}://${window.location.host}/ws`;
+            this.ws = new WebSocket(wsUrl);
+
+            this.ws.onopen = this.onWebSocketOpen;
+            this.ws.onclose = this.onWebSocketClose;
+            this.ws.onmessage = this.onWebSocketMessage;
+        }
+    });
+
+    app.mount("#app");
+</script>
+
+</body>
+</html>
