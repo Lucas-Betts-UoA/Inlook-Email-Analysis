@@ -1,6 +1,16 @@
 # Inlook - Email Analysis Tool
 
+*last updated: Monday 17th March*
+
 **For research and industry use in analyzing and processing emails efficiently.**
+
+### Contact:
+To get in touch, please email:
+
+Lucas Betts
+lucas.betts@auckland.ac.nz
+
+This tool has been developed by the University of Auckland Secret Lab.
 
 ### Safety Warnings
 **Note:** This tool is a work in progress. Expect issues, but feel free to make them known so that we can improve!
@@ -16,14 +26,29 @@
 
 Inlook is an extendable, modular tool designed for individuals and organisations to analyze large volumes of digital messages. Initially focused on email analysis, it provides a plugin-based system for creating custom analysis workflows.
 
-The primary goal of Inlook is to serve as a community-driven framework for bulk message analysis, enabling both researchers and industry professionals to develop, share, and deploy custom processing workflows. 
-Through its plugin-based architecture, analysis methodology can be easily reproduced using a single workflow (.json) file.
+The primary goal of Inlook is to serve as a community-driven framework for bulk message analysis, enabling both researchers and industry professionals to develop, share, and deploy custom email analysis workflows. 
+Its plugin-based architecture allows email analysis methodology to be easily reproduced using a single workflow (.json) file and shared plugins.
 
 Core Features:
-- Flexible Parsing & Processing – Supports standard and MIME multipart email formats in many languages/encodings, however automated detection of encoding is not always reliable.
+- Flexible Parsing & Processing – Supports standard and MIME multipart email formats in many languages/encodings. However, automated detection of encoding is not always reliable.
 - Web-based UI – Provides interactive control, real-time monitoring, and workflow configuration.
 - Plugin System – Designed for extension and customization depending on the analysis requirements.
 - API-Driven – Provides structured REST and WebSocket interfaces for automation and integration with external systems.
+
+### Sample Workflow + Sample Dataset
+We have provided a sample workflow under config/workflows. 
+
+Most of our work uses emails from the [Untroubled.org/spam](https://untroubled.org/spam/) dataset provided by Bruce Guenter. However, the test data directory contains a few spam emails that were personally collected.
+
+### TO-DO:
+While this is an open-ended tool with many planned features, the current version has some issues that need addressing:
+
+1. Configurations cannot be edited in the user interface, this process must be done in a "workflow" .json file as we have not yet ensured safety of the filesystem.
+2. Global configurations also cannot be edited in the user interface, same as above.
+3. Parallel execution has been disabled for safety.
+4. Email view in the gui has been reduced to text-only, as we have not yet ensured safety of the js/script that could be contained in an email.
+5. The filter with exclude does not currently remove emails from EmailStorage.
+6. Most plugins are still being developed, and will be included in the coming weeks.
 
 ## Installation & Usage
 
