@@ -58,10 +58,12 @@ void WebUIManager::stop() {
 void WebUIManager::runServer() {
     setupWebSocket();
     setupApiRoutes();
-    LOG_INFO << "We have set up routes!";
+    auto serverAddress = GlobalConfigManager::getInstance()->getGlobalConfigValue<std::string>("hostname");
+    auto serverPort = GlobalConfigManager::getInstance()->getGlobalConfigValue<uint16_t>("port");
+    LOG_INFO << "Binding server @ http://" << serverAddress << ":" << serverPort;
 
-    app.bindaddr(GlobalConfigManager::getInstance()->getGlobalConfigValue<std::string>("hostname"))
-       .port(GlobalConfigManager::getInstance()->getGlobalConfigValue<uint16_t>("port"))
+    app.bindaddr(serverAddress)
+       .port(serverPort)
        .loglevel(crow::LogLevel::Warning)
        .multithreaded()
        .run();
