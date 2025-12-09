@@ -136,7 +136,6 @@ void SerialPluginExecutor::removeInstantiatedPlugin(const std::string& pluginIns
 bool SerialPluginExecutor::reloadPluginsFromConfig() {
     if (!validateConfig()) { // Checking my schema is valid before continuing...
         LOG_ERROR << "Schema invalid for " << getPluginName();
-        std::cout << "Schema invalid for " << getPluginName();
         return false;
     }
 
@@ -146,7 +145,7 @@ bool SerialPluginExecutor::reloadPluginsFromConfig() {
 
         if (auto pluginInstance = Plugins->createPluginInstance(pluginName, options)) {
             LOG_DEBUG_VERBOSE << "Loaded plugin: " << pluginName;
-            std::cout << "Loaded plugin: " << pluginName;
+            //std::cout << "Loaded plugin: " << pluginName;
             managedPlugins_[pluginInstance->first] = std::move(pluginInstance->second);
         } else {
             LOG_ERROR << "Failed to load plugin: " << pluginName;

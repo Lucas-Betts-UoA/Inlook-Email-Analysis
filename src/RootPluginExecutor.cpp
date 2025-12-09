@@ -39,24 +39,21 @@ RootPluginExecutor::RootPluginExecutor(const std::string& instanceID) : PluginEx
 }
 
 bool RootPluginExecutor::instantiateRecursive() {
-    std::cout << "RootPluginExecutor::InstantiateRecursive called." << std::endl;
+
+    LOG_DEBUG_VERBOSE << "RootPluginExecutor::InstantiateRecursive called." ;
     bool status = true;
     status &= reloadPluginsFromConfig();
-    std::cout << "test" << std::endl;
     if (!status) {
         SET_PLUGIN_STATE("FAILED");
         return status;
     }
-    std::cout << "test2" << std::endl;
     status &= primaryPlugin_->instantiateRecursive();
-    std::cout << "test3" << std::endl;
     status? SET_PLUGIN_STATE("READY") : SET_PLUGIN_STATE("FAILED");
     return status;
 }
 
 bool RootPluginExecutor::execute(EmailListView * emailList) {
     LOG_INFO << "RootPluginExecutor::execute called.";
-    std::cout << "RootPluginExecutor::execute called." << std::endl;
     SET_PLUGIN_STATE("RUNNING");
     bool status = false;
     if (primaryPlugin_) {
@@ -64,13 +61,11 @@ bool RootPluginExecutor::execute(EmailListView * emailList) {
         emailList->commitInserts();
     }
     status ? SET_PLUGIN_STATE("COMPLETE") : SET_PLUGIN_STATE("FAILED");
-    std::cout << status << std::endl;
     return status;
 }
 
 bool RootPluginExecutor::executeOne(EmailListView * emailList, std::string instanceID) {
     LOG_INFO << "RootPluginExecutor::executeOne called.";
-    std::cout << "RootPluginExecutor::executeOne called." << std::endl;
     SET_PLUGIN_STATE("RUNNING");
     bool status = false;
     if (primaryPluginInstanceID_ == instanceID) {
@@ -78,7 +73,6 @@ bool RootPluginExecutor::executeOne(EmailListView * emailList, std::string insta
         emailList->commitInserts();
     }
     status ? SET_PLUGIN_STATE("COMPLETE") : SET_PLUGIN_STATE("FAILED");
-    std::cout << status << std::endl;
     return status;
 }
 
@@ -137,7 +131,6 @@ bool RootPluginExecutor::reloadPluginsFromConfig() {
     auto pluginInstance = Plugins->createPluginInstance(pluginName, pluginExecutorConfig);
     if (!pluginInstance) {
         LOG_ERROR << "Failed to load plugin: " << pluginName << ". Keeping previous plugin alive.";
-        std::cout << "Failed to load plugin: " << pluginName << ". Keeping previous plugin alive.";
         SET_PLUGIN_STATE("FAILED");
         return false;
     }
@@ -158,8 +151,7 @@ nlohmann::json RootPluginExecutor::printRecursiveInstanceTreeJson() {
         node["children"] = nlohmann::json::array();
         if (primaryPlugin_) node["children"].emplace_back(primaryPlugin_->printRecursiveInstanceTreeJson());
     } catch (std::exception& e) {
-        //LOG_ERROR << e.what();
-        std::cout << e.what();
+        LOG_ERROR << e.what();
     }
     return node;
 }

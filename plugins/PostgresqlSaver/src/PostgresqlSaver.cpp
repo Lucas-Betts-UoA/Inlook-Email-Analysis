@@ -14,8 +14,8 @@
 #include <ctime>
 
 // Constructor
-PostgresqlSaver::PostgresqlSaver(std::string& instanceID) : PluginRunnableInterface(instanceID) {
-    pluginName_ = "DummyPlugin";
+PostgresqlSaver::PostgresqlSaver(const std::string& instanceID) : PluginRunnableInterface(instanceID) {
+    pluginName_ = "PostgresqlSaver";
     instanceID_ = instanceID;
     optionSchema_ = R"(
 {
