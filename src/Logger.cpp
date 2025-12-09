@@ -132,7 +132,7 @@ void Logger::startLogging() {
         flushThread_ = new std::thread(&Logger::flushLoop, this);
     } catch (const std::exception &e) {
         std::cerr << e.what();
-        stopFlag_ = true;
+        //stopFlag_ = true;
     }
 }
 
@@ -243,7 +243,7 @@ void Logger::flushLoop() {
     if (!logFile) {
         LOG_ERROR << "Failed to open log file: " << logFileName_;
     }
-    while (!logBuffer_.empty()) {
+    while (!stopFlag_) {
         flush(logFile);
     }
     logFile.close();
@@ -251,6 +251,7 @@ void Logger::flushLoop() {
 
 Logger::~Logger() {
     stopFlag_ = true;
+    std::cout << "~Logger" << std::endl;
     sleep(1); // Let other classes write, and flushLoop() quit, then call flush one more time.
     {
         std::lock_guard<std::mutex> lock(*mtx_);

@@ -70,9 +70,7 @@ bool PluginRegistry::loadAllPlugins() {
     for (const auto& entry : std::filesystem::directory_iterator(pluginsDir)) {
         if (entry.is_directory()) {
             std::string pluginName = entry.path().filename().string();
-            if (!loadPluginCreateFunc(pluginName)) {
-                LOG_ERROR << "Failed to load plugin: " << pluginName;
-            } else {
+            if (loadPluginCreateFunc(pluginName)) {
                 LOG_DEBUG_VERBOSE << "Successfully loaded plugin: " << pluginName;
             }
         }
