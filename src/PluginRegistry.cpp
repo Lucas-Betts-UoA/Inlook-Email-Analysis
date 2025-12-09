@@ -115,16 +115,18 @@ PluginRegistry::createPluginInstance(const std::string &pluginCreateFuncName, co
     if (!pluginRecords_.contains(pluginCreateFuncName)) {
          if (!loadPluginCreateFunc(pluginCreateFuncName)) { // loads, and confirms it loaded. False if couldn't load
              LOG_ERROR << "Error loading plugin " << pluginCreateFuncName << " plugin.";
+             std::cout << "Error loading plugin " << pluginCreateFuncName << " plugin." << std::endl;
          }
     } else {
         LOG_DEBUG_VERBOSE << "pluginCreateFunc already loaded for " << pluginCreateFuncName;
     }
 
     try {
+        std::cout << pluginCreateFuncName << " plugin." << std::endl;
         CreateFunc createPlugin = pluginRecords_[pluginCreateFuncName].createFunc;
 
         std::string pluginInstanceID = pluginCreateFuncName + "_" + std::to_string(pluginCounter++);
-
+        std::cout << pluginInstanceID << std::endl;
         std::shared_ptr<PluginInterface> instance(
             createPlugin(pluginInstanceID),
             [this, pluginCreateFuncName, pluginInstanceID](PluginInterface* p)
@@ -138,6 +140,7 @@ PluginRegistry::createPluginInstance(const std::string &pluginCreateFuncName, co
         return std::make_pair(pluginInstanceID, std::move(instance));
     } catch (std::exception &e) {
         LOG_ERROR << "Error creating plugin instance: " << e.what();
+        std::cout << "Error creating plugin instance: " << e.what() << std::endl;
         return std::nullopt;
     }
 }

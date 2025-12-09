@@ -69,6 +69,7 @@ bool EmailLoader::execute(EmailListView * emailList) {
     } catch (std::exception& e) {
         SET_PLUGIN_STATE("FAILED");
         LOG_ERROR << e.what();
+        std::cout << e.what() << std::endl;
         return false;
     }
     SET_PLUGIN_STATE("COMPLETE");
