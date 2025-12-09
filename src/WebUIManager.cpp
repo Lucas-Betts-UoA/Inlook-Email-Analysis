@@ -42,7 +42,7 @@ void WebUIManager::startServer() {
         crow::logger::setLogLevel(crow::LogLevel::INFO);
         crow::mustache::set_global_base("web/components/");
         serverThread = std::thread(&WebUIManager::runServer, this);
-        // serverThread.join();
+        serverThread.join();
     } else {
         LOG_ERROR << "GlobalConfigManager did not have root instance ready, aborting WebUIManager::startServer()";
     }
@@ -50,7 +50,6 @@ void WebUIManager::startServer() {
 
 void WebUIManager::stop() {
     LOG_DEBUG_VERBOSE << "WebUIManager::stop()";
-    app.stop();
     if (serverThread.joinable()) {
         serverThread.join();
     }
@@ -59,13 +58,15 @@ void WebUIManager::stop() {
 void WebUIManager::runServer() {
     setupWebSocket();
     setupApiRoutes();
-    LOG_INFO << "We have set up routes!";
-    app.bindaddr(GlobalConfigManager::getInstance()->getGlobalConfigValue<std::string>("hostname"))
-       .port(GlobalConfigManager::getInstance()->getGlobalConfigValue<uint16_t>("port"))
+    auto serverAddress = GlobalConfigManager::getInstance()->getGlobalConfigValue<std::string>("hostname");
+    auto serverPort = GlobalConfigManager::getInstance()->getGlobalConfigValue<uint16_t>("port");
+    LOG_INFO << "Binding server @ http://" << serverAddress << ":" << serverPort;
+
+    app.bindaddr(serverAddress)
+       .port(serverPort)
        .loglevel(crow::LogLevel::Warning)
        .multithreaded()
        .run();
-    LOG_INFO << "TEST";
 }
 
 void WebUIManager::setupWebSocket() {
