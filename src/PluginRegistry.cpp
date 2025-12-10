@@ -110,7 +110,8 @@ bool PluginRegistry::loadPluginCreateFunc(const std::string &pluginName) {
 
 std::optional<std::pair<std::string, std::shared_ptr<PluginInterface>>>
 PluginRegistry::createPluginInstance(const std::string &pluginCreateFuncName, const nlohmann::json &options) {
-    if (!pluginRecords_.contains(pluginCreateFuncName)) {
+    LOG_DEBUG_VERBOSE << "PluginRegistry::createPluginInstance:  (" << pluginCreateFuncName << ", " << options.flatten() << ')';
+    if (!pluginRecords_.contains(pluginCreateFuncName)) { // check if we already have this plugin loaded.
          if (!loadPluginCreateFunc(pluginCreateFuncName)) { // loads, and confirms it loaded. False if couldn't load
              LOG_ERROR << "Error loading plugin " << pluginCreateFuncName << " plugin.";
          }
@@ -119,11 +120,9 @@ PluginRegistry::createPluginInstance(const std::string &pluginCreateFuncName, co
     }
 
     try {
-        LOG_DEBUG_VERBOSE << pluginCreateFuncName << " plugin.";
         CreateFunc createPlugin = pluginRecords_[pluginCreateFuncName].createFunc;
 
         std::string pluginInstanceID = pluginCreateFuncName + "_" + std::to_string(pluginCounter++);
-        LOG_DEBUG_VERBOSE << pluginInstanceID;
         std::shared_ptr<PluginInterface> instance(
             createPlugin(pluginInstanceID),
             [this, pluginCreateFuncName, pluginInstanceID](PluginInterface* p)
@@ -131,8 +130,6 @@ PluginRegistry::createPluginInstance(const std::string &pluginCreateFuncName, co
             LOG_DEBUG_VERBOSE << "Destroying instance of " << pluginCreateFuncName;
             pluginRecords_[pluginCreateFuncName].instances.erase(pluginInstanceID);
         });
-
-
         instance->setConfig(options);
         pluginRecords_[pluginCreateFuncName].instances[pluginInstanceID] = instance;
         return std::make_pair(pluginInstanceID, std::move(instance));

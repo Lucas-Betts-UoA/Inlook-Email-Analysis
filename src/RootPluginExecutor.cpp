@@ -39,8 +39,6 @@ RootPluginExecutor::RootPluginExecutor(const std::string& instanceID) : PluginEx
 }
 
 bool RootPluginExecutor::instantiateRecursive() {
-
-    LOG_DEBUG_VERBOSE << "RootPluginExecutor::InstantiateRecursive called." ;
     bool status = true;
     status &= reloadPluginsFromConfig();
     if (!status) {

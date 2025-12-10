@@ -35,48 +35,4 @@ private:
       }
     };
     static inline Register reg;
-    /* Self registration for plugin registry
-     struct Register {
-         Register() {
-             std::string name = "PostgresqlSaver";
-             static auto pluginSchema = R"(
-  {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "databasePath": {
-        "type": "string",
-        "description": "The path to the PostgreSQL database."
-      },
-      "schemaName": {
-        "type": "string",
-        "description": "The name of the schema."
-      },
-      "datasetName": {
-        "type": "string",
-        "description": "The name of the dataset."
-      },
-      "datasetDescription": {
-        "type": "string",
-        "description": "A description of the dataset."
-      }
-    },
-    "required": [
-      "databasePath",
-      "schemaName",
-      "datasetName",
-      "datasetDescription"
-    ],
-    "additionalProperties": false
-  }
-             )"_json;
-             LOG_DEBUG_VERBOSE << "Registering plugin " << name;
-             Plugins->registerStaticPlugin(name, pluginSchema, []() -> PluginInterface* {
-                 return new SerialPluginExecutor();
-             });
-         }
-     };
-     static inline Register reg;
-     */
-
 };
