@@ -4,7 +4,7 @@
 #include <iterator>
 #include <shared_mutex>
 #include "Email.hpp"
-
+#include <queue>
 class EmailStorage;
 
 class EmailListView {

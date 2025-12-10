@@ -7,7 +7,7 @@ class Email;
 // PostgresqlSaver class implementing PluginInterface
 class PostgresqlSaver final : public PluginRunnableInterface {
 public:
-    explicit PostgresqlSaver(std::string&);  // Constructor
+    explicit PostgresqlSaver(const std::string&);  // Constructor
 
     bool instantiateRecursive() override;
     nlohmann::json printRecursiveInstanceTreeJson() override;
@@ -25,48 +25,14 @@ private:
     int addEmailPartHeaderKey(pqxx::work& trans, int emailpartid, const std::string& key);
     void addEmailPartHeaderValue(pqxx::work& trans, int emailpartheaderkeyid, const std::string& value);
     void addAttribute(pqxx::work& trans, int emailid,const std::string& attributekey, const std::string& attributeval);
-    /* Self registration for plugin registry
-     struct Register {
-         Register() {
-             std::string name = "PostgresqlSaver";
-             static auto pluginSchema = R"(
-  {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "type": "object",
-    "properties": {
-      "databasePath": {
-        "type": "string",
-        "description": "The path to the PostgreSQL database."
-      },
-      "schemaName": {
-        "type": "string",
-        "description": "The name of the schema."
-      },
-      "datasetName": {
-        "type": "string",
-        "description": "The name of the dataset."
-      },
-      "datasetDescription": {
-        "type": "string",
-        "description": "A description of the dataset."
+    struct Register {
+      Register() {
+        std::string name = "PostgresqlSaver";
+        LOG_DEBUG_VERBOSE << "Registering plugin " << name;
+        Plugins->registerPlugin(name, [](const std::string& instanceID) -> PluginInterface* {
+          return new PostgresqlSaver(instanceID);
+        });
       }
-    },
-    "required": [
-      "databasePath",
-      "schemaName",
-      "datasetName",
-      "datasetDescription"
-    ],
-    "additionalProperties": false
-  }
-             )"_json;
-             LOG_DEBUG_VERBOSE << "Registering plugin " << name;
-             Plugins->registerStaticPlugin(name, pluginSchema, []() -> PluginInterface* {
-                 return new SerialPluginExecutor();
-             });
-         }
-     };
-     static inline Register reg;
-     */
-
+    };
+    static inline Register reg;
 };

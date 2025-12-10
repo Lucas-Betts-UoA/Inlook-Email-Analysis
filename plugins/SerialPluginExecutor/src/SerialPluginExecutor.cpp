@@ -144,7 +144,6 @@ bool SerialPluginExecutor::reloadPluginsFromConfig() {
         nlohmann::json options = pluginData.value("options", nlohmann::json{});
 
         if (auto pluginInstance = Plugins->createPluginInstance(pluginName, options)) {
-            //LOG_DEBUG_VERBOSE << "Loaded plugin: " << pluginName;
             managedPlugins_[pluginInstance->first] = std::move(pluginInstance->second);
         } else {
             LOG_ERROR << "Failed to load plugin: " << pluginName;
