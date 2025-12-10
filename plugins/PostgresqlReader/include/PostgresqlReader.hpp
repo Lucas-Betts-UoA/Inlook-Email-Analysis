@@ -1,7 +1,8 @@
 #pragma once
 #include "PluginRunnableInterface.hpp"
 #include <pqxx/pqxx>
-
+#include <unicode/ucnv.h> // ICU4C converter
+#include <unicode/ucsdet.h> // ICU4C detector
 // PostgresqlReader class implementing PluginInterface
 class PostgresqlReader final : public PluginRunnableInterface {
 public:
@@ -13,6 +14,7 @@ public:
     bool execute(EmailListView * emailList) override;
 private:
     void getEmails(pqxx::result &result, pqxx::work& trans, EmailListView *emailList);
+    std::string convertToUTF8(const std::vector<char>& inputBuffer, const std::string& encoding);
     /* Self registration for plugin registry
      struct Register {
          Register() {

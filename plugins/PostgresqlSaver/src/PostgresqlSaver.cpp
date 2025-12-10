@@ -2,14 +2,10 @@
 #include "PluginInterface.hpp"
 #include "Logger.hpp"
 #include "EmailListView.hpp"
-#include <unordered_map>
-#include <iostream>
-#include <functional>
 #include <string>
 #include <regex>
 #include "Email.hpp"
 #include <vector>
-#include <filesystem>
 #include <pqxx/pqxx>
 #include <ctime>
 
