@@ -11,25 +11,43 @@
       {
         "name": "AttributeBagLogger",
         "options": {
-          "logByFile": false
+          "logByFile": true,
+          "files": [
+            {
+              "file": "../smallertest/1729692247.M863314P2814661.txt"
+            }
+          ]
         }
       },
       {
-        "name": "PostgresqlSaver",
+        "name": "EmailListFilter",
         "options": {
-          "databasePath": "postgresql://postgres:myPassword@localhost/emailtestdatabase",
-          "schemaName": "emailschema",
-          "datasetName": "Untroubled.org",
-          "datasetDescription": "This directory contains all the spam that I have received since early 1998. I have employed various \"bait\" addresses, such as <bait@em.ca> to trick email address harvesters into putting them on spam lists."
-        }
-      },
-      {
-        "name": "PostgresqlReader",
-        "options": {
-          "databasePath": "postgresql://postgres:myPassword@localhost/emailtestdatabase",
-          "schemaName": "emailschema",
-          "datasetName": "Untroubled.org",
-          "filters": []
+          "filters": [
+            {
+              "fields": [
+                {
+                  "value": "attributeKey",
+                  "outcome": "exclude",
+                  "filterBy": "string",
+                  "filterVals": [
+                    {
+                      "filterValue": "Language predictions"
+                    }
+                  ]
+                },
+                {
+                  "value": "attributeVal",
+                  "outcome": "include",
+                  "filterBy": "string",
+                  "filterVals": [
+                    {
+                      "filterValue": "../smallertest/1729485940.2761654_3.txt"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       },
       {
