@@ -184,7 +184,8 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
             partBodies = std::make_unique<MIMEMultipartBodies>();
             for (const auto& partRow : parts) {
                 int partId = partRow[0].as<int>();
-                const std::vector<char> rawPartBody = std::vector<char>(partRow[1].as<int>());
+                std::string partBody = partRow[1].as<std::string>();
+                const std::vector<char> rawPartBody(partBody.begin(), partBody.end());
 
                 pqxx::result mimeHeaders = trans.exec("SELECT emailpartheaderkeyid, headerkey FROM emailpartheaderkey WHERE emailpartid = $1", pqxx::params(partId));
                 std::pmr::map<std::string, std::vector<std::string>> headerMap;
@@ -202,8 +203,10 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
                     headerMap[headerKey] = headerValues;
                 }
 
-                auto* (encoding) = dynamic_cast<AttributeBagStringIntPair*>(newEmail.getAttributeValue("Encoding"));
-                std::string safeBody = convertToUTF8(rawPartBody, (encoding.value.first));
+                std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+                size_t pos = encoding.find(':');
+                if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
+                std::string encodedPartBody = convertToUTF8(rawPartBody, encoding.substr(0, pos));
                 dynamic_cast<MIMEMultipartBodies*>(partBodies.get())->addPart(headerMap, encodedPartBody);
             }
             newEmail.setBody(std::move(partBodies));
@@ -211,16 +214,14 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
             pqxx::result standardBody = trans.exec("SELECT partbody FROM emailpart WHERE emailid = $1", pqxx::params(emailId));
             partBodies = std::make_unique<StandardEmailBody>();
             auto body = standardBody[0][0].as<std::string>();
+            const std::vector<char> rawBody(body.begin(), body.end());
 
-            pqxx::result convertedBody;
-            try {
-                convertedBody = trans.exec("SELECT convert_from($1::bytea, $2)", pqxx::params(body, "utf-8"));
-            } catch (const std::exception& e) {
-                LOG_ERROR << "Error converting body: " << e.what();
-                LOG_ERROR << "Skipping email.";
-                continue;
-            }
-            std::string encodedBody = convertedBody[0][0].as<std::string>();
+            std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+            size_t pos = encoding.find(':');
+            if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
+
+
+            std::string encodedBody = convertToUTF8(rawBody, encoding.substr(0, pos));
             dynamic_cast<StandardEmailBody*>(partBodies.get())->setContent(encodedBody);
             newEmail.setBody(std::move(partBodies));
         }
