@@ -301,7 +301,7 @@ int EmailParser_FSM::handleMIMEPreamble(const std::string& input) {
     if (input == "--" + boundary) {
         //LOG_DEBUG_VERBOSE << "End of Preamble, starting first MIME part";
         changeState(ReadingState::MIMEMultiPartHeader);
-        return 1;
+        return 0;
     }
     return 1;
 }
