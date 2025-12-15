@@ -48,6 +48,7 @@ private:
         NotReading,
         Header,
         EmailPartBody,
+        MIMEPreamble,
         MIMEMultiPartHeader,
         MIMEMultiPartBody
     };
@@ -63,6 +64,7 @@ private:
     int handleNotReading(const std::string& input);
     int handleHeader(const std::string& input);
     int handleEmailPartBody(const std::string& input);
+    int handleMIMEPreamble(const std::string& input);
     int handleMIMEMultiPartHeader(const std::string& input);
     int handleMIMEMultiPartBody(const std::string& input);
 

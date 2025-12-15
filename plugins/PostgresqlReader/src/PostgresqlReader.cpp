@@ -99,7 +99,7 @@ nlohmann::json PostgresqlReader::printRecursiveInstanceTreeJson() {
     return node;
 }
 
-std::string PostgresqlReader::convertToUTF8(const std::vector<char>& inputBuffer, const std::string& encoding) {
+std::string PostgresqlReader::convertToUTF8(const std::vector<char>& inputBuffer, const std::string& encoding = "UTF-8") {
     UErrorCode status = U_ZERO_ERROR;
 
     // Open ICU converter for the detected encoding
@@ -159,16 +159,26 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
                                               pqxx::params(emailheaderkeyid));
 
             for (const auto& valueRow : values) {
-                std::string headerValue = valueRow[0].as<std::string>();
-                newEmail.setHeader(headerKey, headerValue); // Assuming addHeader method exists in Email class
+                newEmail.setHeader(headerKey, valueRow[0].as<std::string>()); // Assuming addHeader method exists in Email class
             }
         }
         try {
             pqxx::result attributes = trans.exec("SELECT attributekey, attributeval FROM attributebag WHERE emailid = $1", pqxx::params(emailId));
             for (const auto& attributeRow : attributes) {
                 std::string key = attributeRow[0].as<std::string>();
-                std::string rawValue = attributeRow[1].as<std::string>();
-                newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(rawValue));
+                pqxx::binarystring rawAttributeValue(attributeRow[1]);
+                std::vector<char> rawValueBytes(rawAttributeValue.begin(), rawAttributeValue.end());
+
+                if (key == "File Bytes") {
+                    std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+                    size_t pos = encoding.find(',');
+                    if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
+                    std::string encodedFileBytes = convertToUTF8(rawValueBytes, encoding.substr(1, pos-1));
+                    newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(encodedFileBytes));
+                } else {
+                    std::string encodedAttributeValue = convertToUTF8(rawValueBytes, "UTF-8");
+                    newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(encodedAttributeValue));
+                }
             }
         } catch (const std::exception& e) {
             LOG_ERROR << "PostgresqlReader exception: " << e.what();
@@ -184,7 +194,7 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
             partBodies = std::make_unique<MIMEMultipartBodies>();
             for (const auto& partRow : parts) {
                 int partId = partRow[0].as<int>();
-                std::string partBody = partRow[1].as<std::string>();
+                pqxx::binarystring partBody(partRow[1]);
                 const std::vector<char> rawPartBody(partBody.begin(), partBody.end());
 
                 pqxx::result mimeHeaders = trans.exec("SELECT emailpartheaderkeyid, headerkey FROM emailpartheaderkey WHERE emailpartid = $1", pqxx::params(partId));
@@ -204,24 +214,26 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
                 }
 
                 std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
-                size_t pos = encoding.find(':');
+                size_t pos = encoding.find(',');
                 if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
-                std::string encodedPartBody = convertToUTF8(rawPartBody, encoding.substr(0, pos));
+
+                //LOG_DEBUG_VERBOSE << "Converting MIME body";
+                std::string encodedPartBody = convertToUTF8(rawPartBody, encoding.substr(1, pos-1));
                 dynamic_cast<MIMEMultipartBodies*>(partBodies.get())->addPart(headerMap, encodedPartBody);
             }
             newEmail.setBody(std::move(partBodies));
         } else {
             pqxx::result standardBody = trans.exec("SELECT partbody FROM emailpart WHERE emailid = $1", pqxx::params(emailId));
             partBodies = std::make_unique<StandardEmailBody>();
-            auto body = standardBody[0][0].as<std::string>();
+            pqxx::binarystring body(standardBody[0][0]);
             const std::vector<char> rawBody(body.begin(), body.end());
 
             std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
-            size_t pos = encoding.find(':');
+            size_t pos = encoding.find(',');
             if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
 
-
-            std::string encodedBody = convertToUTF8(rawBody, encoding.substr(0, pos));
+            //LOG_DEBUG_VERBOSE << "Converting standard body";
+            std::string encodedBody = convertToUTF8(rawBody, encoding.substr(1, pos-1));
             dynamic_cast<StandardEmailBody*>(partBodies.get())->setContent(encodedBody);
             newEmail.setBody(std::move(partBodies));
         }

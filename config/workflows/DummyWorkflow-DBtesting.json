@@ -25,12 +25,6 @@
           "datasetName": "Untroubled.org",
           "filters": []
         }
-      },
-      {
-        "name": "AttributeBagLogger",
-        "options": {
-          "logByFile": false
-        }
       }
     ]
   }
