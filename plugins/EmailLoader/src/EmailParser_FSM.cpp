@@ -12,8 +12,9 @@ EmailParser_FSM::EmailParser_FSM(EmailListView* newEmailList) : currentState(Rea
     // Initialize state handlers
     stateHandlers[ReadingState::NotReading] = [this](const std::string& input) -> int {return handleNotReading(input);};
     stateHandlers[ReadingState::Header] = [this](const std::string& input) -> int  {return handleHeader(input); };
-    stateHandlers[ReadingState::MIMEMultiPartHeader] = [this](const std::string& input) -> int {return handleMIMEMultiPartHeader(input); };
     stateHandlers[ReadingState::EmailPartBody] = [this](const std::string& input) -> int {return handleEmailPartBody(input); };
+    stateHandlers[ReadingState::MIMEPreamble] = [this](const std::string& input) -> int {return handleMIMEPreamble(input); };
+    stateHandlers[ReadingState::MIMEMultiPartHeader] = [this](const std::string& input) -> int {return handleMIMEMultiPartHeader(input); };
     stateHandlers[ReadingState::MIMEMultiPartBody] = [this](const std::string& input) -> int {return handleMIMEMultiPartBody(input); };
     emailList = newEmailList;
     try {
@@ -268,12 +269,12 @@ int EmailParser_FSM::handleHeader(const std::string& input) {
         changeState(ReadingState::EmailPartBody);
         return 1;
     } else {
-        //LOG_DEBUG_VERBOSE << "Transitioning to MIMEMultiPartHeader";
+        //LOG_DEBUG_VERBOSE << "Transitioning to MIMEPreamble";
         emailBodyObj = std::make_unique<MIMEMultipartBodies>();
         emailObj.setHeader(headerkey.str(), headervalstringstream.str());
         headerkey.str(std::string());
         headervalstringstream.str(std::string());
-        changeState(ReadingState::MIMEMultiPartHeader);
+        changeState(ReadingState::MIMEPreamble);
         return 1;
     }
 }
@@ -292,6 +293,16 @@ void EmailParser_FSM::checkIfMIME(const std::string& headerVal) {
 int EmailParser_FSM::handleEmailPartBody(const std::string& input) {
     //LOG_DEBUG_VERBOSE << "Body line: " << input;
     body << input;
+    return 1;
+}
+
+int EmailParser_FSM::handleMIMEPreamble(const std::string& input) {
+    // The preamble ends when we hit the first boundary (prefixed with --)
+    if (input == "--" + boundary) {
+        //LOG_DEBUG_VERBOSE << "End of Preamble, starting first MIME part";
+        changeState(ReadingState::MIMEMultiPartHeader);
+        return 0;
+    }
     return 1;
 }
 

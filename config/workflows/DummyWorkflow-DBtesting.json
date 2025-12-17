@@ -5,13 +5,7 @@
       {
         "name": "EmailLoader",
         "options": {
-          "emailPath": "../smallertest"
-        }
-      },
-      {
-        "name": "AttributeBagLogger",
-        "options": {
-          "logByFile": false
+          "emailPath": "../testdata/2024-10"
         }
       },
       {
@@ -30,12 +24,6 @@
           "schemaName": "emailschema",
           "datasetName": "Untroubled.org",
           "filters": []
-        }
-      },
-      {
-        "name": "AttributeBagLogger",
-        "options": {
-          "logByFile": false
         }
       }
     ]

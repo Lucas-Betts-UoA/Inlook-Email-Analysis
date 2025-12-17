@@ -2,17 +2,17 @@
 #include "PluginInterface.hpp"
 #include "Logger.hpp"
 #include "EmailListView.hpp"
-#include <unordered_map>
-#include <iostream>
-#include <functional>
 #include <string>
 #include <regex>
 #include "Email.hpp"
 #include <vector>
-#include <filesystem>
 #include "EmailBody.hpp"
 #include <pqxx/pqxx>
 #include "PluginRegistry.hpp"
+#include <unicode/uloc.h>
+#include <unicode/ustring.h>
+
+#include "../../EmailLoader/include/EmailLoaderAttributes.hpp"
 
 // Constructor
 PostgresqlReader::PostgresqlReader(const std::string& instanceID) : PluginRunnableInterface(instanceID) {
@@ -99,6 +99,45 @@ nlohmann::json PostgresqlReader::printRecursiveInstanceTreeJson() {
     return node;
 }
 
+std::string PostgresqlReader::convertToUTF8(const std::vector<char>& inputBuffer, const std::string& encoding = "UTF-8") {
+    UErrorCode status = U_ZERO_ERROR;
+
+    // Open ICU converter for the detected encoding
+    UConverter* conv = ucnv_open(encoding.c_str(), &status);
+    if (U_FAILURE(status)) {
+        throw std::runtime_error("Error: Unable to open ICU converter for " + encoding);
+    }
+
+    // Step 1: Calculate required UTF-8 buffer size (nullptr = no conversion)
+    status = U_ZERO_ERROR;
+    int32_t requiredSize = ucnv_convert("UTF-8", encoding.c_str(), nullptr, 0,
+                                        inputBuffer.data(), inputBuffer.size(), &status);
+    //LOG_DEBUG_VERBOSE << "Required output buffer size: " << requiredSize;
+    if (status != U_BUFFER_OVERFLOW_ERROR) {
+        ucnv_close(conv);
+        throw std::runtime_error("Error: Failed to calculate buffer size for UTF-8 conversion.");
+    }
+
+    // Step 2: Allocate buffer of the correct size
+    status = U_ZERO_ERROR;
+    std::vector<char> utf8Buffer(requiredSize);
+
+    // Step 3: Perform the actual conversion (with correctly sized target buffer)
+    int32_t actualSize = ucnv_convert("UTF-8", encoding.c_str(), utf8Buffer.data(), utf8Buffer.size(),
+                                      inputBuffer.data(), inputBuffer.size(), &status);
+
+    // Cleanup
+    ucnv_close(conv);
+
+    if (U_FAILURE(status)) {
+        throw std::runtime_error("Error: Conversion to UTF-8 failed.");
+    }
+
+    return std::string(utf8Buffer.begin(), utf8Buffer.begin() + actualSize);
+}
+
+
+
 void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailListView *emailList) {
     for (const auto& emailRow : result) {
         int emailId = emailRow[0].as<int>();
@@ -120,16 +159,26 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
                                               pqxx::params(emailheaderkeyid));
 
             for (const auto& valueRow : values) {
-                std::string headerValue = valueRow[0].as<std::string>();
-                newEmail.setHeader(headerKey, headerValue); // Assuming addHeader method exists in Email class
+                newEmail.setHeader(headerKey, valueRow[0].as<std::string>()); // Assuming addHeader method exists in Email class
             }
         }
         try {
-            pqxx::result attributes = trans.exec("SELECT attributekey, convert_from(attributeval, 'UTF-8') FROM attributebag WHERE emailid = $1", pqxx::params(emailId));
+            pqxx::result attributes = trans.exec("SELECT attributekey, attributeval FROM attributebag WHERE emailid = $1", pqxx::params(emailId));
             for (const auto& attributeRow : attributes) {
                 std::string key = attributeRow[0].as<std::string>();
-                std::string value = attributeRow[1].as<std::string>();
-                newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(value));
+                pqxx::binarystring rawAttributeValue(attributeRow[1]);
+                std::vector<char> rawValueBytes(rawAttributeValue.begin(), rawAttributeValue.end());
+
+                if (key == "File Bytes") {
+                    std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+                    size_t pos = encoding.find(',');
+                    if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
+                    std::string encodedFileBytes = convertToUTF8(rawValueBytes, encoding.substr(1, pos-1));
+                    newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(encodedFileBytes));
+                } else {
+                    std::string encodedAttributeValue = convertToUTF8(rawValueBytes, "UTF-8");
+                    newEmail.insertAttribute(key, AttributeBagRegistry::deserializeAttribute(encodedAttributeValue));
+                }
             }
         } catch (const std::exception& e) {
             LOG_ERROR << "PostgresqlReader exception: " << e.what();
@@ -145,7 +194,8 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
             partBodies = std::make_unique<MIMEMultipartBodies>();
             for (const auto& partRow : parts) {
                 int partId = partRow[0].as<int>();
-                std::string partBody = partRow[1].as<std::string>();
+                pqxx::binarystring partBody(partRow[1]);
+                const std::vector<char> rawPartBody(partBody.begin(), partBody.end());
 
                 pqxx::result mimeHeaders = trans.exec("SELECT emailpartheaderkeyid, headerkey FROM emailpartheaderkey WHERE emailpartid = $1", pqxx::params(partId));
                 std::pmr::map<std::string, std::vector<std::string>> headerMap;
@@ -163,33 +213,27 @@ void PostgresqlReader::getEmails(pqxx::result &result, pqxx::work& trans, EmailL
                     headerMap[headerKey] = headerValues;
                 }
 
-                pqxx::result convertedBody;
-                try {
-                    convertedBody = trans.exec("SELECT convert_from($1::bytea, $2)", pqxx::params(partBody, "UTF-8"));
-                } catch (const std::exception& e) {
-                    LOG_ERROR << "Error converting body: " << e.what();
-                    LOG_ERROR << "Skipping email.";
-                    continue;
-                }
-                std::string encodedPartBody = convertedBody[0][0].as<std::string>();
+                std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+                size_t pos = encoding.find(',');
+                if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
 
+                //LOG_DEBUG_VERBOSE << "Converting MIME body";
+                std::string encodedPartBody = convertToUTF8(rawPartBody, encoding.substr(1, pos-1));
                 dynamic_cast<MIMEMultipartBodies*>(partBodies.get())->addPart(headerMap, encodedPartBody);
             }
             newEmail.setBody(std::move(partBodies));
         } else {
             pqxx::result standardBody = trans.exec("SELECT partbody FROM emailpart WHERE emailid = $1", pqxx::params(emailId));
             partBodies = std::make_unique<StandardEmailBody>();
-            auto body = standardBody[0][0].as<std::string>();
+            pqxx::binarystring body(standardBody[0][0]);
+            const std::vector<char> rawBody(body.begin(), body.end());
 
-            pqxx::result convertedBody;
-            try {
-                convertedBody = trans.exec("SELECT convert_from($1::bytea, $2)", pqxx::params(body, "utf-8"));
-            } catch (const std::exception& e) {
-                LOG_ERROR << "Error converting body: " << e.what();
-                LOG_ERROR << "Skipping email.";
-                continue;
-            }
-            std::string encodedBody = convertedBody[0][0].as<std::string>();
+            std::string encoding = newEmail.getAttributeValue("Encoding")->toString();
+            size_t pos = encoding.find(',');
+            if (pos == std::string::npos) throw std::runtime_error("Invalid pair format.");
+
+            //LOG_DEBUG_VERBOSE << "Converting standard body";
+            std::string encodedBody = convertToUTF8(rawBody, encoding.substr(1, pos-1));
             dynamic_cast<StandardEmailBody*>(partBodies.get())->setContent(encodedBody);
             newEmail.setBody(std::move(partBodies));
         }
