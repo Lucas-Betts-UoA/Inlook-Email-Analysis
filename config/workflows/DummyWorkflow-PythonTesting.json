@@ -1,0 +1,22 @@
+{
+  "name": "SerialPluginExecutor",
+  "options": {
+    "plugins": [
+      {
+        "name": "EmailLoader",
+        "options": {
+          "emailPath": "../smallertest"
+        }
+      },
+      {
+        "name": "PythonScriptExecutor"
+      },
+      {
+        "name": "AttributeBagLogger",
+        "options": {
+          "logByFile": false
+        }
+      }
+    ]
+  }
+}

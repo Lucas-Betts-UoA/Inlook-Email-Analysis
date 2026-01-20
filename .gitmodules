@@ -13,3 +13,7 @@
 [submodule "external/json"]
 	path = external/json
 	url = https://github.com/nlohmann/json.git
+[submodule "external/pybind11"]
+	path = external/pybind11
+	url = ../../pybind/pybind11
+	branch = stable

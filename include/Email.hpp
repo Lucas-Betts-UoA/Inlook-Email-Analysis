@@ -78,6 +78,13 @@ public:
     nlohmann::json toJson();
 
     /**
+     * @brief De-Jsonify an entire email.
+     *
+     * @return nlohmann::json which represents the entire email.
+     */
+    void fromJson(const nlohmann::json& json);
+
+    /**
      * @brief Sets a header field.
      *
      * Adds or updates a header field with the given key and value.

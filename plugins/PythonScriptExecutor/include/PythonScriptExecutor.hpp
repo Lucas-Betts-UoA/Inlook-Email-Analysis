@@ -1,10 +1,10 @@
-
 #pragma once
 #include "PluginRunnableInterface.hpp"
-
+#include <pybind11/embed.h>
+#include <nlohmann/json.hpp>
 
 // PythonScriptExecutor class implementing PluginInterface
-class  final : public PluginRunnableInterface {
+class PythonScriptExecutor final : public PluginRunnableInterface {
 public:
     explicit PythonScriptExecutor(const std::string&);  // Constructor
     ~PythonScriptExecutor() override;  // Destructor
@@ -12,7 +12,7 @@ public:
     bool instantiateRecursive() override;
     nlohmann::json printRecursiveInstanceTreeJson() override;
 
-    int execute(EmailList *emailList) override;
+    bool execute(EmailListView *emailList) override;
 
 private:
     struct Register {

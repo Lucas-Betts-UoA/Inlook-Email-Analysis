@@ -3,6 +3,7 @@ add_subdirectory(json)
 add_subdirectory(libpqxx)
 add_subdirectory(json-scheme-validator)
 add_subdirectory(fastText)
+add_subdirectory(pybind11)
 
 # Handle ICU across platforms
 if (APPLE)
@@ -48,10 +49,12 @@ target_link_libraries(Inlook_Core
         PUBLIC
         ICU::uc ICU::i18n ICU::data # Core + Plugins need ICU
         nlohmann_json_schema_validator # JSON schema validator needed for configs
+        pybind11::embed # Core embeds python
         INTERFACE
         nlohmann_json # Header-only, no linking required
         libpqxx::pqxx
         fasttext-static # Only used by plugins, Core does NOT use it
+
 )
 
 # Apply common compile options

@@ -1,8 +1,7 @@
-
 #include "PythonScriptExecutor.hpp"
 
 #include "Logger.hpp"
-#include "EmailList.hpp"
+#include "EmailListView.hpp"
 #include <PluginInterface.hpp>
 #include <unordered_map>
 #include <iostream>
@@ -12,6 +11,10 @@
 #include "Email.hpp"
 #include <vector>
 #include <filesystem>
+#include <pybind11/embed.h>
+#include  <pybind11/stl.h>
+
+namespace py = pybind11;
 
 // Constructor
 PythonScriptExecutor::PythonScriptExecutor(const std::string& instanceID) : PluginRunnableInterface(instanceID) {
@@ -39,22 +42,55 @@ bool PythonScriptExecutor::instantiateRecursive() {
 }
 
 nlohmann::json PythonScriptExecutor::printRecursiveInstanceTreeJson() {
-nlohmann::json node;
-node["instanceID"] = instanceID_;
-node["createFunc"] = Plugins->getCreateFuncForInstance(instanceID_);
-node["state"]     = getState();
-return node;
+    nlohmann::json node;
+    node["instanceID"] = instanceID_;
+    node["createFunc"] = Plugins->getCreateFuncForInstance(instanceID_);
+    node["state"]     = getState();
+    return node;
 }
 
 // Destructor
 PythonScriptExecutor::~PythonScriptExecutor() = default;
 
-int PythonScriptExecutor::execute(EmailList *emailList) {
-LOG_INFO << "PythonScriptExecutor::execute called.";
-SET_PLUGIN_STATE("RUNNING");
-for (auto email : *emailList) {
-    LOG_DEBUG_VERBOSE << "Email Parsed by PythonScriptExecutor";
-}
-SET_PLUGIN_STATE("COMPLETE");
-return true;
+bool PythonScriptExecutor::execute(EmailListView *emailList) {
+    LOG_INFO << "PythonScriptExecutor::execute called.";
+    SET_PLUGIN_STATE("RUNNING");
+    try {
+        LOG_INFO << "Acquiring GIL";
+        py::gil_scoped_acquire gil;
+        LOG_INFO << "GIL acquired";
+
+        py::module sys = py::module::import("sys");
+        for (auto p : sys.attr("path")) {
+            LOG_INFO << "sys.path entry: " << py::str(p).cast<std::string>();
+        }
+        sys.attr("path").attr("append")("plugins/PythonScriptExecutor/scripts");
+
+        nlohmann::json emailArray = nlohmann::json::array();
+        for (auto& email : *emailList) {
+            emailArray.push_back(email.toJson());
+        }
+        py::module script = py::module::import("email_plugin_test");
+        py::object processFunc = script.attr("process_emails");
+
+        py::object result = processFunc(emailArray.dump());
+
+        nlohmann::json processedEmails = nlohmann::json::parse(result.cast<std::string>());
+
+        for (const auto& emailJson : processedEmails) {
+            Email email;
+            email.fromJson(emailJson);
+            emailList->insertEmail(email);
+        }
+
+        emailList->commitInserts();
+    }
+    catch (const std::exception& e) {
+        LOG_ERROR << "PythonScriptExecutor exception: " << e.what();
+        SET_PLUGIN_STATE("FAILED");
+        return false;
+    }
+
+    SET_PLUGIN_STATE("COMPLETE");
+    return true;
 }

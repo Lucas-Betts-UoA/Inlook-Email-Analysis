@@ -1,4 +1,3 @@
-
 project(PythonScriptExecutor LANGUAGES CXX)
 
 # Enable verbose output during the build process (optional)
