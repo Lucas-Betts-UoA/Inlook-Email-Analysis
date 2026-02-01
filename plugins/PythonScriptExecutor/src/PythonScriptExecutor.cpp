@@ -19,19 +19,24 @@ namespace py = pybind11;
 // Constructor
 PythonScriptExecutor::PythonScriptExecutor(const std::string& instanceID) : PluginRunnableInterface(instanceID) {
     pluginName_ = "PythonScriptExecutor";
-        instanceID_ = instanceID;
-        optionSchema_ = R"(
-        {
-        "$schema": "https://json-schema.org/draft/2020-12/schema",
-        "type": "object",
-        "properties": {
-        },
-        "required": [
-        ],
-        "additionalProperties": false
-        }
-        )"_json;
-        inputAttributes_ = {};
+    instanceID_ = instanceID;
+    optionSchema_ = R"(
+    {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "scriptPath": {
+        "type": "string",
+        "description": "The path to the Python scripts."
+      }
+    },
+    "required": [
+      "scriptPath"
+    ],
+    "additionalProperties": false
+    }
+    )"_json;
+    inputAttributes_ = {};
     generatedAttributes_ = {};
     SET_PLUGIN_STATE("LOADED");
 }
@@ -60,11 +65,16 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
         py::gil_scoped_acquire gil;
         LOG_INFO << "GIL acquired";
 
-        py::module sys = py::module::import("sys");
-        for (auto p : sys.attr("path")) {
-            LOG_INFO << "sys.path entry: " << py::str(p).cast<std::string>();
+        std::filesystem::path cwd = optionConfig_["scriptPath"];
+
+        if (!std::filesystem::exists(cwd)) {
+            std::string errorMsg = "Script directory does not exist: " + cwd.string();
+            LOG_ERROR << errorMsg;
+            throw std::runtime_error(errorMsg);
         }
-        sys.attr("path").attr("append")("plugins/PythonScriptExecutor/scripts");
+
+        py::module sys = py::module::import("sys");
+        sys.attr("path").attr("append")(cwd.string());
 
         nlohmann::json emailArray = nlohmann::json::array();
         for (auto& email : *emailList) {

@@ -9,7 +9,10 @@
         }
       },
       {
-        "name": "PythonScriptExecutor"
+        "name": "PythonScriptExecutor",
+        "options": {
+          "scriptPath": "../plugins/PythonScriptExecutor/scripts"
+        }
       },
       {
         "name": "AttributeBagLogger",
