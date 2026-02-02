@@ -1,11 +1,12 @@
-import json
+import email_core
 
-def process_emails(email_json_str):
-    emails = json.loads(email_json_str)
+def process_emails(email_list):
+    print(f"Received {len(email_list)} emails from C++")
 
-    for email in emails:
-        headers = email.setdefault("header", {})
-        headers["X-Processed-By"] = "PythonScriptExecutor"
-        print("Hello world")
+    for email in email_list:
+        file_identifier = email.get_attribute("File identifier")
 
-    return json.dumps(emails)
+
+        print(f"Processing: {file_identifier.to_string()}")
+
+    return

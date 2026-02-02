@@ -13,6 +13,7 @@
 #include <filesystem>
 #include <pybind11/embed.h>
 #include  <pybind11/stl.h>
+#include "EmailBindings.hpp"
 
 namespace py = pybind11;
 
@@ -65,35 +66,27 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
         py::gil_scoped_acquire gil;
         LOG_INFO << "GIL acquired";
 
-        std::filesystem::path cwd = optionConfig_["scriptPath"];
+        std::filesystem::path scriptPath = optionConfig_["scriptPath"];
 
-        if (!std::filesystem::exists(cwd)) {
-            std::string errorMsg = "Script directory does not exist: " + cwd.string();
+        if (!std::filesystem::exists(scriptPath)) {
+            std::string errorMsg = "Script directory does not exist: " + scriptPath.string();
             LOG_ERROR << errorMsg;
             throw std::runtime_error(errorMsg);
         }
 
         py::module sys = py::module::import("sys");
-        sys.attr("path").attr("append")(cwd.string());
-
-        nlohmann::json emailArray = nlohmann::json::array();
-        for (auto& email : *emailList) {
-            emailArray.push_back(email.toJson());
-        }
+        sys.attr("path").attr("append")(scriptPath.string());
         py::module script = py::module::import("email_plugin_test");
         py::object processFunc = script.attr("process_emails");
 
-        py::object result = processFunc(emailArray.dump());
+        py::list pyEmailList;
 
-        nlohmann::json processedEmails = nlohmann::json::parse(result.cast<std::string>());
-
-        for (const auto& emailJson : processedEmails) {
-            Email email;
-            email.fromJson(emailJson);
-            emailList->insertEmail(email);
+        for (auto& email : *emailList) {
+            pyEmailList.append(py::cast(&email, py::return_value_policy::reference));
         }
 
-        emailList->commitInserts();
+        processFunc(pyEmailList);
+
     }
     catch (const std::exception& e) {
         LOG_ERROR << "PythonScriptExecutor exception: " << e.what();
