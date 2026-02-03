@@ -62,9 +62,7 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
     LOG_INFO << "PythonScriptExecutor::execute called.";
     SET_PLUGIN_STATE("RUNNING");
     try {
-        LOG_INFO << "Acquiring GIL";
         py::gil_scoped_acquire gil;
-        LOG_INFO << "GIL acquired";
 
         std::filesystem::path scriptPath = optionConfig_["scriptPath"];
 
@@ -86,14 +84,13 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
         }
 
         processFunc(pyEmailList);
-
+        py::gil_scoped_release gil_release;
     }
     catch (const std::exception& e) {
         LOG_ERROR << "PythonScriptExecutor exception: " << e.what();
         SET_PLUGIN_STATE("FAILED");
         return false;
     }
-
     SET_PLUGIN_STATE("COMPLETE");
     return true;
 }
