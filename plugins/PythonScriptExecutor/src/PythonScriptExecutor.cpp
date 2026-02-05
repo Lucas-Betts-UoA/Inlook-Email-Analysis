@@ -16,6 +16,7 @@
 #include "EmailBindings.hpp"
 
 namespace py = pybind11;
+namespace fs = std::filesystem;
 
 // Constructor
 PythonScriptExecutor::PythonScriptExecutor(const std::string& instanceID) : PluginRunnableInterface(instanceID) {
@@ -64,7 +65,7 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
     try {
         py::gil_scoped_acquire gil;
 
-        std::filesystem::path scriptPath = optionConfig_["scriptPath"];
+        fs::path scriptPath = optionConfig_["scriptPath"];
 
         if (!std::filesystem::exists(scriptPath)) {
             std::string errorMsg = "Script directory does not exist: " + scriptPath.string();
@@ -72,19 +73,49 @@ bool PythonScriptExecutor::execute(EmailListView *emailList) {
             throw std::runtime_error(errorMsg);
         }
 
+        py::module::import("email_core");
+
         py::module sys = py::module::import("sys");
         sys.attr("path").attr("append")(scriptPath.string());
-        py::module script = py::module::import("email_plugin_test");
-        py::object processFunc = script.attr("process_emails");
+
 
         py::list pyEmailList;
-
         for (auto& email : *emailList) {
             pyEmailList.append(py::cast(&email, py::return_value_policy::reference));
         }
 
-        processFunc(pyEmailList);
-        py::gil_scoped_release gil_release;
+        for (const auto& fileEntry : fs::recursive_directory_iterator(scriptPath)) {
+            if (fileEntry.is_regular_file() && fileEntry.path().extension() == ".py") {
+                if (fileEntry.path().filename() == "__init__.py") continue;
+
+
+                fs::path relativePath;
+
+                try {
+                    std::string parentDir = fileEntry.path().parent_path().string();
+
+                    sys.attr("path").attr("insert")(0, parentDir);
+
+                    std::string moduleName = fileEntry.path().stem().string();
+
+
+                    LOG_INFO << "Executing loose script: " << moduleName << " from " << parentDir;
+
+                    py::module script = py::module::import(moduleName.c_str());
+
+                    if (py::hasattr(script, "process_emails")) {
+                        LOG_INFO << "Executing 'process_emails' in: " << moduleName;
+                        py::object processFunc = script.attr("process_emails");
+                        processFunc(pyEmailList);
+                    } else {
+                        LOG_WARNING << "Skipping " << moduleName << ": 'process_emails' function not found.";
+                    }
+                    sys.attr("path").attr("remove")(parentDir);
+                } catch (const std::exception& e) {
+                    LOG_ERROR << "Error executing script " << fileEntry.path().string() << ": " << e.what();
+                }
+            }
+        }
     }
     catch (const std::exception& e) {
         LOG_ERROR << "PythonScriptExecutor exception: " << e.what();
