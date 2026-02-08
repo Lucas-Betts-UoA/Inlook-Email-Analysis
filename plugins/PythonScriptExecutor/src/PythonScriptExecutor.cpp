@@ -59,10 +59,19 @@ nlohmann::json PythonScriptExecutor::printRecursiveInstanceTreeJson() {
 // Destructor
 PythonScriptExecutor::~PythonScriptExecutor() = default;
 
+void PythonScriptExecutor::ensure_python() {
+    static std::once_flag once;
+    std::call_once(once, [] {
+        static auto *interp = new py::scoped_interpreter(); // Allocate so it isn't unloaded after the first plugin.
+        (void)interp;
+    });
+}
+
 bool PythonScriptExecutor::execute(EmailListView *emailList) {
     LOG_INFO << "PythonScriptExecutor::execute called.";
     SET_PLUGIN_STATE("RUNNING");
     try {
+        ensure_python(); // Should create just a single interpreter rather than in the constructor called per plugin load.
         py::gil_scoped_acquire gil;
 
         fs::path scriptPath = optionConfig_["scriptPath"];

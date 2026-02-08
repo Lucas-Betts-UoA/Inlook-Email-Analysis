@@ -19,6 +19,12 @@
         "options": {
           "logByFile": false
         }
+      },
+      {
+        "name": "PythonScriptExecutor",
+        "options": {
+          "scriptPath": "../plugins/PythonScriptExecutor/scripts"
+        }
       }
     ]
   }

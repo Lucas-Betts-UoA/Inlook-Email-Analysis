@@ -1,10 +1,7 @@
 #pragma once
 #include "PluginRunnableInterface.hpp"
-#include <pybind11/embed.h>
 #include <nlohmann/json.hpp>
-#include <pybind11/embed.h>
 
-namespace py = pybind11;
 // PythonScriptExecutor class implementing PluginInterface
 class PythonScriptExecutor final : public PluginRunnableInterface {
 public:
@@ -14,11 +11,11 @@ public:
     bool instantiateRecursive() override;
     nlohmann::json printRecursiveInstanceTreeJson() override;
 
+    static void ensure_python();
+
     bool execute(EmailListView *emailList) override;
 
 private:
-    py::scoped_interpreter python{};
-    py::gil_scoped_release release;
     struct Register {
         Register() {
             std::string name = "PythonScriptExecutor";
