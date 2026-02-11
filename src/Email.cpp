@@ -37,7 +37,9 @@ nlohmann::json Email::toJson() {
 
         emailJson["headers"] = header;
 
-        emailJson["body"] = body ? body->getAllBodyData() : nullptr;
+        if (body) {
+            emailJson["body"] = body->toJson();
+        }
 
         emailJson["attributes"] = nlohmann::json::object();
         for (const auto& [key, valuePtr] : attribute_bag) {
@@ -47,6 +49,22 @@ nlohmann::json Email::toJson() {
         LOG_ERROR << "Failing " << e.what();
     }
     return emailJson;
+}
+
+void Email::fromJson(const nlohmann::json& json) {
+    header.clear();
+
+    for (auto& [k, v] : json["headers"].items()) {
+        setHeader(k, v.get<std::string>());
+    }
+
+    isMIMEMultipart = json.value("isMIMEMultipart", false);
+
+    if (json.contains("body")) {
+        body = EmailBody::fromJson(json["body"]);
+    }
+
+    generateUniqueHash();
 }
 
 void Email::setHeader(const std::string& key, const std::string& value) {

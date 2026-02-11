@@ -6,6 +6,8 @@ class EmailBody {
 public:
     virtual ~EmailBody() = default;
     virtual std::string getAllBodyData() = 0;
+    virtual nlohmann::json toJson() const = 0;
+    static std::unique_ptr<EmailBody> fromJson(const nlohmann::json& json);
 };
 
 class StandardEmailBody final : public EmailBody {
@@ -14,8 +16,14 @@ private:
 public:
     StandardEmailBody() = default;
     explicit StandardEmailBody(const std::string& content) : content(content) {}
-     std::string getAllBodyData() {return content;}
+    std::string getAllBodyData() {return content;}
     void setContent(const std::string& newContent) {content = newContent;}
+    nlohmann::json toJson() const override{
+        return {
+                {"type", "standard"},
+                {"content", content}
+        };
+    }
 };
 
 
@@ -81,7 +89,56 @@ public:
         }
         return MIMEBodyData.str();
     }
+    nlohmann::json toJson() const override {
+        nlohmann::json parts = nlohmann::json::array();
+
+            for (const auto& part : multipartBodies) {
+                nlohmann::json headers;
+                for (const auto& [k, v] : part.getHeader()) {
+                    headers[k] = v;
+                }
+
+                parts.push_back({
+                    {"headers", headers},
+                    {"content", part.getBody()}
+                });
+            }
+
+            return {
+                        {"type", "mime"},
+                        {"parts", parts}
+        };
+    }
      std::vector<MIMEMultipartPart> getMultipartParts() const {
         return multipartBodies;
     }
 };
+
+
+
+inline std::unique_ptr<EmailBody> EmailBody::fromJson(const nlohmann::json& json) {
+    if (!json.contains("type")) {
+        throw std::runtime_error("EmailBody JSON missing 'type'");
+    }
+
+    const std::string type = json.at("type").get<std::string>();
+
+    if (type == "standard") {
+        return std::make_unique<StandardEmailBody>(json.value("content", ""));
+    }
+
+    if (type == "mime") {
+        auto mimeBody = std::make_unique<MIMEMultipartBodies>();
+        for (const auto& part : json.at("parts")) {
+            std::pmr::map<std::string, std::vector<std::string>> headers;
+            for (auto& [key, values] : part.at("headers").items()) {
+                headers[key] = values.get<std::vector<std::string>>();
+            }
+            mimeBody->addPart(headers, part.value("content", ""));
+        }
+        return mimeBody;
+    }
+    throw std::runtime_error("Unknown EmailBody type: '" + type + "'");
+}
+
+
